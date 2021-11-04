@@ -1,0 +1,141 @@
+.input-label {
+    display: block;
+
+    &--type_1 {
+        margin-bottom: 16px;
+    }
+
+    &--type_2 {
+        margin-bottom: 32px;
+    }
+
+    &__label-text {
+        color: $text-low;
+        display: block;
+        font-size: 10px;
+        margin-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        text-transform: uppercase;
+    }
+
+    &__input-container {
+        display: block;
+        position: relative;
+
+        .input {
+            padding-right: 52px;
+        }
+    }
+
+    &__input-action,
+    &__input-status {
+        align-items: center;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    &__input-status {
+        &--verified {
+            svg {
+                stroke: $green;
+                stroke-width: 1.6px;
+            }
+        }
+    }
+
+    &__input-action {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &--delete {
+            svg {
+                stroke: $secondary-medium;
+                stroke-width: 1.4px;
+            }
+        }
+
+        &--clear {
+            svg {
+                stroke: $text-medium;
+                stroke-width: 1.4px;
+            }
+        }
+
+        &--undo {
+            svg {
+                stroke: $primary-medium;
+                stroke-width: 1.4px;
+            }
+        }
+    }
+}
+
+.input,
+.textarea {
+    background-color: #fff;
+    border: 1px solid $primary-ghostL;
+    border-radius: 4px;
+    color: $text-full;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 10px 12px;
+    text-overflow: ellipsis;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    width: 100%;
+
+    &:hover {
+        border-color: $primary-full;
+    }
+
+    &:focus {
+        border-color: $primary-medium;
+        box-shadow: none;
+        outline: none;
+    }
+
+    &.error {
+        border-color: $secondary-full;
+
+        &:focus {
+            border-color: $secondary-full;
+        }
+    }
+
+    &:disabled {
+        background-color: $background-alt;
+        color: $text-full;
+
+        &:hover {
+            border-color: $primary-ghostL;
+        }
+    }
+
+    &:-ms-input-placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder {
+        color: $text-low;
+        opacity: 1;
+    }
+}
+
+.input {
+    height: 40px;
+
+    &.deleted {
+        color: $text-low;
+    }
+}
+
+.textarea {
+    height: 80px;
+    resize: vertical;
+}

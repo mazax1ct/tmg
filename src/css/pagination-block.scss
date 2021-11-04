@@ -1,0 +1,33 @@
+@import "base/_variables.scss";
+
+.pagination-block {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 56px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media(min-width: 768px) {
+        justify-content: flex-start;
+    }
+
+    &:last-child {
+        margin-top: 20px;
+    }
+
+    .pager {
+        margin-bottom: 10px;
+        @media(min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__pages {
+        color: $text-full;
+        font-size: 14px;
+        line-height: 1.14285;
+        @media(min-width: 768px) {
+            margin-left: auto;
+        }
+    }
+}

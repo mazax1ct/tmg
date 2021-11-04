@@ -1,0 +1,22 @@
+.icon {
+    fill: none;
+    transition: stroke 0.3s;
+
+    &--big {
+        stroke-width: 2px;
+        height: 24px;
+        width: 24px;
+    }
+
+    &--medium {
+        stroke-width: 1.6px;
+        height: 20px;
+        width: 20px;
+    }
+
+    &--small {
+        stroke-width: 1.2px;
+        height: 16px;
+        width: 16px;
+    }
+}

@@ -1,0 +1,39 @@
+@import "base/_variables.scss";
+
+.breadcrumbs {
+    align-items: center;
+    color: $text-full;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &__item {
+        align-items: center;
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+
+            &::after {
+                color: $text-low;
+                content: '/';
+                margin-left: 8px;
+            }
+        }
+    }
+
+    &__link {
+        color: $text-full;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+
+        &:focus,
+        &:hover {
+            color: $primary-medium;
+        }
+    }
+}

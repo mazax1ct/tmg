@@ -1,0 +1,88 @@
+.button {
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Montserrat', Arial, sans-serif;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    vertical-align: middle;
+
+    &--primary {
+        background-color: $primary-medium;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+
+        &:focus,
+        &:hover {
+            background-color: $primary-full;
+            color: #fff;
+        }
+
+        &.disabled,
+        &:disabled {
+            background-color: $primary-ghostL;
+            color: $primary-medium;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &--secondary {
+        background-color: $secondary-medium;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+
+        &:focus,
+        &:hover {
+            background-color: $secondary-full;
+            color: #fff;
+        }
+
+        &.disabled,
+        &:disabled {
+            background-color: $secondary-ghostL;
+            color: $secondary-medium;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &--big {
+        height: 40px;
+        padding: 10px 16px;
+    }
+
+    &--small {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.15px;
+        height: 24px;
+        padding: 3px 12px 4px;
+
+        &.disabled,
+        &:disabled {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.15px;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        cursor: default;
+        pointer-events: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
