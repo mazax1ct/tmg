@@ -64,8 +64,13 @@
 
     <!--стили подключаемых на страние блоков-->
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <link rel="stylesheet" href="css/header-link.css" />
+    <link rel="stylesheet" href="css/notificator.css" />
     <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/cart-block.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
     <link rel="stylesheet" href="css/breadcrumbs.css" />
     <link rel="stylesheet" href="css/pagination-block.css" />
     <link rel="stylesheet" href="css/pager.css" />
@@ -134,6 +139,38 @@
         <symbol id="arrow_down" viewBox="0 0 24 24">
             <path d="M6 9L12 15L18 9" />
         </symbol>
+        <symbol id="help" viewBox="0 0 24 24">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M9.08984 8.99959C9.32495 8.33126 9.789 7.7677 10.3998 7.40873C11.0106 7.04975 11.7287 6.91853 12.427 7.0383C13.1253 7.15808 13.7587 7.52112 14.2149 8.06312C14.6712 8.60512 14.9209 9.29112 14.9198 9.99959C14.9198 11.9996 11.9198 12.9996 11.9198 12.9996"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 17H12.01" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="personal" viewBox="0 0 24 24">
+            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="favorite" viewBox="0 0 24 24">
+            <path
+              d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="cart" viewBox="0 0 24 24">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="login" viewBox="0 0 24 24">
+            <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 17L15 12L10 7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15 12H3" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="feather" viewBox="0 0 24 24">
+            <path d="M20.24 12.74C21.3658 11.6142 21.9983 10.0872 21.9983 8.49504C21.9983 6.90285 21.3658 5.37588 20.24 4.25004C19.1142 3.12419 17.5872 2.4917 15.995 2.4917C14.4028 2.4917 12.8758 3.12419 11.75 4.25004L5 11V19.5H13.5L20.24 12.74Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 8.5L2 22.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17.5 15.5H9" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar compensate-for-scrollbar">
@@ -145,75 +182,365 @@
                 </picture>
             </a>
         </div>
-        <div class="header__bottom container">
-            <button class="js-catalog-toggler catalog-toggler" type="button">
-                <svg class="icon icon--big">
-                    <use xlink:href="#burger"></use>
-                </svg>
-                <span>Каталог</span>
-            </button>
-            <div class="search-bar">
-                <div class="search-bar__categories-block">
-                    <button class="js-search-categories search-bar__categories-toggler" type="button">
-                        <span>Все категории</span>
-                        <svg class="icon icon--big icon--fill">
-                            <use xlink:href="#arrow_down"></use>
-                        </svg>
-                    </button>
-                    <div class="dropdown">
-                        <ul class="dropdown__list">
-                            <li class="dropdown__list-item">Ежедневники и блокноты</li>
-                            <li class="dropdown__list-item">Подарочные наборы</li>
-                            <li class="dropdown__list-item">Пледы</li>
-                            <li class="dropdown__list-item">Зонты</li>
-                            <li class="dropdown__list-item">Футболки</li>
-                            <li class="dropdown__list-item">Одежда</li>
-                            <li class="dropdown__list-item">Детские подарки</li>
-                            <li class="dropdown__list-item">Сумки</li>
-                            <li class="dropdown__list-item">Электроника</li>
-                            <li class="dropdown__list-item">Флешки</li>
-                            <li class="dropdown__list-item">Товары для путешествий</li>
-                            <li class="dropdown__list-item">Товары для дома</li>
-                            <li class="dropdown__list-item">Средства защиты</li>
-                            <li class="dropdown__list-item">Посуда с нанесением логотипа</li>
-                            <li class="dropdown__list-item">Спортивные товары</li>
-                            <li class="dropdown__list-item">Упаковка</li>
-                            <li class="dropdown__list-item">Мерч</li>
-                            <li class="dropdown__list-item">Ручки с логотипом</li>
-                            <li class="dropdown__list-item">Часы</li>
-                            <li class="dropdown__list-item">Эко-подарки</li>
-                            <li class="dropdown__list-item">Съедобные сувениры</li>
-                            <li class="dropdown__list-item">Товары для отдыха и туризма</li>
-                            <li class="dropdown__list-item">Корпоративные подарки</li>
-                            <li class="dropdown__list-item">Полиграфическая продукция</li>
-                        </ul>
+        <div class="header__bottom">
+            <div class="header__bottom-inner container">
+                <button class="js-catalog-toggler catalog-toggler" type="button">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#burger"></use>
+                    </svg>
+                    <span>Каталог</span>
+                </button>
+                <div class="header__search">
+                    <div class="search-bar">
+                        <div class="search-bar__categories-block">
+                            <button class="js-search-categories search-bar__categories-toggler" type="button">
+                                <span>Все категории</span>
+                                <svg class="icon icon--big icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="search-bar__categories-dropdown dropdown">
+                                <ul class="categories-list">
+                                    <li class="categories-list__item">Ежедневники и блокноты</li>
+                                    <li class="categories-list__item">Подарочные наборы</li>
+                                    <li class="categories-list__item">Пледы</li>
+                                    <li class="categories-list__item">Зонты</li>
+                                    <li class="categories-list__item">Футболки</li>
+                                    <li class="categories-list__item">Одежда</li>
+                                    <li class="categories-list__item">Детские подарки</li>
+                                    <li class="categories-list__item">Сумки</li>
+                                    <li class="categories-list__item">Электроника</li>
+                                    <li class="categories-list__item">Флешки</li>
+                                    <li class="categories-list__item">Товары для путешествий</li>
+                                    <li class="categories-list__item">Товары для дома</li>
+                                    <li class="categories-list__item">Средства защиты</li>
+                                    <li class="categories-list__item">Посуда с нанесением логотипа</li>
+                                    <li class="categories-list__item">Спортивные товары</li>
+                                    <li class="categories-list__item">Упаковка</li>
+                                    <li class="categories-list__item">Мерч</li>
+                                    <li class="categories-list__item">Ручки с логотипом</li>
+                                    <li class="categories-list__item">Часы</li>
+                                    <li class="categories-list__item">Эко-подарки</li>
+                                    <li class="categories-list__item">Съедобные сувениры</li>
+                                    <li class="categories-list__item">Товары для отдыха и туризма</li>
+                                    <li class="categories-list__item">Корпоративные подарки</li>
+                                    <li class="categories-list__item">Полиграфическая продукция</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="search-bar__form" action="search.html" method="post">
+                            <div class="search-bar__input-container">
+                                <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
+                                <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                                    <svg class="icon icon--big">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-bar__dropdown dropdown">
+                            <div class="search-bar__items">
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#undo"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> для завоевания мира длинное название товарной позиции для проверки вообше всего на свете</span>
+                                        </span>
+                                    </button>
+                                    <button class="search-item__delete" type="button" title="Удалить подсказку">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#delete"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> женская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> детская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> мужская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> унисексик</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> с принтом</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_1.jpg" srcset="images/content/search-items/img_1.jpg 2x" alt="Футболки женские">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Футболки женские</span>
+                                            <span class="search-item__alt-text">Шмотоньки / Женские / Футболки</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_2.jpg" srcset="images/content/search-items/img_2.jpg 2x" alt="Футболки мужские">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Футболки мужские</span>
+                                            <span class="search-item__alt-text">Шмотоньки / Мужские / Футболки</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#feather"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Печать изображения на футболках</span>
+                                            <span class="search-item__alt-text">Узнайте о новейших доступных методах нанесения</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_3.jpg" srcset="images/content/search-items/img_3.jpg 2x" alt="Бренд ТВОЁ">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">ТВОЁ</span>
+                                            <span class="search-item__alt-text">Бренд</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> Puma женская</span>
+                                            <span class="search-item__price">1 650 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> ТВОЕ женская</span>
+                                            <span class="search-item__price">379 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка ТВОЕ женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболк ТВОЕ женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка ТВОЕ женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> Under Armor женская</span>
+                                            <span class="search-item__price">890 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Under Armor женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Under Armor женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form class="search-bar__form" action="search.html" method="post">
-                    <div class="search-bar__input-container">
-                        <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
-                        <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                <div class="header__bottom-links">
+                    <a class="header-link" href="#">
+                        <span class="header-link__icon-container">
                             <svg class="icon icon--big">
-                                <use xlink:href="#close"></use>
+                                <use xlink:href="#help"></use>
                             </svg>
-                        </button>
+                        </span>
+                        <span class="header-link__title">Помощь</span>
+                    </a>
+                    <a class="header-link header-link--type_1" href="#">
+                        <span class="header-link__icon-container">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#login"></use>
+                            </svg>
+                        </span>
+                        <span class="header-link__title">Войти</span>
+                    </a>
+                    <a class="header-link" href="#">
+                        <span class="header-link__icon-container">
+                            <span class="header-link__notificator notificator">123</span>
+                            <svg class="icon icon--big">
+                                <use xlink:href="#favorite"></use>
+                            </svg>
+                        </span>
+                        <span class="header-link__title">Избранное</span>
+                    </a>
+                    <div class="cart-block">
+                        <a class="js-cart-toggler header-link" href="#">
+                            <span class="header-link__icon-container">
+                                <span class="header-link__notificator notificator">10</span>
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                            </span>
+                            <span class="header-link__title">Корзина</span>
+                        </a>
+                        <div class="cart-block__dropdown dropdown">
+                            <div class="mini-cart">
+                                <p class="mini-cart__title-block">
+                                    <span class="mini-cart__title">В корзине 323 товара и нанесение на сумму</span>
+                                    <span class="mini-cart__cost">138&nbsp;301.50&nbsp;₽</span>
+                                </p>
+                                <div class="mini-cart__list">
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_1.jpg" srcset="images/content/mini-cart/img_1@2x.jpg 2x" alt="Стерилизатор с функцией беспроводной зарядки Chili, белый">
+                                        </span>
+                                        <span class="mc-item__title">Стерилизатор с функцией беспроводной зарядки Chili, белый</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">56 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">11&nbsp;378&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_2.jpg" srcset="images/content/mini-cart/img_2@2x.jpg 2x" alt="Портативное зарядное устройство «Олдбери», 2200 mAh">
+                                        </span>
+                                        <span class="mc-item__title">Портативное зарядное устройство «Олдбери», 2200 mAh</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">120 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">34&nbsp;890&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_3.jpg" srcset="images/content/mini-cart/img_3@2x.jpg 2x" alt="Зонт трость полуавтомат Яркость, красный">
+                                        </span>
+                                        <span class="mc-item__title">Зонт трость полуавтомат Яркость, красный</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">44 шт</span>
+                                        </span>
+                                        <span class="mc-item__price">9&nbsp;270&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_4.jpg" srcset="images/content/mini-cart/img_4@2x.jpg 2x" alt="Зарядное устройство беспроводное Ritmix RM-1000W">
+                                        </span>
+                                        <span class="mc-item__title">Зарядное устройство беспроводное Ritmix RM-1000W</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">23 шт</span>
+                                        </span>
+                                        <span class="mc-item__price">17&nbsp;778&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_5.jpg" srcset="images/content/mini-cart/img_5@2x.jpg 2x" alt="Плед для пикника Comfy, черный">
+                                        </span>
+                                        <span class="mc-item__title">Плед для пикника Comfy, черный</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">80 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">29&nbsp;587&nbsp;₽</span>
+                                    </a>
+                                </div>
+                                <div class="mini-cart__buttons-block">
+                                    <button class="mini-cart__clear" type="button" title="Очистить корзину">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#delete"></use>
+                                        </svg>
+                                    </button>
+                                    <a class="mini-cart__cart-link button button--primary button--big disabled" href="cart.hrml">Минимальная сумма заказа - 5000 ₽</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="search-bar__submit" type="submit" title="Найти" disabled>
-                        <svg class="icon icon--big">
-                            <use xlink:href="#search"></use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-            <div class="header__bottom-links">
-                <a class="header-link" href="#">
-                    <span class="header-link__icon-container">
-                        <svg class="icon icon--big">
-                            <use xlink:href="#arrow_down"></use>
-                        </svg>
-                    </span>
-                    <span class="header-link__title">Помощь</span>
-                </a>
+                </div>
             </div>
         </div>
     </header>

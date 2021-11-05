@@ -1,0 +1,16 @@
+@import "base/_variables.scss";
+
+.notificator {
+    border: 2px solid #fff;
+    background-color: $secondary-medium;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    height: 18px;
+    line-height: 14px;
+    letter-spacing: 0.35px;
+    min-width: 19px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
