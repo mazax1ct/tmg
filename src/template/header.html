@@ -1,3 +1,81 @@
 <header class="header compensate-scrollbar compensate-for-scrollbar">
-
+    <div class="header__top container">
+        <a class="logo" href="#" title="На главную">
+            <picture>
+                <source srcset="images/logo_full.svg" media="(min-width: 1024px)">
+                <img src="images/logo.svg" alt="TOOMANYGIFTS">
+            </picture>
+        </a>
+    </div>
+    <div class="header__bottom container">
+        <button class="js-catalog-toggler catalog-toggler" type="button">
+            <svg class="icon icon--big">
+                <use xlink:href="#burger"></use>
+            </svg>
+            <span>Каталог</span>
+        </button>
+        <div class="search-bar">
+            <div class="search-bar__categories-block">
+                <button class="js-search-categories search-bar__categories-toggler" type="button">
+                    <span>Все категории</span>
+                    <svg class="icon icon--big icon--fill">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="dropdown">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item">Ежедневники и блокноты</li>
+                        <li class="dropdown__list-item">Подарочные наборы</li>
+                        <li class="dropdown__list-item">Пледы</li>
+                        <li class="dropdown__list-item">Зонты</li>
+                        <li class="dropdown__list-item">Футболки</li>
+                        <li class="dropdown__list-item">Одежда</li>
+                        <li class="dropdown__list-item">Детские подарки</li>
+                        <li class="dropdown__list-item">Сумки</li>
+                        <li class="dropdown__list-item">Электроника</li>
+                        <li class="dropdown__list-item">Флешки</li>
+                        <li class="dropdown__list-item">Товары для путешествий</li>
+                        <li class="dropdown__list-item">Товары для дома</li>
+                        <li class="dropdown__list-item">Средства защиты</li>
+                        <li class="dropdown__list-item">Посуда с нанесением логотипа</li>
+                        <li class="dropdown__list-item">Спортивные товары</li>
+                        <li class="dropdown__list-item">Упаковка</li>
+                        <li class="dropdown__list-item">Мерч</li>
+                        <li class="dropdown__list-item">Ручки с логотипом</li>
+                        <li class="dropdown__list-item">Часы</li>
+                        <li class="dropdown__list-item">Эко-подарки</li>
+                        <li class="dropdown__list-item">Съедобные сувениры</li>
+                        <li class="dropdown__list-item">Товары для отдыха и туризма</li>
+                        <li class="dropdown__list-item">Корпоративные подарки</li>
+                        <li class="dropdown__list-item">Полиграфическая продукция</li>
+                    </ul>
+                </div>
+            </div>
+            <form class="search-bar__form" action="search.html" method="post">
+                <div class="search-bar__input-container">
+                    <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
+                    <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                    <svg class="icon icon--big">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="header__bottom-links">
+            <a class="header-link" href="#">
+                <span class="header-link__icon-container">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </span>
+                <span class="header-link__title">Помощь</span>
+            </a>
+        </div>
+    </div>
 </header>

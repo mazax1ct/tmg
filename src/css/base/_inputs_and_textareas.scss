@@ -119,8 +119,16 @@
         }
     }
 
-    &:-ms-input-placeholder,
-    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: $text-low;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: $text-low;
+        opacity: 1;
+    }
+
     &::-webkit-input-placeholder {
         color: $text-low;
         opacity: 1;

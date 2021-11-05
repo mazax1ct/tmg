@@ -1,0 +1,77 @@
+.switch {
+    display: block;
+    height: 24px;
+    width: 40px;
+
+    &:hover {
+        input[type="checkbox"],
+        input[type="radio"] {
+            &:not(:checked):not(:disabled) + .switch__icon {
+                background-color: $primary-low;
+            }
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            &:not(:disabled) + .switch__icon {
+                background-color: $primary-full;
+            }
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:not(:disabled) + .switch__icon {
+            cursor: pointer;
+        }
+
+        &:checked + .switch__icon {
+            background-color: $primary-medium;
+
+            &::after {
+                left: 18px;
+            }
+        }
+
+        &:not(:checked):not(:disabled):focus + .switch__icon {
+            background-color: $primary-low;
+        }
+
+        &:not(:disabled):focus + .switch__icon {
+            background-color: $primary-full;
+        }
+
+        &:disabled + .switch__icon {
+            opacity: 0.5;
+        }
+    }
+
+    &__icon {
+        border-radius: 20px;
+        background-color: $text-lowest;
+        content: '';
+        display: block;
+        height: 24px;
+        position: relative;
+        transition: background-color 0.3s;
+        width: 40px;
+
+        &::after {
+            background-color: #fff;
+            border-radius: 10px;
+            content: '';
+            height: 20px;
+            left: 2px;
+            position: absolute;
+            transition: left 0.2s;
+            top: 2px;
+            width: 20px;
+        }
+    }
+}

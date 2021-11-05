@@ -21,9 +21,14 @@
     //= template/style.html
 
     <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
     <link rel="stylesheet" href="css/breadcrumbs.css" />
     <link rel="stylesheet" href="css/pagination-block.css" />
     <link rel="stylesheet" href="css/pager.css" />
+    <link rel="stylesheet" href="css/tags.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
 </head>
 
 <body>
@@ -42,10 +47,22 @@
             </ul>
 
             <div class="title-block">
-                <h1>Заголовок типа h1</h1>
+                <h1>Блузы и рубашки<sup>123</sup></h1>
             </div>
 
-            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+            <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким
+                большим
+                художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого
+                ручья и,
+                прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость
+                всемогущего,
+                создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг,
+                меня
+                часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+
+            <div class="title-block">
+                <h1 class="text-center">Бизнес-сувениры и корпоративные подарки</h1>
+            </div>
 
             <div class="title-block title-block--type_1">
                 <h2>Заголовок типа h2</h2>
@@ -204,6 +221,7 @@
                 <textarea class="textarea" placeholder="текст..." disabled></textarea>
             </label>
 
+            <h6>Чекбоксы</h6>
             <ul class="checkboxes-list">
                 <li>
                     <label class="checkbox-label">
@@ -233,6 +251,10 @@
                         <span class="checkbox-text">Чекбокс</span>
                     </label>
                 </li>
+            </ul>
+
+            <h6>Радио</h6>
+            <ul class="checkboxes-list">
                 <li>
                     <label class="radio-label">
                         <input id="radio1" type="radio" name="radio" value="1" checked />
@@ -252,6 +274,56 @@
                         <input id="radio2" type="radio" name="radio" value="3" disabled />
                         <span class="radio-icon"></span>
                         <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Свитчи с чекбоксами</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" disabled />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Свитчи с радио</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="1" checked />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="2" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="3" disabled />
+                        <span class="switch__icon"></span>
                     </label>
                 </li>
             </ul>
@@ -495,6 +567,106 @@
                         сервисом заказа образцов.</p>
                 </div>
             </div>
+
+            <ul class="tags">
+                <li class="tags__item">
+                    <button class="tags__button" type="button">Новые</button>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Яркие</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Экотекстиль</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Лето в разгаре</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">BolShevichka</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Мамкин модник</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Дёшево и сердито</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Р-рич бич!</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Лабутены дядюшки Ляо</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Дорого и весело</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Средненько и скучненько</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Рискуй, модник</a>
+                </li>
+            </ul>
+
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">товары<sup>46</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">категории<sup>6</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">бренды<sup>4</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">информационные страницы<sup>3</sup></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Санкт-петербург и ло</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Москва</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Россия и другие страны</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Доставка по адресу в СПБ</h2>
+            </div>
+
+            <div class="tabs-nav tabs-nav--type_1">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Описание</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Доставка</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Оплата</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabs-nav tabs-nav--type_2">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Категории</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Праздники</button>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </main>
 

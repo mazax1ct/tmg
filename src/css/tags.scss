@@ -1,0 +1,39 @@
+@import "base/_variables.scss";
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    list-style: none;
+    line-height: 1.16666;
+    margin: 0 -4px 12px;
+    padding: 0;
+
+    &__item {
+        margin-bottom: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    &__button {
+        border-radius: 16px;
+        background-color: $primary-ghostL;
+        color: $text-full;
+        display: block;
+        height: 32px;
+        padding: 9px 12px;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            background-color: $background-alt;
+            color: $primary-full;
+        }
+    }
+
+    button.tags__button {
+        border: none;
+        cursor: pointer;
+    }
+}

@@ -12,7 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fb3449">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="preload" href="fonts/subset-Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Roboto-Regular.woff2" as="font" crossorigin="anonymous">
@@ -79,6 +87,15 @@
     </div>
 
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="burger" viewBox="0 0 24 24">
+            <path d="M3 12H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H21" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 24 24">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21.0004 21.0004L16.6504 16.6504" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
         <symbol id="chevron_left" viewBox="0 0 24 24">
             <path d="M14 6L8 12L14 18" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
@@ -107,10 +124,91 @@
               d="M3.51 15C4.15839 16.8404 5.38734 18.4202 7.01166 19.5014C8.63598 20.5826 10.5677 21.1066 12.5157 20.9945C14.4637 20.8824 16.3226 20.1402 17.8121 18.8798C19.3017 17.6194 20.3413 15.909 20.7742 14.0064C21.2072 12.1038 21.0101 10.112 20.2126 8.33111C19.4152 6.55025 18.0605 5.0768 16.3528 4.13277C14.6451 3.18874 12.6769 2.82527 10.7447 3.09713C8.81245 3.36898 7.02091 4.26143 5.64 5.64001L1 10"
               stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
+        <symbol id="arrow_down" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar compensate-for-scrollbar">
-    
+        <div class="header__top container">
+            <a class="logo" href="#" title="На главную">
+                <picture>
+                    <source srcset="images/logo_full.svg" media="(min-width: 1024px)">
+                    <img src="images/logo.svg" alt="TOOMANYGIFTS">
+                </picture>
+            </a>
+        </div>
+        <div class="header__bottom container">
+            <button class="js-catalog-toggler catalog-toggler" type="button">
+                <svg class="icon icon--big">
+                    <use xlink:href="#burger"></use>
+                </svg>
+                <span>Каталог</span>
+            </button>
+            <div class="search-bar">
+                <div class="search-bar__categories-block">
+                    <button class="js-search-categories search-bar__categories-toggler" type="button">
+                        <span>Все категории</span>
+                        <svg class="icon icon--big icon--fill">
+                            <use xlink:href="#arrow_down"></use>
+                        </svg>
+                    </button>
+                    <div class="dropdown">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item">Ежедневники и блокноты</li>
+                            <li class="dropdown__list-item">Подарочные наборы</li>
+                            <li class="dropdown__list-item">Пледы</li>
+                            <li class="dropdown__list-item">Зонты</li>
+                            <li class="dropdown__list-item">Футболки</li>
+                            <li class="dropdown__list-item">Одежда</li>
+                            <li class="dropdown__list-item">Детские подарки</li>
+                            <li class="dropdown__list-item">Сумки</li>
+                            <li class="dropdown__list-item">Электроника</li>
+                            <li class="dropdown__list-item">Флешки</li>
+                            <li class="dropdown__list-item">Товары для путешествий</li>
+                            <li class="dropdown__list-item">Товары для дома</li>
+                            <li class="dropdown__list-item">Средства защиты</li>
+                            <li class="dropdown__list-item">Посуда с нанесением логотипа</li>
+                            <li class="dropdown__list-item">Спортивные товары</li>
+                            <li class="dropdown__list-item">Упаковка</li>
+                            <li class="dropdown__list-item">Мерч</li>
+                            <li class="dropdown__list-item">Ручки с логотипом</li>
+                            <li class="dropdown__list-item">Часы</li>
+                            <li class="dropdown__list-item">Эко-подарки</li>
+                            <li class="dropdown__list-item">Съедобные сувениры</li>
+                            <li class="dropdown__list-item">Товары для отдыха и туризма</li>
+                            <li class="dropdown__list-item">Корпоративные подарки</li>
+                            <li class="dropdown__list-item">Полиграфическая продукция</li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="search-bar__form" action="search.html" method="post">
+                    <div class="search-bar__input-container">
+                        <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
+                        <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                        <svg class="icon icon--big">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header__bottom-links">
+                <a class="header-link" href="#">
+                    <span class="header-link__icon-container">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#arrow_down"></use>
+                        </svg>
+                    </span>
+                    <span class="header-link__title">Помощь</span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main class="page-content">
@@ -134,6 +232,8 @@
     <script src="js/scroll-compensate.js"></script>
     
     <script src="js/main.js"></script>
+    
+    <script src="js/header.js"></script>
 
     <script src="js/swiper-bundle.min.js"></script>
 

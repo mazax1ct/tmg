@@ -12,7 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fb3449">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="preload" href="fonts/subset-Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Roboto-Regular.woff2" as="font" crossorigin="anonymous">
@@ -55,9 +63,14 @@
     <link rel="stylesheet" href="css/style.css"/>
 
     <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
     <link rel="stylesheet" href="css/breadcrumbs.css" />
     <link rel="stylesheet" href="css/pagination-block.css" />
     <link rel="stylesheet" href="css/pager.css" />
+    <link rel="stylesheet" href="css/tags.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
 </head>
 
 <body>
@@ -81,6 +94,15 @@
     </div>
 
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="burger" viewBox="0 0 24 24">
+            <path d="M3 12H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H21" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 24 24">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21.0004 21.0004L16.6504 16.6504" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
         <symbol id="chevron_left" viewBox="0 0 24 24">
             <path d="M14 6L8 12L14 18" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
@@ -109,10 +131,91 @@
               d="M3.51 15C4.15839 16.8404 5.38734 18.4202 7.01166 19.5014C8.63598 20.5826 10.5677 21.1066 12.5157 20.9945C14.4637 20.8824 16.3226 20.1402 17.8121 18.8798C19.3017 17.6194 20.3413 15.909 20.7742 14.0064C21.2072 12.1038 21.0101 10.112 20.2126 8.33111C19.4152 6.55025 18.0605 5.0768 16.3528 4.13277C14.6451 3.18874 12.6769 2.82527 10.7447 3.09713C8.81245 3.36898 7.02091 4.26143 5.64 5.64001L1 10"
               stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
+        <symbol id="arrow_down" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar compensate-for-scrollbar">
-    
+        <div class="header__top container">
+            <a class="logo" href="#" title="На главную">
+                <picture>
+                    <source srcset="images/logo_full.svg" media="(min-width: 1024px)">
+                    <img src="images/logo.svg" alt="TOOMANYGIFTS">
+                </picture>
+            </a>
+        </div>
+        <div class="header__bottom container">
+            <button class="js-catalog-toggler catalog-toggler" type="button">
+                <svg class="icon icon--big">
+                    <use xlink:href="#burger"></use>
+                </svg>
+                <span>Каталог</span>
+            </button>
+            <div class="search-bar">
+                <div class="search-bar__categories-block">
+                    <button class="js-search-categories search-bar__categories-toggler" type="button">
+                        <span>Все категории</span>
+                        <svg class="icon icon--big icon--fill">
+                            <use xlink:href="#arrow_down"></use>
+                        </svg>
+                    </button>
+                    <div class="dropdown">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item">Ежедневники и блокноты</li>
+                            <li class="dropdown__list-item">Подарочные наборы</li>
+                            <li class="dropdown__list-item">Пледы</li>
+                            <li class="dropdown__list-item">Зонты</li>
+                            <li class="dropdown__list-item">Футболки</li>
+                            <li class="dropdown__list-item">Одежда</li>
+                            <li class="dropdown__list-item">Детские подарки</li>
+                            <li class="dropdown__list-item">Сумки</li>
+                            <li class="dropdown__list-item">Электроника</li>
+                            <li class="dropdown__list-item">Флешки</li>
+                            <li class="dropdown__list-item">Товары для путешествий</li>
+                            <li class="dropdown__list-item">Товары для дома</li>
+                            <li class="dropdown__list-item">Средства защиты</li>
+                            <li class="dropdown__list-item">Посуда с нанесением логотипа</li>
+                            <li class="dropdown__list-item">Спортивные товары</li>
+                            <li class="dropdown__list-item">Упаковка</li>
+                            <li class="dropdown__list-item">Мерч</li>
+                            <li class="dropdown__list-item">Ручки с логотипом</li>
+                            <li class="dropdown__list-item">Часы</li>
+                            <li class="dropdown__list-item">Эко-подарки</li>
+                            <li class="dropdown__list-item">Съедобные сувениры</li>
+                            <li class="dropdown__list-item">Товары для отдыха и туризма</li>
+                            <li class="dropdown__list-item">Корпоративные подарки</li>
+                            <li class="dropdown__list-item">Полиграфическая продукция</li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="search-bar__form" action="search.html" method="post">
+                    <div class="search-bar__input-container">
+                        <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
+                        <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                        <svg class="icon icon--big">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header__bottom-links">
+                <a class="header-link" href="#">
+                    <span class="header-link__icon-container">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#arrow_down"></use>
+                        </svg>
+                    </span>
+                    <span class="header-link__title">Помощь</span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main class="page-content">
@@ -124,10 +227,22 @@
             </ul>
 
             <div class="title-block">
-                <h1>Заголовок типа h1</h1>
+                <h1>Блузы и рубашки<sup>123</sup></h1>
             </div>
 
-            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+            <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким
+                большим
+                художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого
+                ручья и,
+                прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость
+                всемогущего,
+                создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг,
+                меня
+                часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+
+            <div class="title-block">
+                <h1 class="text-center">Бизнес-сувениры и корпоративные подарки</h1>
+            </div>
 
             <div class="title-block title-block--type_1">
                 <h2>Заголовок типа h2</h2>
@@ -286,6 +401,7 @@
                 <textarea class="textarea" placeholder="текст..." disabled></textarea>
             </label>
 
+            <h6>Чекбоксы</h6>
             <ul class="checkboxes-list">
                 <li>
                     <label class="checkbox-label">
@@ -315,6 +431,10 @@
                         <span class="checkbox-text">Чекбокс</span>
                     </label>
                 </li>
+            </ul>
+
+            <h6>Радио</h6>
+            <ul class="checkboxes-list">
                 <li>
                     <label class="radio-label">
                         <input id="radio1" type="radio" name="radio" value="1" checked />
@@ -334,6 +454,56 @@
                         <input id="radio2" type="radio" name="radio" value="3" disabled />
                         <span class="radio-icon"></span>
                         <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Свитчи с чекбоксами</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" disabled />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Свитчи с радио</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="1" checked />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="2" />
+                        <span class="switch__icon"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="radio" name="switch" value="3" disabled />
+                        <span class="switch__icon"></span>
                     </label>
                 </li>
             </ul>
@@ -577,6 +747,106 @@
                         сервисом заказа образцов.</p>
                 </div>
             </div>
+
+            <ul class="tags">
+                <li class="tags__item">
+                    <button class="tags__button" type="button">Новые</button>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Яркие</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Экотекстиль</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Лето в разгаре</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">BolShevichka</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Мамкин модник</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Дёшево и сердито</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Р-рич бич!</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Лабутены дядюшки Ляо</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Дорого и весело</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Средненько и скучненько</a>
+                </li>
+                <li class="tags__item">
+                    <a class="tags__button" href="#">Рискуй, модник</a>
+                </li>
+            </ul>
+
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">товары<sup>46</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">категории<sup>6</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">бренды<sup>4</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">информационные страницы<sup>3</sup></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Санкт-петербург и ло</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Москва</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Россия и другие страны</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Доставка по адресу в СПБ</h2>
+            </div>
+
+            <div class="tabs-nav tabs-nav--type_1">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Описание</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Доставка</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Оплата</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabs-nav tabs-nav--type_2">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Категории</button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Праздники</button>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </main>
 
@@ -595,6 +865,8 @@
     <script src="js/scroll-compensate.js"></script>
     
     <script src="js/main.js"></script>
+    
+    <script src="js/header.js"></script>
 
     <script src="js/preloader.js"></script>
 </body>
