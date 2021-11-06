@@ -85,4 +85,16 @@
             outline: none;
         }
     }
+
+    .icon {
+        stroke: #fff;
+
+        &:first-child {
+            margin-right: 8px;
+        }
+
+        &:last-child {
+            margin-left: 8px;
+        }
+    }
 }

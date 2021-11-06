@@ -1,0 +1,32 @@
+@import "base/_variables.scss";
+
+.header-phone {
+    align-items: center;
+    border-radius: 4px;
+    background-color: $primary-medium;
+    color: $text-full;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+    @media(min-width: 768px) {
+        background-color: transparent;
+        margin-right: 16px;
+        width: auto;
+    }
+
+    .icon {
+        stroke: #fff;
+        @media(min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__text {
+        display: none;
+        font-weight: 500;
+        @media(min-width: 768px) {
+            display: block;
+        }
+    }
+}

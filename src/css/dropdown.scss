@@ -1,26 +1,128 @@
 @import "base/_variables.scss";
 
+.dropdown-container {
+    position: relative;
+
+    &__toggler {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: $text-medium;
+        cursor: pointer;
+        display: flex;
+        font-size: 14px;
+        height: 42px;
+        padding: 0;
+        transition: color 0.3s;
+
+        &:focus,
+        &:hover {
+            color: $text-full;
+
+            .icon {
+                fill: $text-full;
+            }
+        }
+
+        &.is-active {
+            .icon {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .icon {
+            fill: $text-medium;
+            transform-origin: 50% 50% 0;
+        }
+    }
+
+    &__toggler-text {
+        margin-right: 4px;
+    }
+}
+
 .dropdown {
     border-radius: 4px;
     box-shadow: 0 -3px 12px 0 rgba(#00508A, 0.05), 0 6px 12px -6px rgba(#2574AC, 0.08), 0 8px 24px -4px rgba(#2772A8, 0.08);
     background-color: #fff;
     display: none;
+    font-size: 14px;
     left: 0;
+    line-height: 1.14285;
     min-width: 100%;
     overflow: hidden;
     opacity: 0;
     position: absolute;
     transform: translateY(-30px);
-    top: calc(100% + 14px);
+    top: calc(100% + 6px);
     transition: opacity 0.3s, transform 0.3s;
     z-index: 1;
 
     &.is-active {
         display: block;
+        z-index: 3;
     }
 
     &.is-open {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.dropdown-list {
+    color: $text-medium;
+    font-size: 14px;
+    list-style: none;
+    line-height: 1.14285;
+    letter-spacing: 0.35px;
+    margin: 0;
+    max-height: 192px;
+    overflow-y: auto;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: $text-lowest transparent;
+
+    &::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $text-lowest;
+        width: 6px;
+    }
+
+    &__item {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: $text-medium;
+        cursor: pointer;
+        display: flex;
+        min-height: 32px;
+        padding: 8px 12px;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+
+        &:hover {
+            background-color: $background-alt;
+            color: $primary-medium;
+        }
+
+        &.selected {
+            background-color: $background-alt;
+            color: $primary-full;
+
+            &:hover {
+                background-color: $primary-ghostL;
+                color: $primary-full;
+            }
+        }
     }
 }

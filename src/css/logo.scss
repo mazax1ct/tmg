@@ -1,0 +1,15 @@
+@import "base/_variables.scss";
+
+.logo {
+    display: block;
+    height: 32px;
+    width: 26px;
+    @media(min-width: 1024px) {
+        height: 42px;
+        width: 168px;
+    }
+
+    picture {
+        display: block;
+    }
+}
