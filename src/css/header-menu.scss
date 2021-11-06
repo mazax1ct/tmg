@@ -115,6 +115,7 @@
     .dropdown {
         @media(max-width: 767px) {
             box-shadow: none;
+            border-radius: 0;
             display: block;
             opacity: 1;
             position: static;

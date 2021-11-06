@@ -74,11 +74,15 @@
         font-weight: 500;
         line-height: 1.21428;
         letter-spacing: 0.2px;
-        padding: 31px 24px 8px;
+        padding: 31px 16px 8px;
         position: relative;
         transition: color 0.3s;
         text-transform: uppercase;
         white-space: nowrap;
+        @media(min-width: 768px) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
 
         sup {
             font-weight: 400;
