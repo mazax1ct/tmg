@@ -4,18 +4,18 @@ var scrolled;
 $(document).ready(function() {
 	scrolled = $(window).scrollTop();
 	if (scrolled > $('.header').height()*0.5) {
-		$('.header').addClass('scrolled');
+		$('.header__bottom').addClass('scrolled');
 	} else {
-		$('.header').removeClass('scrolled');
+		$('.header__bottom').removeClass('scrolled');
 	}
 });
 
 $(window).scroll(function() {
 	scrolled = $(window).scrollTop();
 	if (scrolled > $('.header').height()*0.5) {
-		$('.header').addClass('scrolled');
+		$('.header__bottom').addClass('scrolled');
 	} else {
-		$('.header').removeClass('scrolled');
+		$('.header__bottom').removeClass('scrolled');
 	}
 });
 

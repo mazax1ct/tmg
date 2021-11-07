@@ -60,7 +60,35 @@
         }
     </style>
 
-    <link rel="stylesheet" href="css/style.css"/>
+    <!--основные стили страницы и типографика-->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!--стили общих блоков-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/location.css" />
+    <link rel="stylesheet" href="css/header-phone.css" />
+    <link rel="stylesheet" href="css/header-menu.css" />
+    <link rel="stylesheet" href="css/catalog-menu.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <link rel="stylesheet" href="css/search-item.css" />
+    <link rel="stylesheet" href="css/iconed-link.css" />
+    <link rel="stylesheet" href="css/notificator.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/cart-block.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/footer-menu.css" />
+    <link rel="stylesheet" href="css/float-bar.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/inputs.css" />
+    <link rel="stylesheet" href="css/phone-input.css" />
+    <link rel="stylesheet" href="css/input-file.css" />
+    
+    <!--стили подключаемых плагинов-->
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    
+    <!--стили модификаторы подключаемых плагинов-->
+    <link rel="stylesheet" href="css/fancybox-modifier.css" />
 
     <!--стили подключаемых на страние блоков-->
 
@@ -178,9 +206,13 @@
             <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M22 6L12 13L2 6" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
+        <symbol id="arrow_left" viewBox="0 0 24 24">
+            <path d="M19 12H5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 19L5 12L12 5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
     </svg>
 
-    <header class="header compensate-scrollbar compensate-for-scrollbar">
+    <header class="header">
         <div class="header__top container">
             <!--если главная, то меняем ссылку на div без href-->
             <a class="logo" href="#" title="На главную">
@@ -274,7 +306,7 @@
                 </div>
             </div>
         </div>
-        <div class="header__bottom">
+        <div class="header__bottom compensate-for-scrollbar">
             <div class="header__bottom-inner container">
                 <button class="js-catalog-toggler catalog-toggler" type="button">
                     <svg class="icon icon--big">
@@ -525,7 +557,7 @@
                     </div>
                 </div>
                 <div class="header__bottom-links">
-                    <a class="iconed-link" href="#">
+                    <a class="iconed-link" href="javascript:void(0)" data-fancybox="help_popup" data-src="#help_popup">
                         <span class="iconed-link__icon-container">
                             <svg class="icon icon--big">
                                 <use xlink:href="#help"></use>
@@ -533,7 +565,7 @@
                         </span>
                         <span class="iconed-link__title">Помощь</span>
                     </a>
-                    <a class="iconed-link iconed-link--type_1" href="#">
+                    <a class="iconed-link iconed-link--type_1" href="javascript:void(0)" data-fancybox="modal_1" data-src="#modal_1">
                         <span class="iconed-link__icon-container">
                             <svg class="icon icon--big">
                                 <use xlink:href="#login"></use>
@@ -1050,7 +1082,7 @@
                     <p class="footer__work-time">c 10:00 до 19:00 (по Мск)</p>
                 </div>
                 <div class="footer__top-right">
-                    <button class="button button--secondary button--big" type="button">
+                    <button class="button button--secondary button--big" type="button" data-fancybox="request" data-src="#request">
                         <span>Оставить заявку</span>
                         <svg class="icon icon--big">
                             <use xlink:href="#envelope"></use>
@@ -1154,13 +1186,13 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     
-    <script src="js/select2.full.min.js"></script>
-    <script src="js/select2-addon.js"></script>
+    <!--<script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>-->
     
-    <script src="js/jquery.inputmask.min.js"></script>
-    <script src="js/inputmask-init.js"></script>
+    <!--<script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/inputmask-init.js"></script>-->
     
-    <script src="js/scroll-compensate.js"></script>
+    <!--<script src="js/scroll-compensate.js"></script>-->
     
     <script src="js/main.js"></script>
     
@@ -1169,6 +1201,13 @@
     <script src="js/header.js"></script>
     
     <script src="js/header-menu.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/inputs.js"></script>
+    
+    <script src="js/phone-input.js"></script>
 
     <script src="js/swiper-bundle.min.js"></script>
 

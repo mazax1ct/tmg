@@ -205,18 +205,21 @@ hr {
     height: 1px;
     margin-top: 20px;
     margin-bottom: 20px;
-    position: relative;
 
-    &::after {
-        background-color: $primary-ghostH;
-        content: '';
-        height: 100%;
-        left: 50%;
-        position: absolute;
-        top: 0;
-        transform: translateX(-50%);
-        width: 100vw;
-        z-index: -1;
+    &.wide {
+        position: relative;
+
+        &::after {
+            background-color: $primary-ghostH;
+            content: '';
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
     }
 }
 
@@ -405,4 +408,8 @@ p + .title-block--type_1 {
 
 .text-right {
     text-align: right;
+}
+
+.required {
+    color: $secondary-medium;
 }

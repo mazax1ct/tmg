@@ -21,23 +21,6 @@
     //= template/style.html
 
     <!--стили подключаемых на страние блоков-->
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/logo.css" />
-    <link rel="stylesheet" href="css/location.css" />
-    <link rel="stylesheet" href="css/header-phone.css" />
-    <link rel="stylesheet" href="css/header-menu.css" />
-    <link rel="stylesheet" href="css/catalog-menu.css" />
-    <link rel="stylesheet" href="css/search-bar.css" />
-    <link rel="stylesheet" href="css/search-item.css" />
-    <link rel="stylesheet" href="css/iconed-link.css" />
-    <link rel="stylesheet" href="css/notificator.css" />
-    <link rel="stylesheet" href="css/dropdown.css" />
-    <link rel="stylesheet" href="css/cart-block.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/footer-menu.css" />
-    <link rel="stylesheet" href="css/float-bar.css" />
-
-
     <link rel="stylesheet" href="css/breadcrumbs.css" />
     <link rel="stylesheet" href="css/pagination-block.css" />
     <link rel="stylesheet" href="css/pager.css" />
@@ -114,6 +97,16 @@
                 создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг,
                 меня
                 часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+            <hr class="wide">
+            <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким
+                большим
+                художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого
+                ручья и,
+                прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость
+                всемогущего,
+                создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг,
+                меня
+                часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
             <div class="title-block">
                 <h2>Заголовок типа h2</h2>
             </div>
@@ -168,24 +161,28 @@
             </ol>
             <h5>Заголовок типа h5</h5>
 
-            <label class="input-label input-label--type_1">
-                <span class="input-label__label-text">обращение</span>
+            <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="input" type="text" value="" placeholder="текст..." />
+                    <input class="js-input input" type="text" value="" />
+                    <span class="input-label__label-text">Обращение <span class="required">*</span></span>
                 </span>
             </label>
 
-            <label class="input-label input-label--type_1">
-                <span class="input-label__label-text">обращение</span>
-                <span class="input-label__input-container">
-                    <input class="input" type="text" value="" placeholder="текст..." disabled />
+            <br>
+
+            <label class="input-label">
+                <span class="js-input input-label__input-container">
+                    <input class="input" type="text" value="" disabled />
+                    <span class="input-label__label-text">Обращение</span>
                 </span>
             </label>
 
-            <label class="input-label input-label--type_1">
-                <span class="input-label__label-text">Электронная почта</span>
+            <br>
+
+            <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="input" type="text" value="no1knows_where2find.me@gmail.com" placeholder="текст..." disabled />
+                    <input class="js-input input" type="text" value="no1knows_where2find.me@gmail.com" disabled />
+                    <span class="input-label__label-text">Электронная почта</span>
                     <span class="input-label__input-status input-label__input-status--verified" title="Email подтверждён">
                         <svg class="icon icon--big">
                             <use xlink:href="#verified"></use>
@@ -194,9 +191,12 @@
                 </span>
             </label>
 
-            <label class="input-label input-label--type_2">
+            <br>
+
+            <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" placeholder="текст..." />
+                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
+                    <span class="input-label__label-text">Адрес</span>
                     <button class="input-label__input-action input-label__input-action--delete" type="button" title="Удалить">
                         <svg class="icon icon--big">
                             <use xlink:href="#delete"></use>
@@ -205,9 +205,12 @@
                 </span>
             </label>
 
-            <label class="input-label input-label--type_2">
+            <br>
+
+            <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" placeholder="текст..." />
+                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
+                    <span class="input-label__label-text">Адрес</span>
                     <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
                         <svg class="icon icon--big">
                             <use xlink:href="#close"></use>
@@ -216,9 +219,12 @@
                 </span>
             </label>
 
-            <label class="input-label input-label--type_2">
+            <br>
+
+            <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="input deleted" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" placeholder="текст..." disabled />
+                    <input class="js-input input deleted" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled />
+                    <span class="input-label__label-text">Адрес</span>
                     <button class="input-label__input-action input-label__input-action--undo" type="button" title="Восстановить">
                         <svg class="icon icon--big">
                             <use xlink:href="#undo"></use>
@@ -227,13 +233,47 @@
                 </span>
             </label>
 
-            <label class="input-label input-label--type_2">
+            <br>
+
+            <label class="phone-input">
+                <span class="phone-input__input-container">
+                    <button class="phone-input__prefix" type="button">
+                        <span class="phone-input__prefix-text">+7</span>
+                        <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
+                            <use xlink:href="#arrow_down"></use>
+                        </svg>
+                    </button>
+                    <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
+                    <span class="phone-input__pseudo-container"></span>
+                    <div class="phone-input__dropdown dropdown">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
+                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
+                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
+                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
+                        </ul>
+                    </div>
+                    <button class="phone-input__input-action phone-input__input-action--clear" type="button" title="Очистить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+
+            <br>
+
+            <label class="input-label">
                 <textarea class="textarea" placeholder="текст..."></textarea>
             </label>
 
-            <label class="input-label input-label--type_2">
+            <br>
+
+            <label class="input-label">
                 <textarea class="textarea" placeholder="текст..." disabled></textarea>
             </label>
+
+            <br>
 
             <h6>Чекбоксы</h6>
             <ul class="checkboxes-list">
@@ -341,6 +381,28 @@
                     </label>
                 </li>
             </ul>
+
+            <h6>Input type FILE</h6>
+
+            <div class="input-file">
+                <input id="input_1" type="file">
+                <label class="input-file__text-block ready" for="input_1">Прикрепить файл +</label>
+            </div>
+
+            <br>
+
+            <div class="input-file">
+                <input id="input_1" type="file">
+                <label class="input-file__text-block preload" for="input_1"><span class="input-file__text">гениальная_идея.pdf</span></label>
+                <span class="input-file__placeholder">Прикрепить реквизиты</span>
+                <button class="input-file__delete" type="button" title="Очистить">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <br>
 
             <div class="title-block title-block--type_2">
                 <h2>Кнопки</h2>
@@ -687,6 +749,8 @@
     //= template/footer.html
 
     //= template/float-bar.html
+
+    //= template/modals.html
 
     //= template/scripts.html
 

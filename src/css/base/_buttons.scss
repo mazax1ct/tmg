@@ -76,6 +76,10 @@
         }
     }
 
+    &--wide {
+        width: 100%;
+    }
+
     &.disabled,
     &:disabled {
         cursor: default;
@@ -95,6 +99,22 @@
 
         &:last-child {
             margin-left: 8px;
+        }
+    }
+
+    &--just_icon {
+        min-width: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        .icon {
+            &:first-child {
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-left: 0;
+            }
         }
     }
 }

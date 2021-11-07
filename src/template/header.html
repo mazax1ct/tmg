@@ -1,4 +1,4 @@
-<header class="header compensate-scrollbar compensate-for-scrollbar">
+<header class="header">
     <div class="header__top container">
         <!--если главная, то меняем ссылку на div без href-->
         <a class="logo" href="#" title="На главную">
@@ -92,7 +92,7 @@
             </div>
         </div>
     </div>
-    <div class="header__bottom">
+    <div class="header__bottom compensate-for-scrollbar">
         <div class="header__bottom-inner container">
             <button class="js-catalog-toggler catalog-toggler" type="button">
                 <svg class="icon icon--big">
@@ -343,7 +343,7 @@
                 </div>
             </div>
             <div class="header__bottom-links">
-                <a class="iconed-link" href="#">
+                <a class="iconed-link" href="javascript:void(0)" data-fancybox="help_popup" data-src="#help_popup">
                     <span class="iconed-link__icon-container">
                         <svg class="icon icon--big">
                             <use xlink:href="#help"></use>
@@ -351,7 +351,7 @@
                     </span>
                     <span class="iconed-link__title">Помощь</span>
                 </a>
-                <a class="iconed-link iconed-link--type_1" href="#">
+                <a class="iconed-link iconed-link--type_1" href="javascript:void(0)" data-fancybox="modal_1" data-src="#modal_1">
                     <span class="iconed-link__icon-container">
                         <svg class="icon icon--big">
                             <use xlink:href="#login"></use>

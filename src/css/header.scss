@@ -3,27 +3,6 @@
 .header {
     min-height: 136px;
 
-    &.scrolled {
-        .header__bottom {
-            left: 0;
-            position: fixed;
-            right: 0;
-            top: 0;
-            z-index: 10;
-
-            &::after {
-                background-color: $primary-ghostH;
-                content: '';
-                height: 1px;
-                left: 0;
-                position: absolute;
-                top: 100%;
-                width: 100%;
-                z-index: 1;
-            }
-        }
-    }
-
     &__top {
         align-items: center;
         display: flex;
@@ -86,6 +65,29 @@
         background-color: #fff;
         position: relative;
         z-index: 1;
+
+        &:not(.scrolled) {
+            margin: 0;
+        }
+
+        &.scrolled {
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
+
+            &::after {
+                background-color: $primary-ghostH;
+                content: '';
+                height: 1px;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+        }
     }
 
     &__bottom-inner {

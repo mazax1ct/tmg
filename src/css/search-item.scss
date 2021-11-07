@@ -45,7 +45,9 @@
         width: 40px;
 
         img {
+            display: block;
             mix-blend-mode: multiply;
+            width: 100%;
         }
 
         .icon {
@@ -121,6 +123,12 @@
 
         &:not(:last-child) {
             margin-right: 8px;
+        }
+
+        img {
+            display: block;
+            mix-blend-mode: multiply;
+            width: 100%;
         }
     }
 

@@ -1,0 +1,197 @@
+@import "base/_variables.scss";
+
+.popup {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 -3px 12px 0 rgba(#00508A, 0.05), 0 6px 12px -6px rgba(#2574AC, 0.08), 0 8px 24px -4px rgba(#2772A8, 0.08);
+    display: none;
+    padding: 24px 20px;
+    width: 100%;
+
+    &--400 {
+        max-width: 400px;
+    }
+
+    &--460 {
+        max-width: 460px;
+    }
+
+    &--656 {
+        max-width: 656px;
+        padding: 32px 32px 24px;
+    }
+
+    &--1204 {
+        max-width: 1204px;
+    }
+
+    &__close {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        padding: 0;
+        top: 12px;
+        right: 10px;
+        width: 40px;
+        z-index: 1;
+
+        &:focus,
+        &:hover {
+            .icon {
+                stroke: $text-full;
+            }
+        }
+
+        .icon {
+            stroke: $text-medium;
+        }
+    }
+
+    &__header {
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        margin-top: 22px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__enter-block {
+        align-items: center;
+        display: flex;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        justify-content: space-between;
+        letter-spacing: 0.15px;
+        line-height: 1.21428;
+        margin-top: -10px;
+        margin-bottom: 14px;
+    }
+
+    &__enter-title {
+        color: $text-full;
+        font-weight: 600;
+    }
+
+    &__enter-button {
+        background-color: transparent;
+        border: none;
+        color: $primary-medium;
+        cursor: pointer;
+        font-weight: 500;
+        padding: 10px 0;
+        transition: color 0.3s;
+
+        &:focus,
+        &:hover {
+            color: $primary-full;
+        }
+    }
+
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &--type_1 {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
+        &--type_2 {
+            display: flex;
+        }
+    }
+
+    &__forgot-block {
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.15px;
+        line-height: 1.21428;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        text-align: right;
+
+        a {
+            color: $primary-medium;
+            display: inline-block;
+            font-weight: 500;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            vertical-align: top;
+
+            &:focus,
+            &:hover {
+                color: $primary-full;
+            }
+        }
+    }
+
+    &__back-button {
+        margin-right: 16px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.42857;
+    }
+
+    .checkbox-label {
+        font-size: 14px;
+        line-height: 1.42857;
+    }
+
+    .checkbox-text,
+    .radio-text {
+        padding-top: 3px;
+    }
+
+    .checkbox-label--tiny {
+        font-size: 10px;
+        line-height: 1.4;
+        padding-left: 24px;
+
+        .checkbox-text,
+        .radio-text {
+            padding-top: 2px;
+        }
+
+        .checkbox-icon,
+        .radio-icon {
+            background-size: 16px 16px;
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+    &__recaptcha {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        margin-top: -12px;
+    }
+
+    &__title {
+        color: $text-full;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: 0.35px;
+        margin-bottom: 24px;
+    }
+}

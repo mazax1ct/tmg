@@ -1,0 +1,188 @@
+@import "base/_variables.scss";
+
+.phone-input {
+    display: block;
+
+    &__input-container {
+        align-items: center;
+        display: flex;
+        position: relative;
+
+        &:hover {
+            .phone-input__pseudo-container {
+                border-color: $primary-full;
+            }
+        }
+    }
+
+    &__pseudo-container {
+        border: 1px solid $primary-ghostL;
+        background-color: #fff;
+        border-radius: 4px;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        transition: background-color 0.3s, border-color 0.3s;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__prefix {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        font-size: 16px;
+        height: 40px;
+        line-height: 19px;
+        letter-spacing: 0.35px;
+        padding: 0 0 0 12px;
+        position: relative;
+        z-index: 1;
+
+        &:focus,
+        &:hover {
+            color: $text-full;
+
+            .icon {
+                fill: $text-full;
+            }
+        }
+
+        &.is-active {
+            .icon {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .icon {
+            fill: $text-medium;
+            transform-origin: 50% 50% 0;
+        }
+    }
+
+    &__input {
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        color: $text-full;
+        font-size: 16px;
+        height: 40px;
+        line-height: 19px;
+        letter-spacing: 0.35px;
+        padding: 9px 52px 9px 4px;
+        text-overflow: ellipsis;
+        transition: color 0.3s;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        &:hover {
+            & + .phone-input__pseudo-container {
+                border-color: $primary-full;
+            }
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+
+            & + .phone-input__pseudo-container {
+                border-color: $primary-medium;
+            }
+        }
+
+        &.error {
+            border-color: $secondary-full;
+
+            &:focus {
+                border-color: $secondary-full;
+            }
+        }
+
+        &:disabled {
+            background-color: $background-alt;
+            color: $text-full;
+
+            &:hover {
+                border-color: $primary-ghostL;
+            }
+        }
+
+        &:-ms-input-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &.deleted {
+            color: $text-low;
+        }
+    }
+
+    &__input-action,
+    &__input-status {
+        align-items: center;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        z-index: 2;
+    }
+
+    &__input-status {
+        &--verified {
+            svg {
+                stroke: $green;
+                stroke-width: 1.6px;
+            }
+        }
+    }
+
+    &__input-action {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &--delete {
+            svg {
+                stroke: $secondary-medium;
+                stroke-width: 1.4px;
+            }
+        }
+
+        &--clear {
+            svg {
+                stroke: $text-medium;
+                stroke-width: 1.4px;
+            }
+        }
+
+        &--undo {
+            svg {
+                stroke: $primary-medium;
+                stroke-width: 1.4px;
+            }
+        }
+    }
+
+    &__dropdown {
+        min-width: 0;
+        width: 160px;
+    }
+}
