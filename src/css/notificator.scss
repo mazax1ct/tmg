@@ -1,10 +1,12 @@
 @import "base/_variables.scss";
 
 .notificator {
+    align-items: center;
     border: 2px solid #fff;
     background-color: $secondary-medium;
     border-radius: 9px;
     color: #fff;
+    display: flex;
     font-size: 12px;
     font-weight: 700;
     height: 18px;

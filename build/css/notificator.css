@@ -1,1 +1,1 @@
-.notificator{font-size:12px;font-weight:700;line-height:14px;min-width:19px;height:18px;padding-right:4px;padding-left:4px;letter-spacing:.35px;color:#fff;border:2px solid #fff;border-radius:9px;background-color:#fb3449}
+.notificator{font-size:12px;font-weight:700;line-height:14px;display:-webkit-box;display:-ms-flexbox;display:flex;min-width:19px;height:18px;padding-right:4px;padding-left:4px;letter-spacing:.35px;color:#fff;border:2px solid #fff;border-radius:9px;background-color:#fb3449;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
