@@ -21,7 +21,11 @@
     //= template/style.html
 
     <!--стили подключаемых на страние блоков-->
-
+    <link rel="stylesheet" href="plugins_css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main-slider.css" />
+    <link rel="stylesheet" href="css/banners.css" />
+    <link rel="stylesheet" href="css/cards-list.css" />
+    <link rel="stylesheet" href="css/card.css" />
 </head>
 
 <body>
@@ -33,7 +37,135 @@
 
     <main class="page-content">
         <div class="container">
+            <div class="js-main-slider main-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')" href="#">
+                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
+                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')">
+                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
+                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')">
+                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
+                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <button class="swiper-button-prev" type="button" title="Назад">
+                    <svg class="icon">
+                        <use xlink:href="#chevron_left"></use>
+                    </svg>
+                </button>
+                <button class="swiper-button-next" type="button" title="Вперёд">
+                    <svg class="icon">
+                        <use xlink:href="#chevron_right"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="title-block">
+                <h1 class="text-center">Бизнес-сувениры и корпоративные подарки</h1>
+            </div>
 
+            <div class="banners">
+                <div class="banners__item">
+                    <a class="banner" href="#">
+                        <div class="banner__image">
+                            <img src="images/content/banners/img_1.jpg" srcset="images/content/banners/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="banner__inner">
+                            <p class="banner__title">Новые коллекции</p>
+                            <p class="banner__text">Кружки, ручки, свистелки</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="banners__item">
+                    <a class="banner" href="#">
+                        <div class="banner__image">
+                            <img src="images/content/banners/img_2.jpg" srcset="images/content/banners/img_2@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="banner__inner">
+                            <p class="banner__title">Идеальные чашки</p>
+                            <p class="banner__text">Для чайных энтузиастов</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="banners">
+                <div class="banners__item banners__item--type_1">
+                    <a class="banner" href="#">
+                        <div class="banner__image">
+                            <img class="align-left" src="images/content/banners/img_3.jpg" srcset="images/content/banners/img_3@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="banner__inner text-right">
+                            <p class="banner__title">Коллекции для<br> самых нежных</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="banners__item banners__item--type_1">
+                    <a class="banner" href="#">
+                        <div class="banner__image">
+                            <img class="align-right" src="images/content/banners/img_4.jpg" srcset="images/content/banners/img_4@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="banner__inner text-center">
+                            <p class="banner__title">Создаём уютную<br> атмосферу</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="banners__item banners__item--type_1">
+                    <a class="banner" href="#">
+                        <div class="banner__image">
+                            <img class="align-right" src="images/content/banners/img_5.jpg" srcset="images/content/banners/img_5@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="banner__inner">
+                            <p class="banner__title">Подарки для<br> спорта</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Новинки каталога</h2>
+                <a href="#">Смотреть всё</a>
+            </div>
+
+            <div class="cards-list">
+                <div class="cards-list__item">
+                    <div class="card">
+                        <div class="card__inner">
+                            <a class="card__link" href="detail.html">
+                                <span class="card__image">
+                                    <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                </span>
+                                <span class="card__image-togglers">
+                                    <span class="card__image-toggler is-active" data-src="images/content/cards/img_3.jpg" data-srcset="images/content/cards/img_3@2x.jpg 2x"></span>
+                                    <span class="card__image-toggler" data-src="images/content/cards/img_1.jpg" data-srcset="images/content/cards/img_1@2x.jpg 2x"></span>
+                                    <span class="card__image-toggler" data-src="images/content/cards/img_3.jpg" data-srcset="images/content/cards/img_3@2x.jpg 2x"></span>
+                                    <span class="card__image-toggler" data-src="images/content/cards/img_1.jpg" data-srcset="images/content/cards/img_1@2x.jpg 2x"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Мы рекомендуем</h2>
+                <a href="#">Смотреть всё</a>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Лучшие предложения!</h2>
+                <a href="#">Смотреть всё</a>
+            </div>
         </div>
     </main>
 
@@ -47,6 +179,9 @@
 
     <script src="js/preloader.js"></script>
 
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main-slider.js"></script>
+    <script src="js/card.js"></script>
 </body>
 
 </html>

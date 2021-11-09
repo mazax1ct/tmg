@@ -147,34 +147,6 @@
         line-height: 1.42857;
     }
 
-    .checkbox-label {
-        font-size: 14px;
-        line-height: 1.42857;
-    }
-
-    .checkbox-text,
-    .radio-text {
-        padding-top: 3px;
-    }
-
-    .checkbox-label--tiny {
-        font-size: 10px;
-        line-height: 1.4;
-        padding-left: 24px;
-
-        .checkbox-text,
-        .radio-text {
-            padding-top: 2px;
-        }
-
-        .checkbox-icon,
-        .radio-icon {
-            background-size: 16px 16px;
-            height: 16px;
-            width: 16px;
-        }
-    }
-
     &__recaptcha {
         align-items: center;
         display: flex;

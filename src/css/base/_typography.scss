@@ -344,6 +344,19 @@ hr {
             margin-bottom: 0;
         }
     }
+
+    & + .banners {
+        margin-top: -12px;
+    }
+}
+
+.banners + .title-block {
+    @media(min-width: 768px) {
+        margin-top: 10px;
+    }
+    @media(min-width: 1024px) {
+        margin-top: 20px;
+    }
 }
 
 p + .title-block--type_1 {
