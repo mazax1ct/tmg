@@ -40,21 +40,36 @@
             <div class="js-main-slider main-slider swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')" href="#">
-                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
-                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        <a class="main-slider__slide" href="#">
+                            <span class="main-slider__slide-image">
+                                <img src="images/content/main-slider/img_1.jpg" alt="">
+                            </span>
+                            <span class="main-slider__slide-container">
+                                <span class="main-slider__slide-title">Вперёд к жаркому лету!</span>
+                                <span class="main-slider__slide-text">Путешествуем к морю</span>
+                            </span>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')">
-                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
-                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        <div class="main-slider__slide">
+                            <span class="main-slider__slide-image">
+                                <img src="images/content/main-slider/img_1.jpg" alt="">
+                            </span>
+                            <span class="main-slider__slide-container">
+                                <span class="main-slider__slide-title">Вперёд к жаркому лету!</span>
+                                <span class="main-slider__slide-text">Путешествуем к морю</span>
+                            </span>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="main-slider__slide" style="background-image: url('images/content/main-slider/img_1.jpg')">
-                            <p class="main-slider__slide-title">Вперёд к жаркому лету!</p>
-                            <p class="main-slider__slide-text">Путешествуем к морю</p>
+                        <div class="main-slider__slide">
+                            <span class="main-slider__slide-image">
+                                <img src="images/content/main-slider/img_1.jpg" alt="">
+                            </span>
+                            <span class="main-slider__slide-container">
+                                <span class="main-slider__slide-title">Вперёд к жаркому лету!</span>
+                                <span class="main-slider__slide-text">Путешествуем к морю</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -73,7 +88,6 @@
             <div class="title-block">
                 <h1 class="text-center">Бизнес-сувениры и корпоративные подарки</h1>
             </div>
-
             <div class="banners">
                 <div class="banners__item">
                     <a class="banner" href="#">
@@ -98,7 +112,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="banners">
                 <div class="banners__item banners__item--type_1">
                     <a class="banner" href="#">
@@ -131,40 +144,26 @@
                     </a>
                 </div>
             </div>
-
             <div class="title-block title-block--type_2">
                 <h2>Новинки каталога</h2>
                 <a href="#">Смотреть всё</a>
             </div>
-
-            <div class="cards-list">
-                <div class="cards-list__item">
-                    <div class="card">
-                        <div class="card__inner">
-                            <a class="card__link" href="detail.html">
-                                <span class="card__image">
-                                    <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
-                                </span>
-                                <span class="card__image-togglers">
-                                    <span class="card__image-toggler is-active" data-src="images/content/cards/img_3.jpg" data-srcset="images/content/cards/img_3@2x.jpg 2x"></span>
-                                    <span class="card__image-toggler" data-src="images/content/cards/img_1.jpg" data-srcset="images/content/cards/img_1@2x.jpg 2x"></span>
-                                    <span class="card__image-toggler" data-src="images/content/cards/img_3.jpg" data-srcset="images/content/cards/img_3@2x.jpg 2x"></span>
-                                    <span class="card__image-toggler" data-src="images/content/cards/img_1.jpg" data-srcset="images/content/cards/img_1@2x.jpg 2x"></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards-list cards-list--type_1">
+                //= template/cards-list.html
             </div>
-
             <div class="title-block title-block--type_2">
                 <h2>Мы рекомендуем</h2>
                 <a href="#">Смотреть всё</a>
             </div>
-
+            <div class="cards-list cards-list--type_1">
+                //= template/cards-list.html
+            </div>
             <div class="title-block title-block--type_2">
                 <h2>Лучшие предложения!</h2>
                 <a href="#">Смотреть всё</a>
+            </div>
+            <div class="cards-list cards-list--type_1">
+                //= template/cards-list.html
             </div>
         </div>
     </main>

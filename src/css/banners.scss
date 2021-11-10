@@ -85,11 +85,13 @@
 
         img {
             border-radius: 4px;
+            display: block;
             height: 288px;
             object-fit: cover;
             object-position: center;
             transition: transform 0.3s;
             transform: scale(1);
+            width: 100%;
 
             &.align-left {
                 object-position: 0 50%;

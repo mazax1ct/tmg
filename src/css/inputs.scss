@@ -96,14 +96,13 @@
 .input,
 .textarea {
     background-color: #fff;
-    border: 1px solid $primary-ghostL;
+    border: 1px solid $primary-ghostH;
     border-radius: 4px;
     color: $text-full;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.35px;
     padding: 10px 12px;
-    text-overflow: ellipsis;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
     width: 100%;
 
@@ -152,6 +151,8 @@
 
 .input {
     height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &.deleted {
         color: $text-low;

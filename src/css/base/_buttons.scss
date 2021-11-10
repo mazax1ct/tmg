@@ -58,14 +58,16 @@
 
     &--big {
         height: 40px;
+        line-height: 1.25;
         padding: 10px 16px;
     }
 
     &--small {
         font-size: 14px;
         font-weight: 500;
-        letter-spacing: 0.15px;
         height: 24px;
+        letter-spacing: 0.15px;
+        line-height: 1.21428;
         padding: 3px 12px 4px;
 
         &.disabled,
@@ -115,6 +117,54 @@
             &:last-child {
                 margin-left: 0;
             }
+        }
+    }
+
+    &--primary_ghost {
+        background-color: $primary-ghostL;
+        color: $primary-medium;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+
+        &:focus,
+        &:hover {
+            background-color: $primary-full;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+
+            .icon {
+                stroke: #fff;
+            }
+        }
+
+        .icon {
+            stroke: $primary-medium;
+        }
+    }
+
+    &--secondary_ghost {
+        background-color: $secondary-ghostL;
+        color: $secondary-medium;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+
+        &:focus,
+        &:hover {
+            background-color: $secondary-full;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+
+            .icon {
+                stroke: #fff;
+            }
+        }
+
+        .icon {
+            stroke: $secondary-medium;
         }
     }
 }

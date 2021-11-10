@@ -346,7 +346,9 @@ hr {
     }
 
     & + .banners {
-        margin-top: -12px;
+        @media(min-width: 1024px) {
+            margin-top: -12px;
+        }
     }
 }
 

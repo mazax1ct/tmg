@@ -1,0 +1,38 @@
+@import "base/_variables.scss";
+
+.catalog-section {
+    @media(min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 28px;
+    }
+
+    &__filter {
+        @media(min-width: 1024px) {
+            background-color: $background-alt;
+            display: block;
+            min-width: 240px;
+            width: 240px;
+        }
+    }
+
+    &__list {
+        @media(min-width: 1024px) {
+            flex-grow: 1;
+            padding-left: 16px;
+        }
+        @media(min-width: 1350px) {
+            padding-left: 32px;
+        }
+
+        .tags {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list-top {
+        background-color: $background-alt;
+        min-height: 56px;
+        margin-bottom: 20px;
+    }
+}
