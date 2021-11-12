@@ -8,15 +8,18 @@ $(document).on('mouseenter focusin', '.card__image-toggler', function () {
 
 $(document).on('click', '.js-open-dropdown', function () {
   var _this = $(this);
-  var dropdown = $(this).closest('.card').find('.card__dropdown');
+  var card = _this.closest('.card');
+  var dropdown = card.find('.card__dropdown');
 
   if(_this.hasClass('is-active')) {
     dropdown.removeClass('is-open');
     setTimeout(function() {
       dropdown.removeClass('is-active');
+      card.removeClass('is-open');
     }, 300);
     _this.removeClass('is-active');
   } else {
+    card.addClass('is-open');
     dropdown.addClass('is-active');
     setTimeout(function() {
       dropdown.addClass('is-open');
@@ -28,13 +31,15 @@ $(document).on('click', '.js-open-dropdown', function () {
 });
 
 $(document).on('click', '.js-close-dropdown', function () {
-  var dropdown = $(this).closest('.card').find('.card__dropdown');
+  var card = $(this).closest('.card');
+  var dropdown = card.find('.card__dropdown');
 
   dropdown.removeClass('is-open');
   setTimeout(function() {
     dropdown.removeClass('is-active');
+    card.removeClass('is-open');
   }, 300);
-  $(this).closest('.card').find('.js-open-dropdown').removeClass('is-active');
+  card.find('.js-open-dropdown').removeClass('is-active');
 
   return false;
 });

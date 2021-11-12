@@ -107,7 +107,7 @@
         z-index: 1;
     }
 
-    &__color {
+    &__color-container {
         align-items: center;
         display: flex;
 
@@ -118,6 +118,22 @@
             min-width: 18px;
             width: 18px;
         }
+    }
+
+    &__color {
+        border: 1px solid $text-low;
+        border-radius: 50%;
+        height: 18px;
+        margin-right: 8px;
+        padding: 1px;
+        width: 18px;
+    }
+
+    &__color-inner {
+        border-radius: 50%;
+        display: block;
+        height: 14px;
+        width: 14px;
     }
 
     &__switch {

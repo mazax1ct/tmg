@@ -15,9 +15,12 @@
     &--primary {
         background-color: $primary-medium;
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.2px;
+        @media(min-width: 375px) {
+            font-size: 16px;
+        }
 
         &:focus,
         &:hover {
@@ -37,9 +40,12 @@
     &--secondary {
         background-color: $secondary-medium;
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.2px;
+        @media(min-width: 375px) {
+            font-size: 16px;
+        }
 
         &:focus,
         &:hover {

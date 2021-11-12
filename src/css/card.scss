@@ -18,6 +18,14 @@
         }
     }
 
+    &.is-open {
+        z-index: 3;
+
+        .card__inner {
+            box-shadow: 0 2px 4px -2px rgba(#254082, 0.12), 0 4px 4px -2px rgba(#324F95, 0.08);
+        }
+    }
+
     &:hover {
         z-index: 3;
 
@@ -401,8 +409,6 @@
         width: 140px;
 
         .input {
-            text-align: center;
-
             &:-ms-input-placeholder {
                 color: $text-low;
                 text-align: left;

@@ -16,6 +16,10 @@
         padding-bottom: 10px;
         transition: background-color 0.3s, color 0.3s;
 
+        &--not_root {
+            padding-left: 8px;
+        }
+
         &:focus,
         &:hover {
             color: $primary-medium;
@@ -34,7 +38,7 @@
             }
 
             .icon {
-                stroke: $text-medium;
+                stroke: $primary-full;
             }
         }
 
