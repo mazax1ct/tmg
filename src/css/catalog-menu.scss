@@ -218,6 +218,10 @@
         @media(min-width: 1200px) {
             columns: 3;
         }
+
+        li {
+            overflow: hidden;
+        }
     }
 
     &__category-link {

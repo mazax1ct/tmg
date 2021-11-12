@@ -29,6 +29,10 @@
         margin-bottom: 34px;
     }
 
+    li {
+        overflow: hidden;
+    }
+
     a {
         color: $text-medium;
         display: block;

@@ -62,29 +62,27 @@
         }
     }
 
-    &__links-item {
-        padding-left: 24px;
-        position: relative;
-
-        &::before {
-            color: inherit;
-            content: '•';
-            left: 0;
-            line-height: 1;
-            margin-top: -1px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
-            width: 24px;
-        }
-    }
+    &__links-item {}
 
     &__link {
         align-items: center;
         color: $text-low;
         display: flex;
         min-height: 56px;
+        position: relative;
+        padding-left: 24px;
+
+        &::before {
+            color: inherit;
+            content: '•';
+            left: 0;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 24px;
+        }
     }
 }
 

@@ -1,0 +1,58 @@
+@import "base/_variables.scss";
+
+.dotted-links {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 1.21428;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+
+    &--type_1 {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        overflow: hidden;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        break-inside: avoid-column;
+        overflow-wrap: initial;
+        @media(min-width: 600px) {
+            columns: 2;
+        }
+        @media(min-width: 768px) {
+            columns: 3;
+        }
+
+        li {
+            overflow: hidden;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: $text-medium;
+        display: flex;
+        min-height: 40px;
+        position: relative;
+        padding-left: 20px;
+
+        &:focus,
+        &:hover {
+            color: $primary-full;
+        }
+
+        &::before {
+            content: '•';
+            left: 0;
+            line-height: 1;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+        }
+    }
+}
