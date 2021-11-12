@@ -87,9 +87,11 @@
     
     <!--стили подключаемых плагинов-->
     <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="plugins_css/select2.css" />
     
     <!--стили модификаторы подключаемых плагинов-->
     <link rel="stylesheet" href="css/fancybox-modifier.css" />
+    <link rel="stylesheet" href="css/select.css" />
 
     <!--стили подключаемых на страние блоков-->
     <link rel="stylesheet" href="plugins_css/swiper-bundle.min.css" />
@@ -230,6 +232,23 @@
         </symbol>
         <symbol id="check" viewBox="0 0 24 24">
             <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid" viewBox="0 0 24 24">
+            <path d="M3 3H10V10H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 3H21V10H14V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 14H21V21H14V14Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 14H10V21H3V14Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid_2" viewBox="0 0 24 24">
+            <path d="M3 3H7V7H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 10H7V14H3V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 17H7V21H3V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 3H14V7H10V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 10H14V14H10V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 17H14V21H10V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 3H21V7H17V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 10H21V14H17V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 17H21V21H17V17Z" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
     </svg>
 
@@ -675,7 +694,7 @@
                                     </a>
                                 </div>
                                 <div class="mini-cart__buttons-block">
-                                    <button class="mini-cart__clear" type="button" title="Очистить корзину">
+                                    <button class="mini-cart__clear button button--secondary button--big button--just_icon" type="button" title="Очистить корзину">
                                         <svg class="icon icon--big">
                                             <use xlink:href="#delete"></use>
                                         </svg>
@@ -1243,49 +1262,81 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -1354,54 +1405,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -1488,54 +1571,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -1636,54 +1751,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -1753,54 +1900,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -1865,53 +2044,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -1972,53 +2188,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -2079,53 +2332,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -2186,53 +2476,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -2299,49 +2626,81 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -2410,54 +2769,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -2544,54 +2935,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -2692,54 +3115,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -2809,54 +3264,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -2921,53 +3408,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -3028,53 +3552,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -3135,53 +3696,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -3242,53 +3840,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -3355,49 +3990,81 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -3466,54 +4133,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -3600,54 +4299,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -3748,54 +4479,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -3865,54 +4628,86 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="14" placeholder="до 1 580 шт">
-                                    <button class="card__input-action" type="button" title="Очистить">
-                                        <svg class="icon icon--small">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
@@ -3977,53 +4772,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -4084,53 +4916,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -4191,53 +5060,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -4298,53 +5204,90 @@
                             <div class="card__tirage">
                                 <span class="card__size">XS /44</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">S / 46</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                            <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">M /48</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">L / 50</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">XL / 52</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">2XL / 54</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">3XL / 56</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__tirage">
                                 <span class="card__size">4XL / 58</span>
                                 <div class="card__input-container">
-                                    <input class="card__input" type="text" value="" placeholder="до 1 580 шт">
+                                    <label class="input-label input-label--small">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="card__buttons card__buttons--type_1">
-                                <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                <button class="button button--primary button--big" type="button">Добавить</button>
                                 <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
                                     <svg class="icon icon--big">
                                         <use xlink:href="#close"></use>
@@ -4675,16 +5618,24 @@
             </ul>
         </div>
     </div>
+    
+    <div id="filter_reset" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Сбросить фильтры?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Данное действие необратимо!</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, сбросить</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     
-    <!--<script src="js/select2.full.min.js"></script>
-    <script src="js/select2-addon.js"></script>-->
-    
-    <!--<script src="js/jquery.inputmask.min.js"></script>
-    <script src="js/inputmask-init.js"></script>-->
-    
-    <!--<script src="js/scroll-compensate.js"></script>-->
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
     
     <script src="js/main.js"></script>
     

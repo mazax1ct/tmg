@@ -398,92 +398,25 @@
     }
 
     &__input-container {
-        position: relative;
         width: 140px;
-    }
 
-    &__input {
-        background-color: #fff;
-        border: 1px solid $primary-ghostH;
-        border-radius: 8px;
-        color: $text-full;
-        font-size: 14px;
-        height: 32px;
-        line-height: 19px;
-        letter-spacing: 0.35px;
-        padding: 8px 12px;
-        text-align: center;
-        text-overflow: ellipsis;
-        transition: border-color 0.3s, background-color 0.3s, color 0.3s;
-        width: 100%;
-
-        &:hover {
-            border-color: $primary-full;
-        }
-
-        &:focus {
-            border-color: $primary-medium;
-            box-shadow: none;
-            outline: none;
+        .input {
+            text-align: center;
 
             &:-ms-input-placeholder {
-                opacity: 0;
+                color: $text-low;
+                text-align: left;
             }
 
             &::-moz-placeholder {
-                opacity: 0;
+                color: $text-low;
+                text-align: left;
             }
 
             &::-webkit-input-placeholder {
-                opacity: 0;
+                color: $text-low;
+                text-align: left;
             }
-        }
-
-        &.error {
-            border-color: $secondary-full;
-
-            &:focus {
-                border-color: $secondary-full;
-            }
-        }
-
-        &:-ms-input-placeholder {
-            color: $text-low;
-            opacity: 1;
-            text-align: left;
-        }
-
-        &::-moz-placeholder {
-            color: $text-low;
-            opacity: 1;
-            text-align: left;
-        }
-
-        &::-webkit-input-placeholder {
-            color: $text-low;
-            opacity: 1;
-            text-align: left;
-        }
-    }
-
-    &__input-action {
-        align-items: center;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        height: 32px;
-        justify-content: center;
-        left: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 32px;
-        z-index: 1;
-
-        .icon {
-            stroke-width: 1.6px;
-            stroke: $text-medium;
         }
     }
 }

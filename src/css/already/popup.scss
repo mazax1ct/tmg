@@ -112,6 +112,15 @@
         &--type_2 {
             display: flex;
         }
+
+        &--type_3 {
+            display: flex;
+            justify-content: space-between;
+
+            .button {
+                width: calc(50% - 8px);
+            }
+        }
     }
 
     &__forgot-block {

@@ -27,8 +27,6 @@
         position: relative;
 
         .input {
-            padding-right: 52px;
-
             &.changed + .input-label__label-text,
             &:focus + .input-label__label-text {
                 color: $text-low;
@@ -50,6 +48,7 @@
         justify-content: center;
         left: auto;
         position: absolute;
+        padding: 0;
         right: 0;
         top: 0;
         width: 40px;
@@ -88,6 +87,46 @@
             svg {
                 stroke: $primary-medium;
                 stroke-width: 1.4px;
+            }
+        }
+    }
+
+    &--small {
+        .input {
+            border-radius: 8px;
+            font-size: 14px;
+            height: 32px;
+            line-height: 16px;
+            padding: 8px 12px;
+
+            &:-ms-input-placeholder {
+                color: $text-lowest;
+                opacity: 1;
+            }
+
+            &::-moz-placeholder {
+                color: $text-lowest;
+                opacity: 1;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $text-lowest;
+                opacity: 1;
+            }
+        }
+
+        .input--with_action {
+            padding-right: 44px;
+        }
+
+        .input-label__input-action,
+        .input-label__input-status {
+            height: 32px;
+            width: 32px;
+
+            .icon {
+                height: 16px;
+                width: 16px;
             }
         }
     }
@@ -156,6 +195,10 @@
 
     &.deleted {
         color: $text-low;
+    }
+
+    &--with_action {
+        padding-right: 52px;
     }
 }
 

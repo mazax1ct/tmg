@@ -1,0 +1,362 @@
+<div class="filter">
+    <button class="js-filter-closer filter__close" type="button" title="Закрыть фильтр">
+        <svg class="icon icon--big">
+            <use xlink:href="#close"></use>
+        </svg>
+    </button>
+    <div class="filter__section">
+        <button class="filter__reset button button--secondary_ghost button--big" type="reset" data-fancybox="filter_reset" data-src="#filter_reset">Очистить фильтры</button>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Категория</p>
+        <ul class="filter-menu">
+            <li>
+                <a class="filter-menu__link" href="#">
+                    <svg class="icon icon--medium">
+                        <use xlink:href="#chevron_left"></use>
+                    </svg>
+                    <span>Все категории</span>
+                </a>
+            </li>
+            <li>
+                <a class="filter-menu__link" href="#">
+                    <svg class="icon icon--medium">
+                        <use xlink:href="#chevron_left"></use>
+                    </svg>
+                    <span>Одежда <sup>12345</sup></span>
+                </a>
+            </li>
+            <li>
+                <a class="filter-menu__link" href="#">
+                    <svg class="icon icon--medium">
+                        <use xlink:href="#chevron_left"></use>
+                    </svg>
+                    <span>Женщинам <sup>1234</sup></span>
+                </a>
+            </li>
+            <li>
+                <a class="filter-menu__link is-active" href="#">
+                    <span>Блузы и рубашки <sup>123</sup></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Сроки поставки</p>
+        <label class="checkbox-label checkbox-label--small">
+            <input type="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">1-2 дня</span>
+        </label>
+        <label class="checkbox-label checkbox-label--small">
+            <input type="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">3-6 дней</span>
+        </label>
+        <label class="checkbox-label checkbox-label--small">
+            <input type="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Дольше</span>
+        </label>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Цена с учётом тиража</p>
+        <label class="input-label input-label--small">
+            <span class="input-label__input-container">
+                <input class="input input--with_action" type="text" value="" placeholder="Тираж, шт" />
+            </span>
+        </label>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Цена, ₽</p>
+        <div class="filter__pair-inputs">
+            <div class="filter__limited-input">
+                <label class="input-label input-label--small">
+                    <span class="filter__limit">от</span>
+                    <span class="input-label__input-container">
+                        <input class="input" type="text" value="123456" />
+                    </span>
+                </label>
+            </div>
+            <div class="filter__limited-input">
+                <label class="input-label input-label--small">
+                    <span class="filter__limit">до</span>
+                    <span class="input-label__input-container">
+                        <input class="input" type="text" value="123456" />
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="range-slider">
+            <div class="range-slider__line"></div>
+            <div class="range-slider__bar" style="left: 20%; width: 50%"></div>
+            <button class="range-slider__handle" type="button" style="left: 15%"></button>
+            <button class="range-slider__handle" type="button" style="left: 65%"></button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Количество, шт</p>
+        <div class="filter__limited-input">
+            <label class="input-label input-label--small">
+                <span class="filter__limit">от</span>
+                <span class="input-label__input-container">
+                    <input class="input" type="text" value="123456" />
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Цвет</p>
+        <div class="filter-list">
+            <div class="filter-list__list">
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text"><img src="images/content/filter/img_1.jpg" alt="Белый"> Белый</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text"><img src="images/content/filter/img_2.jpg" alt="Чёрный"> Чёрный</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text"><img src="images/content/filter/img_3.jpg" alt="Синий"> Синий</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text"><img src="images/content/filter/img_4.jpg" alt="Голубой"> Голубой</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text"><img src="images/content/filter/img_5.jpg" alt="Красный"> Красный</span>
+                </label>
+            </div>
+            <button class="filter-list__toggler" type="button">
+                Показать все
+                <svg class="icon icon--small">
+                    <use xlink:href="#chevron_down"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Бренд</p>
+        <div class="filter-list">
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="input input--with_action" type="text" value="" placeholder="Найти..." />
+                </span>
+            </label>
+            <div class="filter-list__list is-open">
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Лучезарный пирожок</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Кепка имени Ильича</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Штуки с рукавами</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">EMPORIO АРМЯНЕ</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">БОЛЬшеви4ка</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Лучезарный пирожок</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Кепка имени Ильича</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Штуки с рукавами</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">EMPORIO АРМЯНЕ</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">БОЛЬшеви4ка</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Лучезарный пирожок</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Кепка имени Ильича</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Штуки с рукавами</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">EMPORIO АРМЯНЕ</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">БОЛЬшеви4ка</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Лучезарный пирожок</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Кепка имени Ильича</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Штуки с рукавами</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">EMPORIO АРМЯНЕ</span>
+                </label>
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">БОЛЬшеви4ка</span>
+                </label>
+            </div>
+            <button class="filter-list__toggler is-active" type="button">
+                Свернуть
+                <svg class="icon icon--small">
+                    <use xlink:href="#chevron_down"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Материал</p>
+        <div class="filter-list">
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="input input--with_action" type="text" value="Хло" placeholder="Найти..." />
+                    <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+            <button class="filter-list__checker" type="button">Выбрать все</button>
+            <div class="filter-list__list is-open">
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Хлопок</span>
+                </label>
+            </div>
+            <button class="filter-list__toggler is-active" type="button">
+                Свернуть
+                <svg class="icon icon--small">
+                    <use xlink:href="#chevron_down"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Материал подкладки</p>
+        <div class="filter-list">
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="input input--with_action" type="text" value="Хло" placeholder="Найти..." />
+                    <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+            <button class="filter-list__checker" type="button">Снять выбор</button>
+            <div class="filter-list__list is-open">
+                <label class="checkbox-label checkbox-label--small">
+                    <input type="checkbox" checked />
+                    <span class="checkbox-icon"></span>
+                    <span class="filter__color checkbox-text">Хлопок</span>
+                </label>
+            </div>
+            <button class="filter-list__toggler is-active" type="button">
+                Свернуть
+                <svg class="icon icon--small">
+                    <use xlink:href="#chevron_down"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <p class="filter__section-title">Варианты нанесения</p>
+        <div class="filter-list">
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="input input--with_action" type="text" value="Хло" placeholder="Найти..." />
+                    <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+            <p class="filter-list__no-results">Ничего не найдено</p>
+            <div class="filter-list__list is-open"></div>
+            <button class="filter-list__toggler is-active" type="button">
+                Свернуть
+                <svg class="icon icon--small">
+                    <use xlink:href="#chevron_down"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="filter__section">
+        <label class="filter__switch" for="switch_1">
+            <span>Высокий рейтинг</span>
+            <div class="switch switch--small">
+                <input id="switch_1" type="checkbox" />
+                <span class="switch__icon"></span>
+            </div>
+        </label>
+        <label class="filter__switch" for="switch_2">
+            <span>Товары со скидкой</span>
+            <div class="switch switch--small">
+                <input id="switch_2" type="checkbox" checked />
+                <span class="switch__icon"></span>
+            </div>
+        </label>
+    </div>
+    <button class="filter__apply button button--primary button--big" type="button">Все фильтры</button>
+</div>

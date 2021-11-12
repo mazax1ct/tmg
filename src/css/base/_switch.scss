@@ -74,4 +74,28 @@
             width: 20px;
         }
     }
+
+    &--small {
+        height: 20px;
+        width: 34px;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            &:checked + .switch__icon {
+                &::after {
+                    left: 16px;
+                }
+            }
+        }
+
+        .switch__icon {
+            height: 20px;
+            width: 34px;
+
+            &::after {
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
 }

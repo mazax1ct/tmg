@@ -23,11 +23,15 @@
     <!--стили подключаемых на страние блоков-->
     <link rel="stylesheet" href="css/breadcrumbs.css" />
     <link rel="stylesheet" href="css/catalog-section.css" />
+    <link rel="stylesheet" href="css/filter.css" />
+    <link rel="stylesheet" href="css/filter-menu.css" />
+    <link rel="stylesheet" href="css/range-slider.css" />
     <link rel="stylesheet" href="css/tags.css" />
     <link rel="stylesheet" href="css/cards-list.css" />
     <link rel="stylesheet" href="css/card.css" />
     <link rel="stylesheet" href="css/pagination-block.css" />
     <link rel="stylesheet" href="css/pager.css" />
+    <link rel="stylesheet" href="css/sticky-nav.css" />
 </head>
 
 <body>
@@ -48,7 +52,9 @@
                 <h1>Блузы и рубашки<sup>123</sup></h1>
             </div>
             <div class="catalog-section">
-                <div class="catalog-section__filter"></div>
+                <div class="catalog-section__filter">
+                    //= template/filter-2.html
+                </div>
                 <div class="catalog-section__list">
                     <ul class="tags">
                         <li class="tags__item">
@@ -88,43 +94,39 @@
                             <a class="tags__button" href="#">Рискуй, модник</a>
                         </li>
                     </ul>
-                    <div class="catalog-section__list-top"></div>
+                    <div class="catalog-section__list-top">
+                        <label class="select-wrapper">
+                            <span class="select-wrapper__container">
+                                <select class="js-select">
+                                    <option value="1">Популярные</option>
+                                    <option value="2">Сначала дешевле</option>
+                                    <option value="3">Сначала дороже</option>
+                                </select>
+                            </span>
+                        </label>
+                        <button class="catalog-section__grid-toggler" type="button" title="Свободная компоновка">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#grid_2"></use>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="cards-list cards-list--type_3">
                         //= template/cards-list-2.html
                     </div>
-                    <div class="pagination-block">
-                        <ul class="pager">
-                            <li class="pager__item">
-                                <a class="pager__arrow" href="#" title="Назад">
-                                    <svg class="icon icon--big">
-                                        <use xlink:href="#chevron_left"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="pager__item">
-                                <a class="pager__link" href="#">1</a>
-                            </li>
-                            <li class="pager__item">
-                                <span class="pager__link is-active">2</span>
-                            </li>
-                            <li class="pager__item">
-                                <a class="pager__link" href="#">3</a>
-                            </li>
-                            <li class="pager__item">
-                                <a class="pager__link" href="#">...</a>
-                            </li>
-                            <li class="pager__item">
-                                <a class="pager__link" href="#">45</a>
-                            </li>
-                            <li class="pager__item">
-                                <a class="pager__arrow" href="#" title="Вперёд">
-                                    <svg class="icon icon--big">
-                                        <use xlink:href="#chevron_right"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="pagination-block__pages">1 - 50 из 1000</p>
+                    <div class="sticky-nav-container">
+                        <div class="sticky-nav">
+                            <a class="js-scroll-top sticky-nav__button" href="#" title="Наверх">
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#chevron_up"></use>
+                                </svg>
+                            </a>
+                            <div class="sticky-nav__pages">45/45</div>
+                            <a class="sticky-nav__button" href="#" title="Предыдущая страница">
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#chevron_left"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,11 +141,12 @@
 
     //= template/scripts.html
 
+    <script src="js/filter.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/sticky-nav.js"></script>
+
     <script src="js/preloader.js"></script>
 
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main-slider.js"></script>
-    <script src="js/card.js"></script>
 </body>
 
 </html>

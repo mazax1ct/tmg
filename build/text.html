@@ -87,9 +87,11 @@
     
     <!--стили подключаемых плагинов-->
     <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="plugins_css/select2.css" />
     
     <!--стили модификаторы подключаемых плагинов-->
     <link rel="stylesheet" href="css/fancybox-modifier.css" />
+    <link rel="stylesheet" href="css/select.css" />
 
     <!--стили подключаемых на страние блоков-->
     <link rel="stylesheet" href="css/breadcrumbs.css" />
@@ -230,6 +232,23 @@
         </symbol>
         <symbol id="check" viewBox="0 0 24 24">
             <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid" viewBox="0 0 24 24">
+            <path d="M3 3H10V10H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 3H21V10H14V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 14H21V21H14V14Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 14H10V21H3V14Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid_2" viewBox="0 0 24 24">
+            <path d="M3 3H7V7H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 10H7V14H3V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 17H7V21H3V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 3H14V7H10V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 10H14V14H10V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 17H14V21H10V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 3H21V7H17V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 10H21V14H17V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 17H21V21H17V17Z" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
     </svg>
 
@@ -675,7 +694,7 @@
                                     </a>
                                 </div>
                                 <div class="mini-cart__buttons-block">
-                                    <button class="mini-cart__clear" type="button" title="Очистить корзину">
+                                    <button class="mini-cart__clear button button--secondary button--big button--just_icon" type="button" title="Очистить корзину">
                                         <svg class="icon icon--big">
                                             <use xlink:href="#delete"></use>
                                         </svg>
@@ -1213,6 +1232,14 @@
 
             <br>
 
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="js-input input" type="text" value="" placeholder="Плейсхолдер инпута" />
+                </span>
+            </label>
+
+            <br>
+
             <label class="input-label">
                 <span class="js-input input-label__input-container">
                     <input class="input" type="text" value="" disabled />
@@ -1222,10 +1249,31 @@
 
             <br>
 
+            <label class="input-label input-label--small">
+                <span class="js-input input-label__input-container">
+                    <input class="input" type="text" value="" disabled placeholder="Обращение" />
+                </span>
+            </label>
+
+            <br>
+
             <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="js-input input" type="text" value="no1knows_where2find.me@gmail.com" disabled />
+                    <input class="js-input input input--with_action" type="text" value="no1knows_where2find.me@gmail.com" disabled />
                     <span class="input-label__label-text">Электронная почта</span>
+                    <span class="input-label__input-status input-label__input-status--verified" title="Email подтверждён">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#verified"></use>
+                        </svg>
+                    </span>
+                </span>
+            </label>
+
+            <br>
+
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="js-input input input--with_action" type="text" value="no1knows_where2find.me@gmail.com" disabled placeholder="Электронная почта" />
                     <span class="input-label__input-status input-label__input-status--verified" title="Email подтверждён">
                         <svg class="icon icon--big">
                             <use xlink:href="#verified"></use>
@@ -1238,8 +1286,21 @@
 
             <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
+                    <input class="js-input input input--with_action" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
                     <span class="input-label__label-text">Адрес</span>
+                    <button class="input-label__input-action input-label__input-action--delete" type="button" title="Удалить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#delete"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+
+            <br>
+
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="js-input input input--with_action" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" placeholder="Адрес" />
                     <button class="input-label__input-action input-label__input-action--delete" type="button" title="Удалить">
                         <svg class="icon icon--big">
                             <use xlink:href="#delete"></use>
@@ -1252,8 +1313,21 @@
 
             <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
+                    <input class="js-input input input--with_action" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" />
                     <span class="input-label__label-text">Адрес</span>
+                    <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+
+            <br>
+
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="js-input input input--with_action" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" placeholder="Адрес" />
                     <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
                         <svg class="icon icon--big">
                             <use xlink:href="#close"></use>
@@ -1266,8 +1340,21 @@
 
             <label class="input-label">
                 <span class="input-label__input-container">
-                    <input class="js-input input deleted" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled />
+                    <input class="js-input input input--with_action deleted" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled />
                     <span class="input-label__label-text">Адрес</span>
+                    <button class="input-label__input-action input-label__input-action--undo" type="button" title="Восстановить">
+                        <svg class="icon icon--big">
+                            <use xlink:href="#undo"></use>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+
+            <br>
+
+            <label class="input-label input-label--small">
+                <span class="input-label__input-container">
+                    <input class="js-input input input--with_action deleted" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled placeholder="Адрес" />
                     <button class="input-label__input-action input-label__input-action--undo" type="button" title="Восстановить">
                         <svg class="icon icon--big">
                             <use xlink:href="#undo"></use>
@@ -1319,6 +1406,13 @@
             <br>
 
             <h6>Чекбоксы</h6>
+            <style>
+                .checkboxes-list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
             <ul class="checkboxes-list">
                 <li>
                     <label class="checkbox-label">
@@ -1350,6 +1444,71 @@
                 </li>
             </ul>
 
+            <h6>Чекбоксы средние</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="checkbox-label checkbox-label--small">
+                        <input type="checkbox" />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--small">
+                        <input type="checkbox" checked />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--small">
+                        <input type="checkbox" disabled />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--small">
+                        <input type="checkbox" checked disabled />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Чекбоксы мелкие</h6>
+
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" checked />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" disabled />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" checked disabled />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Чекбокс</span>
+                    </label>
+                </li>
+            </ul>
+
             <h6>Радио</h6>
             <ul class="checkboxes-list">
                 <li>
@@ -1368,6 +1527,56 @@
                 </li>
                 <li>
                     <label class="radio-label">
+                        <input id="radio2" type="radio" name="radio" value="3" disabled />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Радио средние</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="radio-label radio-label--small">
+                        <input id="radio1" type="radio" name="radio" value="1" checked />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="radio-label radio-label--small">
+                        <input id="radio2" type="radio" name="radio" value="2" />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="radio-label radio-label--small">
+                        <input id="radio2" type="radio" name="radio" value="3" disabled />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+            </ul>
+
+            <h6>Радио мелкие</h6>
+            <ul class="checkboxes-list">
+                <li>
+                    <label class="radio-label radio-label--tiny">
+                        <input id="radio1" type="radio" name="radio" value="1" checked />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="radio-label radio-label--tiny">
+                        <input id="radio2" type="radio" name="radio" value="2" />
+                        <span class="radio-icon"></span>
+                        <span class="radio-text">Радио</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="radio-label radio-label--tiny">
                         <input id="radio2" type="radio" name="radio" value="3" disabled />
                         <span class="radio-icon"></span>
                         <span class="radio-text">Радио</span>
@@ -1499,8 +1708,8 @@
                 <input class="button button--secondary button--small" type="button" value="Акститесь!" disabled>
             </p>
 
+            <h6>Селект</h6>
             <label class="select-wrapper">
-                <span class="select-wrapper__label">Лейбл для селекта</span>
                 <span class="select-wrapper__container">
                     <select class="js-select" placeholder="Выберите ваш вариант">
                         <option value=""></option>
@@ -1510,6 +1719,8 @@
                     </select>
                 </span>
             </label>
+
+            <br>
 
             <h6>Заголовок типа h6</h6>
 
@@ -2106,16 +2317,24 @@
             </ul>
         </div>
     </div>
+    
+    <div id="filter_reset" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Сбросить фильтры?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Данное действие необратимо!</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, сбросить</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     
-    <!--<script src="js/select2.full.min.js"></script>
-    <script src="js/select2-addon.js"></script>-->
-    
-    <!--<script src="js/jquery.inputmask.min.js"></script>
-    <script src="js/inputmask-init.js"></script>-->
-    
-    <!--<script src="js/scroll-compensate.js"></script>-->
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
     
     <script src="js/main.js"></script>
     

@@ -1,21 +1,11 @@
-.checkboxes-list {
-    list-style: none;
-    line-height: 0;
-    padding: 0;
-
-    li {
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-}
-
 .checkbox-label,
 .radio-label {
+    align-items: center;
     color: $text-medium;
-    display: inline-block;
+    display: flex;
     font-size: 14px;
     line-height: 1.14285;
-    min-height: 24px;
+    min-height: 48px;
     position: relative;
     padding-left: 32px;
     transition: color 0.3s;
@@ -38,20 +28,36 @@
         width: 1px;
     }
 
+    &--small {
+        min-height: 32px;
+        padding-left: 28px;
+
+        .checkbox-icon,
+        .radio-icon {
+            background-size: 20px 20px;
+            height: 20px;
+            top: 6px;
+            width: 20px;
+        }
+    }
+
     &--tiny {
         font-size: 10px;
         line-height: 1.4;
+        min-height: 40px;
         padding-left: 24px;
 
         .checkbox-text,
         .radio-text {
-            padding-top: 2px;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
 
         .checkbox-icon,
         .radio-icon {
             background-size: 16px 16px;
             height: 16px;
+            top: 12px;
             width: 16px;
         }
     }
@@ -66,7 +72,7 @@
     left: 0;
     overflow: hidden;
     position: absolute;
-    top: 0;
+    top: 12px;
     transition: border-color 0.3s;
     width: 24px;
 }
@@ -111,7 +117,8 @@ input[type="radio"]:checked + .radio-icon {
 .radio-text {
     cursor: pointer;
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 input[type="checkbox"]:disabled ~ .checkbox-text,

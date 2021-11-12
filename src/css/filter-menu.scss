@@ -1,0 +1,51 @@
+@import "base/_variables.scss";
+
+.filter-menu {
+    font-size: 14px;
+    list-style: none;
+    line-height: 1.14285;
+    margin: 0;
+    padding: 0;
+
+    &__link {
+        align-items: center;
+        color: $text-full;
+        display: flex;
+        min-height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:focus,
+        &:hover {
+            color: $primary-medium;
+
+            .icon {
+                stroke: $primary-medium;
+            }
+        }
+
+        &.is-active {
+            background-color: $background-alt;
+            color: $primary-full;
+
+            sup {
+                color: $text-medium;
+            }
+
+            .icon {
+                stroke: $text-medium;
+            }
+        }
+
+        .icon {
+            stroke: $text-low;
+        }
+
+        sup {
+            color: $text-low;
+            font-size: 12px;
+            line-height: 1.33333;
+        }
+    }
+}
