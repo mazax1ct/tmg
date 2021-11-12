@@ -1,0 +1,42 @@
+@import "base/_variables.scss";
+
+.brand-title {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media(min-width: 600px) {
+        flex-wrap: nowrap;
+    }
+
+    &__image {
+        margin-bottom: 12px;
+        min-width: 180px;
+        width: 200px;
+        @media(min-width: 1024px) {
+            min-width: 256px;
+            width: 256px;
+        }
+        @media(min-width: 1350px) {
+            min-width: 270px;
+            width: 270px;
+        }
+    }
+
+    &__title-block {
+        margin-bottom: 12px;
+
+        h1 {
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+
+        a {
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.21428;
+            letter-spacing: 0.15px;
+        }
+    }
+}

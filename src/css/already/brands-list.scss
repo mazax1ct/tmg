@@ -1,0 +1,43 @@
+@import "base/_variables.scss";
+
+.brands-list {
+    font-size: 14px;
+    list-style: none;
+    line-height: 1.14285;
+    margin-top: -2px;
+    padding: 0;
+    overflow: hidden;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    break-inside: avoid-column;
+    overflow-wrap: initial;
+    @media(min-width: 600px) {
+        columns: 2;
+    }
+    @media(min-width: 768px) {
+        columns: 3;
+    }
+    @media(min-width: 1024px) {
+        columns: 4;
+    }
+    @media(min-width: 1200px) {
+        columns: 5;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 34px;
+    }
+
+    a {
+        color: $text-medium;
+        display: block;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &:focus,
+        &:hover {
+            color: $primary-medium;
+        }
+    }
+}
