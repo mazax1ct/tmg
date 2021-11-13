@@ -1,0 +1,87 @@
+@import "base/_variables.scss";
+
+.stamp-list {
+    list-style: none;
+    padding: 0;
+    @media(min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @media(min-width: 1200px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    &__item {
+        margin-bottom: 24px;
+        @media(min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 50%;
+        }
+        @media(min-width: 1200px) {
+            margin-bottom: 56px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.stamp {
+    border-bottom: 1px solid $primary-ghostH;
+    color: $text-medium;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 24px;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        .stamp__title {
+            color: $primary-medium;
+        }
+
+        img {
+            transform: scale(1.02);
+        }
+    }
+
+    &__title {
+        color: $text-full;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.20833;
+        letter-spacing: 0.4px;
+        margin-bottom: 20px;
+        transition: color 0.3s;
+        @media(min-width: 1024px) {
+            font-size: 24px;
+        }
+    }
+
+    &__image {
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 12px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            transition: transform 0.3s;
+            transform: scale(1);
+            width: 100%;
+        }
+    }
+
+    &__info {
+        color: $text-medium;
+        display: block;
+    }
+}

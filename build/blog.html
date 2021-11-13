@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Блог</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fb3449">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/subset-Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Roboto-Regular.woff2" as="font" crossorigin="anonymous">
+
+    <style>
+        #preloader {
+            align-items: center;
+            bottom: 0;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0;
+            opacity: 1;
+            position: fixed;
+            padding: 20px;
+            right: 0;
+            top: 0;
+            transition: opacity0.3s;
+            z-index: 999999;
+        }
+    
+        #preloader p {
+            color: #000;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+    
+        #preloader svg {
+            height: auto;
+            max-width: 100%
+        }
+    
+        .loaded #preloader {
+            opacity: 0
+        }
+    </style>
+
+    <!--основные стили страницы и типографика-->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!--стили общих блоков-->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/location.css" />
+    <link rel="stylesheet" href="css/header-phone.css" />
+    <link rel="stylesheet" href="css/header-menu.css" />
+    <link rel="stylesheet" href="css/catalog-menu.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <link rel="stylesheet" href="css/search-item.css" />
+    <link rel="stylesheet" href="css/iconed-link.css" />
+    <link rel="stylesheet" href="css/notificator.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/cart-block.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/footer-menu.css" />
+    <link rel="stylesheet" href="css/float-bar.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/inputs.css" />
+    <link rel="stylesheet" href="css/phone-input.css" />
+    <link rel="stylesheet" href="css/input-file.css" />
+    <link rel="stylesheet" href="css/help-popup.css" />
+    
+    <!--стили подключаемых плагинов-->
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="plugins_css/select2.css" />
+    
+    <!--стили модификаторы подключаемых плагинов-->
+    <link rel="stylesheet" href="css/fancybox-modifier.css" />
+    <link rel="stylesheet" href="css/select.css" />
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/pagination-block.css" />
+    <link rel="stylesheet" href="css/pager.css" />
+</head>
+
+<body>
+    <div id="preloader">
+        <svg width="168" height="42" viewBox="0 0 168 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M72.1077 14.7003H74.5933L77.6992 24.0448L80.832 14.7003H83.3158L85.5626 28.0978H83.0964L81.6605 19.6355L78.8139 28.0978H76.5671L73.7463 19.6355L72.2743 28.0978H69.7878L72.1077 14.7003ZM92.1493 14.7003H94.7359L99.8877 28.0978H97.2363L96.1893 25.3381H90.7218L89.6313 28.0978H86.9808L92.1493 14.7003ZM93.4583 18.2524L91.6605 22.8525H95.2441L93.4583 18.2524ZM101.402 14.7003H103.846L109.58 23.5153V14.7003H112.132V28.0978H109.678L103.953 19.3087V28.0978H101.403V14.7003H101.402ZM113.771 14.7003H116.509L119.008 20.0104L121.497 14.7003H124.201L120.278 22.7867V28.0969H117.711V22.7867L113.771 14.7003ZM39.9017 14.7003H31.2959V16.0269H34.9369V28.0978H36.2598V16.0269H39.6721L39.9017 14.7003ZM141.443 28.0978H140.119V14.7003H141.443V28.0978ZM156.377 14.7003H151.637L151.41 15.9954V16.0269H155.053V28.0978H156.377V16.0269H159.794L160.021 14.7244V14.7003H156.377ZM46.6023 28.1867C42.8595 28.1867 39.8137 25.1428 39.8137 21.3981C39.8137 17.6553 42.8595 14.6086 46.6023 14.6086C50.347 14.6086 53.3927 17.6553 53.3927 21.3981C53.3927 25.1428 50.347 28.1867 46.6023 28.1867ZM46.6023 15.9334C43.589 15.9334 41.1376 18.3848 41.1376 21.3981C41.1376 24.4124 43.589 26.8638 46.6023 26.8638C49.6165 26.8638 52.067 24.4124 52.067 21.3981C52.067 18.3857 49.6165 15.9334 46.6023 15.9334ZM61.8976 28.1867C58.1548 28.1867 55.1081 25.1428 55.1081 21.3981C55.1081 17.6553 58.1548 14.6086 61.8976 14.6086C65.6404 14.6086 68.6861 17.6553 68.6861 21.3981C68.6861 25.1428 65.6404 28.1867 61.8976 28.1867ZM61.8976 15.9334C58.8843 15.9334 56.4319 18.3848 56.4319 21.3981C56.4319 24.4124 58.8843 26.8638 61.8976 26.8638C64.9118 26.8638 67.3614 24.4124 67.3614 21.3981C67.3614 18.3857 64.9118 15.9334 61.8976 15.9334ZM150.486 16.0269L150.713 14.7003H143.989V28.0978H145.312V21.7203H149.498L149.727 20.3955H145.312V16.0269H150.486ZM164.489 20.3983C162.929 19.5124 161.983 18.8986 161.983 17.871C161.983 16.9091 162.698 15.9334 164.065 15.9334C165.539 15.9334 166.334 17.0887 166.439 17.2544L167.566 16.5592C167.382 16.2694 166.234 14.6096 164.065 14.6096C162.124 14.6096 160.659 16.0121 160.659 17.871C160.659 19.7438 162.344 20.7038 163.833 21.5509C165.295 22.3822 166.676 23.1654 166.676 24.641C166.676 25.7186 165.761 26.8647 164.064 26.8647C162.071 26.8647 160.879 24.953 160.661 24.5688L159.53 25.2641C159.908 25.913 161.414 28.1876 164.063 28.1876C166.307 28.1876 167.999 26.6638 167.999 24.641C168 22.3961 166.134 21.3352 164.489 20.3983ZM132.286 21.7203L132.059 23.0321V23.0441H136.428C135.726 25.2992 133.643 26.8647 131.213 26.8647C128.2 26.8647 125.749 24.4133 125.749 21.399C125.749 18.3857 128.2 15.9343 131.213 15.9343C132.944 15.9343 134.533 16.7397 135.557 18.0839L136.687 17.3859C135.422 15.652 133.41 14.6096 131.213 14.6096C127.47 14.6096 124.424 17.6562 124.424 21.399C124.424 25.1437 127.47 28.1876 131.213 28.1876C134.565 28.1876 137.383 25.7917 137.916 22.4886C137.916 22.4886 137.999 21.911 137.999 21.7212H132.286V21.7203Z"
+              fill="#051B2C" />
+            <path
+              d="M19.5143 2.57731L15.0952 3.56355L12.9508 9.05565L10.828 1.15638L5.07079 0L3.97852 6.52321L12.8509 10.6794L19.8601 8.10119L19.5143 2.57731ZM6.13759 5.77722L6.88504 3.22421L9.56625 3.53738L12.4522 9.70816L6.13759 5.77722ZM18.2897 7.23929L13.5259 9.70722L16.4471 5.43227L17.8949 5.09573L18.2897 7.23929Z"
+              fill="#FB3449" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.10222 21.0691L7.37553 11.9526L0 12.163L1.42926 20.7372L3.68042 20.8681V31.2886L5.99134 31.3736L5.37516 20.9681L7.10222 21.0691Z" fill="#FB3449" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.6995 22.1011L25.4244 16.1435L22.8706 21.9927L24.6995 22.1011ZM20.2354 11.5871L17.7188 21.6917L19.1186 31.8551L23.0645 32L22.319 21.9609L21.3825 21.9067V30.566L20.7125 30.5585L20.0414 21.8281L25.6252 14.4963L25.9995 11.4226L20.2354 11.5871Z"
+              fill="#FB3449" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16.4166 21.6142L17.117 21.6563L17.0758 11.677L13.9401 11.7658L13.1309 21.4226L12.3208 21.3758L11.7536 11.8284L8.58452 11.9191L8.46402 21.1496L7.47461 21.0963V31.428L9.37115 31.4972L9.61409 21.2169L10.2724 21.2543L11.3118 31.5682L12.9389 31.629L13.896 21.4684L14.6826 21.5142L14.8531 31.6991L17.1826 31.7842L16.4166 21.6142Z"
+              fill="#FB3449" />
+        </svg>
+        <p>Загрузка...</p>
+    </div>
+
+    <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="burger" viewBox="0 0 24 24">
+            <path d="M3 12H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H21" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 24 24">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21.0004 21.0004L16.6504 16.6504" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_left" viewBox="0 0 24 24">
+            <path d="M14 6L8 12L14 18" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_right" viewBox="0 0 24 24">
+            <path d="M10 18L16 12L10 6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_up" viewBox="0 0 24 24">
+            <path d="M18 15L12 9L6 15" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="chevron_down" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="verified" viewBox="0 0 24 24">
+            <path
+              d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M22 4L12 14.01L9 11.01" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="delete" viewBox="0 0 24 24">
+            <path
+              d="M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6M19 6H5M19 6H21M5 6H3M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 11V17M14 11V17" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="close" viewBox="0 0 24 24">
+            <path d="M18 6L6 18" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6L18 18" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="undo" viewBox="0 0 24 24">
+            <path d="M1 4V10H7" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M3.51 15C4.15839 16.8404 5.38734 18.4202 7.01166 19.5014C8.63598 20.5826 10.5677 21.1066 12.5157 20.9945C14.4637 20.8824 16.3226 20.1402 17.8121 18.8798C19.3017 17.6194 20.3413 15.909 20.7742 14.0064C21.2072 12.1038 21.0101 10.112 20.2126 8.33111C19.4152 6.55025 18.0605 5.0768 16.3528 4.13277C14.6451 3.18874 12.6769 2.82527 10.7447 3.09713C8.81245 3.36898 7.02091 4.26143 5.64 5.64001L1 10"
+              stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="arrow_down" viewBox="0 0 24 24">
+            <path d="M6 9L12 15L18 9" />
+        </symbol>
+        <symbol id="help" viewBox="0 0 24 24">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M9.08984 8.99959C9.32495 8.33126 9.789 7.7677 10.3998 7.40873C11.0106 7.04975 11.7287 6.91853 12.427 7.0383C13.1253 7.15808 13.7587 7.52112 14.2149 8.06312C14.6712 8.60512 14.9209 9.29112 14.9198 9.99959C14.9198 11.9996 11.9198 12.9996 11.9198 12.9996"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 17H12.01" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="personal" viewBox="0 0 24 24">
+            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="favorite" viewBox="0 0 24 24">
+            <path
+              d="M20.8401 4.60987C20.3294 4.09888 19.7229 3.69352 19.0555 3.41696C18.388 3.14039 17.6726 2.99805 16.9501 2.99805C16.2276 2.99805 15.5122 3.14039 14.8448 3.41696C14.1773 3.69352 13.5709 4.09888 13.0601 4.60987L12.0001 5.66987L10.9401 4.60987C9.90843 3.57818 8.50915 2.99858 7.05012 2.99858C5.59109 2.99858 4.19181 3.57818 3.16012 4.60987C2.12843 5.64156 1.54883 7.04084 1.54883 8.49987C1.54883 9.95891 2.12843 11.3582 3.16012 12.3899L4.22012 13.4499L12.0001 21.2299L19.7801 13.4499L20.8401 12.3899C21.3511 11.8791 21.7565 11.2727 22.033 10.6052C22.3096 9.93777 22.4519 9.22236 22.4519 8.49987C22.4519 7.77738 22.3096 7.06198 22.033 6.39452C21.7565 5.72706 21.3511 5.12063 20.8401 4.60987V4.60987Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="cart" viewBox="0 0 24 24">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="login" viewBox="0 0 24 24">
+            <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 17L15 12L10 7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15 12H3" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="feather" viewBox="0 0 24 24">
+            <path d="M20.24 12.74C21.3658 11.6142 21.9983 10.0872 21.9983 8.49504C21.9983 6.90285 21.3658 5.37588 20.24 4.25004C19.1142 3.12419 17.5872 2.4917 15.995 2.4917C14.4028 2.4917 12.8758 3.12419 11.75 4.25004L5 11V19.5H13.5L20.24 12.74Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 8.5L2 22.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17.5 15.5H9" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="pin" viewBox="0 0 24 24">
+            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="phone" viewBox="0 0 24 24">
+            <path
+              d="M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5857 13.7874 20.5342 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.5004 10.2413 2.44866 7.27109 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23704 4.68016 9.47187 5.62282 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3777 14.5286 19.3204 14.7635 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="image" viewBox="0 0 24 24">
+            <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.5 10C9.32843 10 10 9.32843 10 8.5C10 7.67157 9.32843 7 8.5 7C7.67157 7 7 7.67157 7 8.5C7 9.32843 7.67157 10 8.5 10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 15L16 10L5 21" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="envelope" viewBox="0 0 24 24">
+            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M22 6L12 13L2 6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="arrow_left" viewBox="0 0 24 24">
+            <path d="M19 12H5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 19L5 12L12 5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="compare" viewBox="0 0 24 24">
+            <path d="M3 12H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H12" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M18 15.5V21" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 18H15.5" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="check" viewBox="0 0 24 24">
+            <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid" viewBox="0 0 24 24">
+            <path d="M3 3H10V10H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 3H21V10H14V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 14H21V21H14V14Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 14H10V21H3V14Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="grid_2" viewBox="0 0 24 24">
+            <path d="M3 3H7V7H3V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 10H7V14H3V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 17H7V21H3V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 3H14V7H10V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 10H14V14H10V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 17H14V21H10V17Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 3H21V7H17V3Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 10H21V14H17V10Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 17H21V21H17V17Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="gift" viewBox="0 0 24 24">
+            <path d="M20 12V22H4V12" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2 7H22V12H2V7Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 22V7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+    </svg>
+
+    <header class="header">
+        <div class="header__top container">
+            <!--если главная, то меняем ссылку на div без href-->
+            <a class="logo" href="main.html" title="На главную">
+                <picture>
+                    <source srcset="images/logo_full.svg" media="(min-width: 1024px)">
+                    <img src="images/logo.svg" alt="TOOMANYGIFTS">
+                </picture>
+            </a>
+            <div class="header__location location">
+                <button class="js-location-toggler location__toggler" type="button">
+                    <svg class="location__toggler-pin icon icon--small">
+                        <use xlink:href="#pin"></use>
+                    </svg>
+                    <span class="location__toggler-text">Москва</span>
+                    <svg class="location__toggler-arrow icon icon--small icon--fill">
+                        <use xlink:href="#arrow_down"></use>
+                    </svg>
+                </button>
+                <div class="location__dropdown dropdown">
+                    <ul class="dropdown-list">
+                        <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button">Москва</button></li>
+                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Санкт-Петербург</button></li>
+                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Рязань</button></li>
+                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Петропавловск-Камчатский</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <a class="header-phone" href="tel:+74956461552">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    <span class="header-phone__text">7 (495) 646-15-52</span>
+                </a>
+                <a class="header__email" href="mailto:">info+670044@toomanygifts.ru</a>
+            </div>
+            <div class="header__menu header-menu">
+                <div class="header-menu__outer">
+                    <div class="header-menu__inner">
+                        <button class="js-menu-closer header-menu__closer" type="button" title="Закрыть меню">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="header-submenu dropdown-container">
+                            <button class="js-dropdown-toggler dropdown-container__toggler" type="button">
+                                <span class="dropdown-container__toggler-text">Компания</span>
+                                <svg class="icon icon--small icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">О компании</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Блог</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Новости</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-submenu dropdown-container">
+                            <button class="js-dropdown-toggler dropdown-container__toggler" type="button">
+                                <span class="dropdown-container__toggler-text">Производство</span>
+                                <svg class="icon icon--small icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Требования к макетам</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Печать</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-submenu dropdown-container">
+                            <button class="js-dropdown-toggler dropdown-container__toggler" type="button">
+                                <span class="dropdown-container__toggler-text">Помощь</span>
+                                <svg class="icon icon--small icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Как заказать</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Доставка</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Оплата</a></li>
+                                    <li class="dropdown-list__list-item"><a class="dropdown-list__item" href="#">Обмен и возврат</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom compensate-for-scrollbar">
+            <div class="header__bottom-inner container">
+                <button class="js-catalog-toggler catalog-toggler" type="button">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#burger"></use>
+                    </svg>
+                    <span>Каталог</span>
+                </button>
+                <div class="header__search">
+                    <div class="search-bar">
+                        <div class="search-bar__categories-block">
+                            <button class="js-search-categories search-bar__categories-toggler" type="button">
+                                <span>Все категории</span>
+                                <svg class="icon icon--big icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="search-bar__categories-dropdown dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Ежедневники и блокноты</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type>Подарочные наборы</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Пледы</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Зонты</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Футболки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Одежда</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Детские подарки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Сумки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Электроника</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Флешки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Товары для путешествий</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Товары для дома</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Средства защиты</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Посуда с нанесением логотипа</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Спортивные товары</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Упаковка</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Мерч</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Ручки с логотипом</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Часы</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Эко-подарки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Съедобные сувениры</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Товары для отдыха и туризма</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Корпоративные подарки</button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button">Полиграфическая продукция</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="search-bar__form" action="search.html" method="post">
+                            <div class="search-bar__input-container">
+                                <input class="search-bar__input" name="q" type="text" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Найти на сайте...">
+                                <button class="search-bar__input-clear" type="button" title="Очистить" disabled>
+                                    <svg class="icon icon--big">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-bar__dropdown dropdown">
+                            <div class="search-bar__items">
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#undo"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> для завоевания мира длинное название товарной позиции для проверки вообше всего на свете</span>
+                                        </span>
+                                    </button>
+                                    <button class="search-item__delete" type="button" title="Удалить подсказку">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#delete"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> женская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> детская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> мужская</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> унисексик</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <button class="search-item__body" type="button">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> с принтом</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_1.jpg" srcset="images/content/search-items/img_1.jpg 2x" alt="Футболки женские">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Футболки женские</span>
+                                            <span class="search-item__alt-text">Шмотоньки / Женские / Футболки</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_2.jpg" srcset="images/content/search-items/img_2.jpg 2x" alt="Футболки мужские">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Футболки мужские</span>
+                                            <span class="search-item__alt-text">Шмотоньки / Мужские / Футболки</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <svg class="icon icon--big">
+                                                <use xlink:href="#feather"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">Печать изображения на футболках</span>
+                                            <span class="search-item__alt-text">Узнайте о новейших доступных методах нанесения</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block">
+                                            <img src="images/content/search-items/img_3.jpg" srcset="images/content/search-items/img_3.jpg 2x" alt="Бренд ТВОЁ">
+                                        </span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title">ТВОЁ</span>
+                                            <span class="search-item__alt-text">Бренд</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> Puma женская</span>
+                                            <span class="search-item__price">1 650 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Puma женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> ТВОЕ женская</span>
+                                            <span class="search-item__price">379 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка ТВОЕ женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболк ТВОЕ женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка ТВОЕ женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="search-item">
+                                    <a class="search-item__body search-item__body--type_1" href="#">
+                                        <span class="search-item__image-block"></span>
+                                        <span class="search-item__title-block">
+                                            <span class="search-item__title"><b>Футболка</b> Under Armor женская</span>
+                                            <span class="search-item__price">890 ₽</span>
+                                        </span>
+                                        <span class="search-item__images">
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Under Armor женская">
+                                            </span>
+                                            <span class="search-item__images-item">
+                                                <img src="images/content/search-items/img_4.jpg" srcset="images/content/search-items/img_4.jpg 2x" alt="Футболка Under Armor женская">
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom-links">
+                    <a class="iconed-link" href="javascript:void(0)" data-fancybox="help_popup" data-src="#help_popup">
+                        <span class="iconed-link__icon-container">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#help"></use>
+                            </svg>
+                        </span>
+                        <span class="iconed-link__title">Помощь</span>
+                    </a>
+                    <a class="iconed-link iconed-link--type_1" href="javascript:void(0)" data-fancybox="modal_1" data-src="#modal_1">
+                        <span class="iconed-link__icon-container">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#login"></use>
+                            </svg>
+                        </span>
+                        <span class="iconed-link__title">Войти</span>
+                    </a>
+                    <a class="iconed-link" href="#">
+                        <span class="iconed-link__icon-container">
+                            <span class="iconed-link__notificator notificator">123</span>
+                            <svg class="icon icon--big">
+                                <use xlink:href="#favorite"></use>
+                            </svg>
+                        </span>
+                        <span class="iconed-link__title">Избранное</span>
+                    </a>
+                    <div class="cart-block">
+                        <a class="js-cart-toggler iconed-link" href="#">
+                            <span class="iconed-link__icon-container">
+                                <span class="iconed-link__notificator notificator">10</span>
+                                <svg class="icon icon--big">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                            </span>
+                            <span class="iconed-link__title">Корзина</span>
+                        </a>
+                        <div class="cart-block__dropdown dropdown">
+                            <div class="mini-cart">
+                                <p class="mini-cart__title-block">
+                                    <span class="mini-cart__title">В корзине 323 товара и нанесение на сумму</span>
+                                    <span class="mini-cart__cost">138&nbsp;301.50&nbsp;₽</span>
+                                </p>
+                                <div class="mini-cart__list">
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_1.jpg" srcset="images/content/mini-cart/img_1@2x.jpg 2x" alt="Стерилизатор с функцией беспроводной зарядки Chili, белый">
+                                        </span>
+                                        <span class="mc-item__title">Стерилизатор с функцией беспроводной зарядки Chili, белый</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">56 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">11&nbsp;378&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_2.jpg" srcset="images/content/mini-cart/img_2@2x.jpg 2x" alt="Портативное зарядное устройство «Олдбери», 2200 mAh">
+                                        </span>
+                                        <span class="mc-item__title">Портативное зарядное устройство «Олдбери», 2200 mAh</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">120 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">34&nbsp;890&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_3.jpg" srcset="images/content/mini-cart/img_3@2x.jpg 2x" alt="Зонт трость полуавтомат Яркость, красный">
+                                        </span>
+                                        <span class="mc-item__title">Зонт трость полуавтомат Яркость, красный</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">44 шт</span>
+                                        </span>
+                                        <span class="mc-item__price">9&nbsp;270&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_4.jpg" srcset="images/content/mini-cart/img_4@2x.jpg 2x" alt="Зарядное устройство беспроводное Ritmix RM-1000W">
+                                        </span>
+                                        <span class="mc-item__title">Зарядное устройство беспроводное Ritmix RM-1000W</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">23 шт</span>
+                                        </span>
+                                        <span class="mc-item__price">17&nbsp;778&nbsp;₽</span>
+                                    </a>
+                                    <a class="mc-item" href="detail.html">
+                                        <span class="mc-item__image-block">
+                                            <img src="images/content/mini-cart/img_5.jpg" srcset="images/content/mini-cart/img_5@2x.jpg 2x" alt="Плед для пикника Comfy, черный">
+                                        </span>
+                                        <span class="mc-item__title">Плед для пикника Comfy, черный</span>
+                                        <span class="mc-item__qnt-block">
+                                            <span class="mc-item__qnt">80 шт</span>
+                                            <span class="mc-item__service">+ печать</span>
+                                        </span>
+                                        <span class="mc-item__price">29&nbsp;587&nbsp;₽</span>
+                                    </a>
+                                </div>
+                                <div class="mini-cart__buttons-block">
+                                    <button class="mini-cart__clear button button--secondary button--big button--just_icon" type="button" title="Очистить корзину">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#delete"></use>
+                                        </svg>
+                                    </button>
+                                    <a class="mini-cart__cart-link button button--primary button--big disabled" href="cart.hrml">Минимальная сумма заказа - 5000 ₽</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="js-menu-opener header-menu-opener" type="button">Меню</button>
+            </div>
+            <div class="catalog-menu dropdown">
+                <div class="catalog-menu__inner container">
+                    <div class="catalog-menu__categories">
+                        <ul class="catalog-menu__categories-list">
+                            <li>
+                                <a class="catalog-menu__category is-active" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Посуда с нанесением логотипа</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Готовый мерч</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Одежда</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Детские подарки</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Сумки</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Электроника</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Товары для путешествий</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Зонты</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Спортивные товары</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Подарочные наборы</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Средства защиты</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Посуда с логотипом</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">К праздникам</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Посуда с нанесением логотипа</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Готовый мерч</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Одежда</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Детские подарки</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Сумки</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Электроника</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Товары для путешествий</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Зонты</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Спортивные товары</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Подарочные наборы</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Средства защиты</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">Посуда с логотипом</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="catalog-menu__category" href="#">
+                                    <span class="catalog-menu__category-image">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#image"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="catalog-menu__category-text">К праздникам</span>
+                                    <svg class="catalog-menu__category-arrow icon icon--big">
+                                        <use xlink:href="#chevron_right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog-menu__category-detail">
+                        <p class="catalog-menu__category-title">Посуда с нанесением логотипа</p>
+                        <ul class="catalog-menu__category-list">
+                            <li><a class="catalog-menu__category-link" href="#">“Принтэссенция” Арт проект</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">“Соль” Подарки с юмором</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Аккумуляторы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Бейсболки и панамы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Бланковая продукция</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Вязальные пледы с оригинальным рисунком</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Детсткие футболки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Джемперы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Ежедневники с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Зонты с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Китайкопирайт</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Коллекция “Леон</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Коллекция Disney</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Кружки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Оригинальные подарки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Плащи-дождевики с пирнтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Рюкзаки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Сумки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Тематические подарочные наборы</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Термокружки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Толстовки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Удалёнка 2021</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Фартуки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Футболки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Шапки с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Шарфы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принты с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принт на принте принтом погоняет</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Шарфы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принты с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принт на принте принтом погоняет</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Шарфы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принты с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принт на принте принтом погоняет</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Шарфы с принтом</a></li>
+                            <li><a class="catalog-menu__category-link" href="#">Принты с принтом</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                <li class="breadcrumbs__item">Блог</li>
+            </ul>
+            <div class="title-block">
+                <h1>Блог</h1>
+            </div>
+
+            <ul class="blog-list">
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_1" class="blog-article__image"><img src="images/content/blog/img_1.jpg" srcset="images/content/blog/img_1@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_1 {
+                                    min-width: 295px;
+                                    width: 295px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Скоро 23 февраля. День защитника Отечества уже давно стал национальным праздником даже для тех, кто никогда не стоял на страже спокойствия нашей страны. Для многих компаний это повод не только мотивировать мужскую
+                                    часть сотрудников, но также показать им их незаменимость.</p>
+                                <p>Обеспокоиться тем, что и где заказывать, стоит заранее. Нельзя забывать об индивидуальности презента. Ибо вручать кружку с надписью «Лучший сотрудник» всем в офисе – не очень удачный вариант.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_2" class="blog-article__image"><img src="images/content/blog/img_2.jpg" srcset="images/content/blog/img_2@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_2 {
+                                    min-width: 387px;
+                                    width: 387px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo id faucibus molestie lectus habitasse enim varius ut facilisi. Aliquet dui semper aliquam nisi. Venenatis a leo, velit, diam orci arcu tellus nunc
+                                    imperdiet. Leo vestibulum euismod tincidunt nibh vitae nulla. Ipsum senectus gravida ultrices tellus egestas integer vel. Et at at nisl varius. Faucibus at a volutpat quisque posuere. Cursus tincidunt in enim nunc
+                                    orci, risus convallis. Amet, odio sit diam mattis hac facilisi duis hendrerit vitae. Scelerisque lectus aenean vel dolor neque, lobortis justo, est et. Amet velit ut sed nunc eget.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_3" class="blog-article__image"><img src="images/content/blog/img_3.jpg" srcset="images/content/blog/img_3@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_3 {
+                                    min-width: 414px;
+                                    width: 414px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis felis nunc, justo, eget proin eu nec scelerisque. Nunc, nullam magna faucibus sed rhoncus. Non vulputate sit vel sagittis viverra. Mi amet aliquet
+                                    fringilla ligula. Urna amet non ac velit, amet, vulputate. Tristique in enim vulputate suspendisse congue risus iaculis. Maecenas placerat nulla lectus sed nullam sollicitudin vitae velit quisque.</p>
+                                <p>Tempor neque, vel et non sed id. Nam pulvinar neque nam in in. Et nisl vulputate tellus tristique faucibus dis tincidunt. Neque nibh habitant sem ac libero malesuada est volutpat. Non mus enim tincidunt consectetur
+                                    hendrerit eu ac habitant sed. Bibendum molestie vulputate id sit morbi id fermentum, congue. Adipiscing netus</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_4" class="blog-article__image"><img src="images/content/blog/img_4.jpg" srcset="images/content/blog/img_4@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_4 {
+                                    min-width: 217px;
+                                    width: 217px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">День металлурга 2021</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>В России День металлурга отмечается в третье воскресенье июля. В 2021 году праздник выпадает на 18 июля. Цель праздника – почтить труд металлургов и показать важность металлургической отрасли в экономике страны.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_5" class="blog-article__image"><img src="images/content/blog/img_5.jpg" srcset="images/content/blog/img_5@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_5 {
+                                    min-width: 329px;
+                                    width: 329px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis enim, quis vitae quis. Dignissim maecenas augue euismod enim at tellus ullamcorper. Dictum quis nisl libero, tellus rhoncus lobortis. Sed at convallis
+                                    semper ac lacus arcu, condimentum. Amet, quisque magna aenean leo at proin neque arcu. Habitasse massa enim vitae, id faucibus. Nulla venenatis nisi, nam nunc vel sem suscipit cursus sit.
+                                    Ultrices eget ullamcorper dictum nec in. Phasellus quis habitasse nunc arcu. Pulvinar eget amet, lectus scelerisque turpis id duis elit. Sollicitudin arcu, egestas ultrices sit elementum nisi. Egestas suscipit cras
+                                    orci, nulla nunc aliquet morbi.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_6" class="blog-article__image"><img src="images/content/blog/img_6.jpg" srcset="images/content/blog/img_6@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_6 {
+                                    min-width: 295px;
+                                    width: 295px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">День металлурга 2021</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Скоро 23 февраля. День защитника Отечества уже давно стал национальным праздником даже для тех, кто никогда не стоял на страже спокойствия нашей страны. Для многих компаний это повод не только мотивировать мужскую
+                                    часть сотрудников, но также показать им их незаменимость.</p>
+                                <p>Обеспокоиться тем, что и где заказывать, стоит заранее. Нельзя забывать об индивидуальности презента. Ибо вручать кружку с надписью «Лучший сотрудник» всем в офисе – не очень удачный вариант.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <div class="pagination-block">
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Назад">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_left"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <span class="pager__link is-active">2</span>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">45</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Вперёд">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="pagination-block__pages">1 - 50 из 1000</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__top-inner container">
+                <div class="footer__top-center">
+                    <p class="footer__top-center-title h3">Не нашли подходящего товара?</p>
+                    <p class="footer__top-center-note">Мы поможем выбрать!</p>
+                </div>
+                <div class="footer__top-left">
+                    <p class="footer__phone-block">
+                        <a class="footer__phone" href="tel:+7 812 648-28-58">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            +7 812 648-28-58
+                        </a>
+                    </p>
+                    <p class="footer__work-time">c 10:00 до 19:00 (по Мск)</p>
+                </div>
+                <div class="footer__top-right">
+                    <button class="button button--secondary button--big" type="button" data-fancybox="request" data-src="#request">
+                        <span>Оставить заявку</span>
+                        <svg class="icon icon--big">
+                            <use xlink:href="#envelope"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="footer__devider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="footer__middle container">
+            <div class="footer__middle-column">
+                <p class="h5">TooManyGifts</p>
+                <ul class="footer-menu footer-menu--type_1 footer-menu--type_2">
+                    <li><a class="footer-menu__link" href="#">О компании</a></li>
+                    <li><a class="footer-menu__link" href="#">Новости</a></li>
+                    <li><a class="footer-menu__link" href="#">Блог</a></li>
+                    <li><a class="footer-menu__link" href="#">Контакты</a></li>
+                    <li><a class="footer-menu__link" href="#">Акции</a></li>
+                    <li><a class="footer-menu__link" href="#">Бренды</a></li>
+                </ul>
+                <p class="h5">Наш офис в СПб</p>
+                <div class="footer__contacts">
+                    <p>ул. Цветочная, д. 2В</p>
+                    <p><a href="tel:+74956461552">7 495 646-15-52</a> (10:00 - 19:00 Мск)</p>
+                </div>
+            </div>
+            <div class="footer__middle-column">
+                <p class="h5">Помощь с заказом</p>
+                <ul class="footer-menu footer-menu--type_1">
+                    <li><a class="footer-menu__link" href="#">Как заказать</a></li>
+                    <li><a class="footer-menu__link" href="#">Требования к макетам</a></li>
+                    <li><a class="footer-menu__link" href="#">Оплата</a></li>
+                    <li><a class="footer-menu__link" href="#">Доставка</a></li>
+                    <li><a class="footer-menu__link" href="#">Обмен и возврат</a></li>
+                    <li><a class="footer-menu__link" href="#">Готовые решения</a></li>
+                </ul>
+            </div>
+            <div class="footer__middle-column">
+                <p class="h5">Способы оплаты</p>
+                <div class="footer__pics">
+                    <img width="37" height="24" src="images/content/footer-pics/visa.jpg" alt="VISA">
+                    <img width="29" height="24" src="images/content/footer-pics/mc.jpg" alt="MASTERCARD">
+                    <img width="45" height="24" src="images/content/footer-pics/mir.jpg" alt="МИР">
+                    <img width="23" height="24" src="images/content/footer-pics/sberbank.jpg" alt="Сбербанк">
+                    <img width="14" height="24" src="images/content/footer-pics/alfa.jpg" alt="Альфа Банк">
+                    <img width="16" height="24" src="images/content/footer-pics/yd.jpg" alt="Яндекс Деньги">
+                    <img width="23" height="24" src="images/content/footer-pics/webmoney.jpg" alt="Webmoney">
+                    <img width="54" height="24" src="images/content/footer-pics/dc.jpg" alt="Diners Club">
+                    <img width="58" height="24" src="images/content/footer-pics/am_express.jpg" alt="American Express">
+                    <img width="21" height="24" src="images/content/footer-pics/qiwi.jpg" alt="Qiwi">
+                </div>
+                <p class="h5">Способы доставки</p>
+                <div class="footer__pics">
+                    <img width="53" height="24" src="images/content/footer-pics/bc.jpg" alt="Балтийский курьер">
+                    <img width="28" height="24" src="images/content/footer-pics/dl.jpg" alt="Деловые линии">
+                    <img width="45" height="24" src="images/content/footer-pics/gruz.jpg" alt="Грузовичков">
+                    <img width="45" height="24" src="images/content/footer-pics/dpd.jpg" alt="DPD">
+                </div>
+            </div>
+            <div class="footer__middle-column">
+                <p class="h5">Сувенирная продукция</p>
+                <ul class="footer-menu">
+                    <li><a class="footer-menu__link" href="#">Power bank’и</a></li>
+                    <li><a class="footer-menu__link" href="#">Упаковочная бумага</a></li>
+                    <li><a class="footer-menu__link" href="#">Пресс-папье с логотипом</a></li>
+                    <li><a class="footer-menu__link" href="#">Изготовление и печать блокнотов</a></li>
+                    <li><a class="footer-menu__link" href="#">Подарочные коробки и упаковка</a></li>
+                    <li><a class="footer-menu__link" href="#">Стилус для телефона и планшета</a></li>
+                    <li><a class="footer-menu__link" href="#">Печать на кружках</a></li>
+                    <li><a class="footer-menu__link" href="#">Декоративные подушки</a></li>
+                    <li><a class="footer-menu__link" href="#">Мультитулы</a></li>
+                    <li><a class="footer-menu__link" href="#">Складные ножи</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <div class="footer__logo">
+                <picture>
+                    <source srcset="images/logo_full.svg" media="(min-width: 1024px)">
+                    <img src="images/logo.svg" alt="TOOMANYGIFTS">
+                </picture>
+            </div>
+            <div class="footer__bottom-inner">
+                <p class="footer__copyright">© 2020 TooManyGifts.ru</p>
+                <p class="footer__bottom-right">
+                    <button class="footer__feedback-button" type="button">Обратная связь</button>
+                </p>
+                <p class="footer__bottom-note">Информация, представленная на данном сайте, ни при каких обстоятельствах не является публичной офертой.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="float-bar compensate-for-scrollbar">
+        <a class="iconed-link" href="javascript:void(0)" data-fancybox="help_popup_float_bar" data-src="#help_popup">
+            <span class="iconed-link__icon-container">
+                <svg class="icon icon--big">
+                    <use xlink:href="#help"></use>
+                </svg>
+            </span>
+            <span class="iconed-link__title">Помощь</span>
+        </a>
+        <a class="iconed-link iconed-link--type_1" href="javascript:void(0)" data-fancybox="modal_1_float_bar" data-src="#modal_1">
+            <span class="iconed-link__icon-container">
+                <svg class="icon icon--big">
+                    <use xlink:href="#login"></use>
+                </svg>
+            </span>
+            <span class="iconed-link__title">Войти</span>
+        </a>
+        <a class="iconed-link" href="#">
+            <span class="iconed-link__icon-container">
+                <span class="iconed-link__notificator notificator">123</span>
+                <svg class="icon icon--big">
+                    <use xlink:href="#favorite"></use>
+                </svg>
+            </span>
+            <span class="iconed-link__title">Избранное</span>
+        </a>
+        <a class="iconed-link" href="#">
+            <span class="iconed-link__icon-container">
+                <span class="iconed-link__notificator notificator">10</span>
+                <svg class="icon icon--big">
+                    <use xlink:href="#cart"></use>
+                </svg>
+            </span>
+            <span class="iconed-link__title">Корзина</span>
+        </a>
+    </div>
+
+    <div id="modal_1" class="popup popup--400">
+        <div class="popup__content">
+            <div class="popup__logo">
+                <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
+            </div>
+            <div class="popup__enter-block">
+                <span class="popup__enter-title">Войти</span>
+                <button class="popup__enter-button" type="button">Зарегистрироваться</button>
+            </div>
+            <div class="popup__row">
+                <button class="button button--primary button--big button--wide" type="button">По E-mail адресу</button>
+            </div>
+            <div class="popup__row popup__row--type_1">
+                <button class="button button--primary button--big button--wide" type="button">По номеру телефона</button>
+            </div>
+            <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
+        </div>
+    </div>
+    
+    <div id="request" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Оставить заявку</p>
+            <div class="popup__logo">
+                <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
+            </div>
+            <form class="popup__row popup__row--type_1" action="">
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Имя <span class="required">*</span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="phone-input">
+                        <span class="phone-input__input-container">
+                            <button class="phone-input__prefix" type="button">
+                                <span class="phone-input__prefix-text">+7</span>
+                                <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
+                            <span class="phone-input__pseudo-container"></span>
+                            <div class="phone-input__dropdown dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Email <span class="required">*</span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Название компании</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <div class="input-file">
+                        <input id="input_3" type="file">
+                        <label class="input-file__text-block ready" for="input_3"><span class="input-file__text">Прикрепить файл +</span></label>
+                    </div>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <div class="input-file">
+                        <input id="input_4" type="file">
+                        <label class="input-file__text-block preload" for="input_4"><span class="input-file__text">гениальная_идея.pdf</span></label>
+                        <span class="input-file__placeholder">Прикрепить реквизиты</span>
+                        <button class="input-file__delete" type="button" title="Очистить">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <hr class="popup__row popup__row--type_1">
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Тираж</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Ориентировочный бюджет</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Желаемая дата доставки</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Нажимая кнопку «Отправить», я даю свое согласие на обработ-ку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
+                            определенных в Согласии на обработ-ку персональных данных <span class="required">*</span></span>
+                    </label>
+                </div>
+                <button class="button button--primary button--big button--wide" type="button" disabled>Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="help_popup" class="popup help-popup">
+        <div class="popup__content">
+            <p class="h1 text-center">Заказ в пару кликов - быстро и удобно</p>
+            <div class="help-steps">
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_1.svg" alt="">
+                    <p class="help-steps__step-title">Добавьте нужные<br> товары в корзину</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_2.svg" alt="">
+                    <p class="help-steps__step-title">Укажите для каждого из них количество</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_3.svg" alt="">
+                    <p class="help-steps__step-title">Поставьте галочку «нанести логотип» там, где это нужно</p>
+                    <p class="help-steps__step-note">Если у вас уже есть готовый макет или графические файлы для<br> нанесения - прикрепите их к корзине в любом формате.</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_4.svg" alt="">
+                    <p class="help-steps__step-title">Теперь Просто ждите ;)</p>
+                    <p class="help-steps__step-note">Оплата на данном этапе не требуется. Наш менеджер свяжется с<br> вами в ближайшее время, уточнит необходимые детали и оформит<br> заказ.</p>
+                </div>
+            </div>
+            <ul class="help-popup__links">
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">оплата</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">доставка</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">требования к макетам</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">обмен и возврат</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="filter_reset" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Сбросить фильтры?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Данное действие необратимо!</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, сбросить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
+    
+    <script src="js/main.js"></script>
+    
+    <script src="js/dropdown-menu.js"></script>
+    
+    <script src="js/header.js"></script>
+    
+    <script src="js/header-menu.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/inputs.js"></script>
+    
+    <script src="js/phone-input.js"></script>
+
+    <script src="js/preloader.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Блог</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/pagination-block.css" />
+    <link rel="stylesheet" href="css/pager.css" />
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                <li class="breadcrumbs__item">Блог</li>
+            </ul>
+            <div class="title-block">
+                <h1>Блог</h1>
+            </div>
+
+            <ul class="blog-list">
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_1" class="blog-article__image"><img src="images/content/blog/img_1.jpg" srcset="images/content/blog/img_1@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_1 {
+                                    min-width: 295px;
+                                    width: 295px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Скоро 23 февраля. День защитника Отечества уже давно стал национальным праздником даже для тех, кто никогда не стоял на страже спокойствия нашей страны. Для многих компаний это повод не только мотивировать мужскую
+                                    часть сотрудников, но также показать им их незаменимость.</p>
+                                <p>Обеспокоиться тем, что и где заказывать, стоит заранее. Нельзя забывать об индивидуальности презента. Ибо вручать кружку с надписью «Лучший сотрудник» всем в офисе – не очень удачный вариант.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_2" class="blog-article__image"><img src="images/content/blog/img_2.jpg" srcset="images/content/blog/img_2@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_2 {
+                                    min-width: 387px;
+                                    width: 387px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo id faucibus molestie lectus habitasse enim varius ut facilisi. Aliquet dui semper aliquam nisi. Venenatis a leo, velit, diam orci arcu tellus nunc
+                                    imperdiet. Leo vestibulum euismod tincidunt nibh vitae nulla. Ipsum senectus gravida ultrices tellus egestas integer vel. Et at at nisl varius. Faucibus at a volutpat quisque posuere. Cursus tincidunt in enim nunc
+                                    orci, risus convallis. Amet, odio sit diam mattis hac facilisi duis hendrerit vitae. Scelerisque lectus aenean vel dolor neque, lobortis justo, est et. Amet velit ut sed nunc eget.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_3" class="blog-article__image"><img src="images/content/blog/img_3.jpg" srcset="images/content/blog/img_3@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_3 {
+                                    min-width: 414px;
+                                    width: 414px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis felis nunc, justo, eget proin eu nec scelerisque. Nunc, nullam magna faucibus sed rhoncus. Non vulputate sit vel sagittis viverra. Mi amet aliquet
+                                    fringilla ligula. Urna amet non ac velit, amet, vulputate. Tristique in enim vulputate suspendisse congue risus iaculis. Maecenas placerat nulla lectus sed nullam sollicitudin vitae velit quisque.</p>
+                                <p>Tempor neque, vel et non sed id. Nam pulvinar neque nam in in. Et nisl vulputate tellus tristique faucibus dis tincidunt. Neque nibh habitant sem ac libero malesuada est volutpat. Non mus enim tincidunt consectetur
+                                    hendrerit eu ac habitant sed. Bibendum molestie vulputate id sit morbi id fermentum, congue. Adipiscing netus</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_4" class="blog-article__image"><img src="images/content/blog/img_4.jpg" srcset="images/content/blog/img_4@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_4 {
+                                    min-width: 217px;
+                                    width: 217px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">День металлурга 2021</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>В России День металлурга отмечается в третье воскресенье июля. В 2021 году праздник выпадает на 18 июля. Цель праздника – почтить труд металлургов и показать важность металлургической отрасли в экономике страны.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article blog-article--type_1">
+                        <div id="img_5" class="blog-article__image"><img src="images/content/blog/img_5.jpg" srcset="images/content/blog/img_5@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_5 {
+                                    min-width: 329px;
+                                    width: 329px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">Корпоративные подарки на 23 февраля: индивидуальное, мужское, новое</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis enim, quis vitae quis. Dignissim maecenas augue euismod enim at tellus ullamcorper. Dictum quis nisl libero, tellus rhoncus lobortis. Sed at convallis
+                                    semper ac lacus arcu, condimentum. Amet, quisque magna aenean leo at proin neque arcu. Habitasse massa enim vitae, id faucibus. Nulla venenatis nisi, nam nunc vel sem suscipit cursus sit.
+                                    Ultrices eget ullamcorper dictum nec in. Phasellus quis habitasse nunc arcu. Pulvinar eget amet, lectus scelerisque turpis id duis elit. Sollicitudin arcu, egestas ultrices sit elementum nisi. Egestas suscipit cras
+                                    orci, nulla nunc aliquet morbi.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="blog-list__item">
+                    <article class="blog-article">
+                        <div id="img_6" class="blog-article__image"><img src="images/content/blog/img_6.jpg" srcset="images/content/blog/img_6@2x.jpg 2x" alt="alt"></div>
+                        <!--максимальная ширина основана на ширине не ретиновой картинки-->
+                        <style>
+                            @media(min-width: 1024px) {
+                                #img_6 {
+                                    min-width: 295px;
+                                    width: 295px
+                                }
+                            }
+                        </style>
+                        <div class="blog-article__text-block">
+                            <h2 class="blog-article__title">День металлурга 2021</h2>
+                            <time class="blog-article__date" datetime="2021-03-05 00:00">05.03.2021</time>
+                            <div class="blog-article__preview-text">
+                                <p>Скоро 23 февраля. День защитника Отечества уже давно стал национальным праздником даже для тех, кто никогда не стоял на страже спокойствия нашей страны. Для многих компаний это повод не только мотивировать мужскую
+                                    часть сотрудников, но также показать им их незаменимость.</p>
+                                <p>Обеспокоиться тем, что и где заказывать, стоит заранее. Нельзя забывать об индивидуальности презента. Ибо вручать кружку с надписью «Лучший сотрудник» всем в офисе – не очень удачный вариант.</p>
+                            </div>
+                            <p class="blog-article__more"><a href="#">Читать далее</a></p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <div class="pagination-block">
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Назад">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_left"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <span class="pager__link is-active">2</span>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">45</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Вперёд">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="pagination-block__pages">1 - 50 из 1000</p>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/preloader.js"></script>
+
+</body>
+
+</html>

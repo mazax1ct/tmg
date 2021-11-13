@@ -28,4 +28,8 @@
         stroke-width: 0;
         transition: fill 0.3s;
     }
+
+    &--stroke_type_1 {
+        stroke: $secondary-medium;
+    }
 }

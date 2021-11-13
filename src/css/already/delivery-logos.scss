@@ -1,0 +1,15 @@
+@import "base/_variables.scss";
+
+.delivery-logos {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        &:not(:last-child) {
+            margin-right: 20px;
+            @media(min-width: 1024px) {
+                margin-right: 80px;
+            }
+        }
+    }
+}

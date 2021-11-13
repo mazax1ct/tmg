@@ -1,0 +1,30 @@
+@import "base/_variables.scss";
+
+.search-results {
+    list-style: none;
+    margin-bottom: 40px;
+    margin-bottom: 60px;
+    max-width: 880px;
+    padding: 0;
+    text-align: justify;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        a {
+            font-weight: 500;
+        }
+
+        p {
+            color: $text-medium;
+            font-size: 14px;
+            line-height: 1.71428;
+
+            b {
+                color: $text-medium;
+            }
+        }
+    }
+}

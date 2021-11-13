@@ -1,0 +1,32 @@
+@import "base/_variables.scss";
+
+.grid-toggler {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 24px;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    position: relative;
+    width: 24px;
+    @media(min-width: 1200px) {
+        display: flex;
+    }
+
+    &::after {
+        content: '';
+        height: 40px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        z-index: 1;
+    }
+
+    .icon {
+        stroke: $primary-medium;
+    }
+}

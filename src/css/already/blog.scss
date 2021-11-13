@@ -1,0 +1,124 @@
+@import "base/_variables.scss";
+
+.blog-list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &__item {
+        &:first-child {
+            .blog-article {
+                border-top: 1px solid $primary-ghostH;
+            }
+        }
+    }
+}
+
+.blog-article {
+    border-bottom: 1px solid $primary-ghostH;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    @media(min-width: 768px) {
+        display: flex;
+    }
+    @media(min-width: 1024px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &--type_1 {
+        flex-direction: row-reverse;
+
+        .blog-article__text-block {
+            padding-left: 0;
+            @media(min-width: 768px) {
+                padding-right: 20px;
+            }
+            @media(min-width: 1260px) {
+                padding-right: 40px;
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: 16px;
+        width: 100%;
+        @media(min-width: 768px) {
+            margin-bottom: 0;
+            min-width: 40%;
+        }
+
+        img {
+            display: block;
+            border-radius: 2px;
+            width: 100%;
+            @media(min-width: 768px) {
+                object-fit: cover;
+                min-height: 100%;
+            }
+        }
+    }
+
+    &__text-block {
+        @media(min-width: 768px) {
+            padding-left: 20px;
+        }
+        @media(min-width: 1260px) {
+            padding-left: 40px;
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.21428;
+        letter-spacing: 0.2px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+    }
+
+    &__date {
+        color: $text-lowest;
+        display: block;
+        font-size: 12px;
+        line-height: 1.16666;
+        letter-spacing: 0.25px;
+        margin-bottom: 16px;
+    }
+
+    &__preview-text {
+        font-size: 14px;
+        line-height: 1.71428;
+        margin-bottom: 16px;
+        @media(min-width: 768px) and (max-width: 1023px) {
+            font-size: 12px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__more {
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.21428;
+        letter-spacing: 0.15px;
+
+        a {
+            &::after {
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+    }
+}

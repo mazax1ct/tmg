@@ -29,25 +29,67 @@
         li {
             overflow: hidden;
         }
+
+        .dotted-links__link {
+            color: $text-medium;
+
+            &:focus,
+            &:hover {
+                color: $primary-full;
+            }
+        }
+    }
+
+    &--type_2 {
+        display: flex;
+        margin-bottom: 6px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $text-lowest transparent;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $text-lowest;
+            width: 6px;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+
+        .dotted-links__link {
+            color: $secondary-medium;
+
+            &:focus,
+            &:hover {
+                color: $secondary-full;
+            }
+        }
     }
 
     &__link {
         align-items: center;
-        color: $text-medium;
         display: flex;
         min-height: 40px;
         position: relative;
         padding-left: 20px;
 
-        &:focus,
-        &:hover {
-            color: $primary-full;
-        }
-
         &::before {
             content: '•';
             left: 0;
             line-height: 1;
+            margin-top: -1px;
             position: absolute;
             text-align: center;
             top: 50%;

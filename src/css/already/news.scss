@@ -1,0 +1,118 @@
+@import "base/_variables.scss";
+
+.news-page {
+    display: flex;
+    flex-direction: column;
+
+    .wide-banner {
+        order: -1;
+    }
+}
+
+.news-list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media(min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @media(min-width: 1200px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    &__item {
+        margin-bottom: 40px;
+        @media(min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 50%;
+        }
+        @media(min-width: 1024px) {
+            width: 33.33333%;
+        }
+        @media(min-width: 1200px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.news {
+    border-bottom: 1px solid $primary-ghostH;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding-bottom: 12px;
+    width: 100%;
+
+    &__link {
+        display: block;
+        margin-bottom: 20px;
+
+        &::after {
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        &:focus,
+        &:hover {
+            img {
+                transform: scale(1.02);
+            }
+
+            & + .news__title {
+                color: $primary-full;
+            }
+        }
+
+        img {
+            display: block;
+            transition: transform 0.3s;
+            transform: scale(1);
+            width: 100%;
+        }
+    }
+
+    &__image {
+        border-radius: 2px;
+        display: block;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.21428;
+        letter-spacing: 0.2px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+    }
+
+    &__preview-text {
+        font-size: 14px;
+        line-height: 1.71428;
+        margin-bottom: 24px;
+    }
+
+    &__date {
+        color: $text-lowest;
+        display: block;
+        font-size: 12px;
+        line-height: 1.16666;
+        letter-spacing: 0.25px;
+        margin-top: auto;
+    }
+}

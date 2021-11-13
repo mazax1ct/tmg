@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Новости - деталка</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" href="css/grid-toggler.css" />
+    <link rel="stylesheet" href="css/cards-list.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/pagination-block.css" />
+    <link rel="stylesheet" href="css/pager.css" />
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="news.html">Новости</a></li>
+                <li class="breadcrumbs__item">Международный день шахмат 2021</li>
+            </ul>
+            <div class="title-block">
+                <h1>Международный день шахмат 2021</h1>
+            </div>
+            <p>Праздник приурочен к основанию FIDE (Всемирной шахматной федерации) 20 июля 1924 года. В этот день под руководством Всемирной шахматной федерации проводятся международные соревнования. Во многих столицах мира проводятся конференции для
+                участников шахматного союза, на которых оговариваются планы на следующий год и подводятся итоги прошедшего периода.</p>
+            <hr>
+            <div class="title-block title-block--type_4">
+                <h2>Идеи для подарка</h2>
+                <button class="grid-toggler" type="button" title="Свободная компоновка">
+                    <svg class="icon icon--big">
+                        <use xlink:href="#grid_2"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="cards-list cards-list--type_5">
+                //= template/cards-list-2.html
+            </div>
+            <div class="pagination-block">
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Назад">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_left"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <span class="pager__link is-active">2</span>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">45</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__arrow" href="#" title="Вперёд">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="pagination-block__pages">1 - 50 из 1000</p>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/card.js"></script>
+
+    <script src="js/preloader.js"></script>
+
+</body>
+
+</html>
