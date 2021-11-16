@@ -5,7 +5,12 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 252px;
+    min-width: 252px;
+    max-width: 432px;
+    width: 100%;
+    @media(min-width:540px) {
+        width: 252px;
+    }
 
     &--colors_open {
         z-index: 2;
@@ -102,17 +107,20 @@
         flex-direction: column;
         left: 0;
         min-height: 100%;
-        position: absolute;
         padding: 16px;
         transform: box-shadow 0.3s;
         top: 0;
         width: 100%;
         z-index: 1;
+        @media(min-width: 540px) {
+            position: absolute;
+        }
     }
 
     &__dropdown {
         display: none;
         opacity: 0;
+        position: absolute;
         transition: opacity 0.3s;
 
         &.is-active {
@@ -195,10 +203,19 @@
         align-items: center;
         display: flex;
         flex-wrap: wrap;
-        min-height: 40px;
+        max-height: 40px;
         margin-left: -2px;
         margin-right: -2px;
         margin-bottom: 20px;
+        max-width: 224px;
+        overflow: hidden;
+        padding-right: 40px;
+        position: relative;
+
+        &.is-open {
+            max-height: 100%;
+            overflow: visible;
+        }
     }
 
     &__color {
@@ -231,12 +248,15 @@
         font-size: 12px;
         height: 40px;
         justify-content: center;
-        margin-left: 2px;
-        margin-right: 2px;
+        left: auto;
         padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         text-align: center;
         transition: color 0.3s;
         width: 40px;
+        z-index: 1;
 
         &:focus,
         &:hover {
