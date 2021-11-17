@@ -1,0 +1,47 @@
+@import "base/_variables.scss";
+
+.file {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        line-height: 1.1875;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: calc(100% - 40px);
+    }
+
+    &__delete {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        min-width: 20px;
+        padding: 0;
+        position: relative;
+        width: 20px;
+
+        &:focus,
+        &:hover {
+            svg {
+                stroke: $secondary-full;
+            }
+        }
+
+        svg {
+            stroke: $secondary-medium;
+        }
+
+        &::after {
+            content: '';
+            height: 40px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+        }
+    }
+}
