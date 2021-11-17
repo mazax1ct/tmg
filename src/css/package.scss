@@ -1,0 +1,77 @@
+@import "base/_variables.scss";
+
+.package {
+    &__button {
+        background-color: transparent;
+        border: none;
+        color: $primary-medium;
+        cursor: pointer;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+        line-height: 1.21428;
+        margin-top: 12px;
+        padding: 12px 0;
+        text-align: left;
+        transition: color 0.3s;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+            color: $primary-full;
+        }
+    }
+
+    &__item {
+        align-items: center;
+        border-bottom: 1px solid $primary-ghostH;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    &__item-title {
+        align-items: center;
+        display: flex;
+        line-height: 1.1875;
+
+        svg {
+            margin-right: 16px;
+            stroke: $green;
+        }
+    }
+
+    &__delete {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 24px;
+        padding: 0;
+        position: relative;
+        width: 24px;
+
+        &:focus,
+        &:hover {
+            svg {
+                stroke: $secondary-full;
+            }
+        }
+
+        svg {
+            stroke: $secondary-medium;
+        }
+
+        &::after {
+            content: '';
+            height: 40px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+        }
+    }
+}

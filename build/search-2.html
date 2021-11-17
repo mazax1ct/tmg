@@ -257,6 +257,12 @@
             <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
+        <symbol id="edit" viewBox="0 0 24 24">
+            <path d="M12 20H21" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M16.5 3.50023C16.8978 3.1024 17.4374 2.87891 18 2.87891C18.2786 2.87891 18.5544 2.93378 18.8118 3.04038C19.0692 3.14699 19.303 3.30324 19.5 3.50023C19.697 3.69721 19.8532 3.93106 19.9598 4.18843C20.0665 4.4458 20.1213 4.72165 20.1213 5.00023C20.1213 5.2788 20.0665 5.55465 19.9598 5.81202C19.8532 6.06939 19.697 6.30324 19.5 6.50023L7 19.0002L3 20.0002L4 16.0002L16.5 3.50023Z"
+              stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
     </svg>
 
     <header class="header">
@@ -701,7 +707,7 @@
                                     </a>
                                 </div>
                                 <div class="mini-cart__buttons-block">
-                                    <button class="mini-cart__clear button button--secondary button--big button--just_icon" type="button" title="Очистить корзину">
+                                    <button class="mini-cart__clear button button--secondary button--big button--just_icon" type="button" title="Очистить корзину" data-fancybox="cart_clear" data-src="#cart_clear">
                                         <svg class="icon icon--big">
                                             <use xlink:href="#delete"></use>
                                         </svg>
@@ -2186,6 +2192,19 @@
             <div class="popup__row popup__row--type_3">
                 <button class="button button--primary button--big" type="button">Отмена</button>
                 <button class="button button--secondary button--big" type="button">Да, сбросить</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cart_clear" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Очистить корзину?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Внимание! Вы уверены, что хотите удалить все товары в корзине? Данное действие необратимо.</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, удалить</button>
             </div>
         </div>
     </div>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/cart-item.css" />
     <link rel="stylesheet" href="css/file.css" />
     <link rel="stylesheet" href="css/input-file_2.css" />
+    <link rel="stylesheet" href="css/comment-block.css" />
     <link rel="stylesheet" href="css/cards-list.css" />
     <link rel="stylesheet" href="css/card.css" />
 </head>
@@ -67,7 +68,9 @@
                         <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></a>
                         <div class="cart-item__text-block">
                             <p class="cart-item__title"><a href="#">Стерилизатор с функцией беспроводной зарядки Chili, белый</a></p>
-                            <button class="cart-item__comment-button" type="button">Оставить комментарий</button>
+                            <div class="comment-block">
+                                <button class="comment-block__button" type="button">Оставить комментарий</button>
+                            </div>
                         </div>
                         <div class="cart-item__details">
                             <div class="cart-item__tirage">
@@ -115,15 +118,17 @@
                         <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></a>
                         <div class="cart-item__text-block">
                             <p class="cart-item__title"><a href="#">Стерилизатор с функцией беспроводной зарядки Chili, белый</a></p>
-                            <div class="cart-item__comment-workarea">
-                                <textarea class="cart-item__comment-textarea" placeholder="Введите текст комментария"
-                                  disabled>Комментарий: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium gravida a eu egestas ut amet. Ligula vulputate nullam eleifend condimentum sed pharetra, ac pulvinar.</textarea>
-                                <div class="cart-item__comment-actions">
-                                    <button class="cart-item__comment-action cart-item__comment-action--edit" type="button" title="Редактировать">
-                                        <svg class="icon icon--medium">
-                                            <use xlink:href="#edit"></use>
-                                        </svg>
-                                    </button>
+                            <div class="comment-block">
+                                <div class="comment-block__workarea">
+                                    <textarea class="comment-block__textarea" placeholder="Введите текст комментария"
+                                      disabled>Комментарий: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium gravida a eu egestas ut amet. Ligula vulputate nullam eleifend condimentum sed pharetra, ac pulvinar.</textarea>
+                                    <div class="comment-block__actions">
+                                        <button class="comment-block__action comment-block__action--edit" type="button" title="Редактировать">
+                                            <svg class="icon icon--medium">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,19 +204,21 @@
                         <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></a>
                         <div class="cart-item__text-block">
                             <p class="cart-item__title"><a href="#">Стерилизатор с функцией беспроводной зарядки Chili, белый</a></p>
-                            <div class="cart-item__comment-workarea">
-                                <textarea class="cart-item__comment-textarea" placeholder="Введите текст комментария"></textarea>
-                                <div class="cart-item__comment-actions">
-                                    <button class="cart-item__comment-action cart-item__comment-action--apply" type="button" title="Сохранить">
-                                        <svg class="icon icon--medium">
-                                            <use xlink:href="#check"></use>
-                                        </svg>
-                                    </button>
-                                    <button class="cart-item__comment-action cart-item__comment-action--delete" type="button" title="Удалить">
-                                        <svg class="icon icon--medium">
-                                            <use xlink:href="#close"></use>
-                                        </svg>
-                                    </button>
+                            <div class="comment-block">
+                                <div class="comment-block__workarea">
+                                    <textarea class="comment-block__textarea" placeholder="Введите текст комментария"></textarea>
+                                    <div class="comment-block__actions">
+                                        <button class="comment-block__action comment-block__action--apply" type="button" title="Сохранить">
+                                            <svg class="icon icon--medium">
+                                                <use xlink:href="#check"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="comment-block__action comment-block__action--delete" type="button" title="Удалить">
+                                            <svg class="icon icon--medium">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,19 +334,21 @@
                         </label>
                     </div>
                     <div class="cart__comment-block">
-                        <div class="cart__comment-workarea">
-                            <textarea class="cart__comment-textarea" placeholder="Введите текст комментария"></textarea>
-                            <div class="cart__comment-actions">
-                                <button class="cart__comment-action cart__comment-action--apply" type="button" title="Сохранить">
-                                    <svg class="icon icon--medium">
-                                        <use xlink:href="#check"></use>
-                                    </svg>
-                                </button>
-                                <button class="cart__comment-action cart__comment-action--delete" type="button" title="Удалить">
-                                    <svg class="icon icon--medium">
-                                        <use xlink:href="#close"></use>
-                                    </svg>
-                                </button>
+                        <div class="comment-block">
+                            <div class="comment-block__workarea">
+                                <textarea class="comment-block__textarea" placeholder="Введите текст комментария"></textarea>
+                                <div class="comment-block__actions">
+                                    <button class="comment-block__action comment-block__action--apply" type="button" title="Сохранить">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="comment-block__action comment-block__action--delete" type="button" title="Удалить">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

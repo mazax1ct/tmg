@@ -16,6 +16,10 @@
         max-width: 460px;
     }
 
+    &--480 {
+        max-width: 480px;
+    }
+
     &--656 {
         max-width: 656px;
         @media(min-width: 768px) {
@@ -172,5 +176,9 @@
         line-height: 1.25;
         letter-spacing: 0.35px;
         margin-bottom: 24px;
+    }
+
+    &__button-block {
+        padding-top: 16px;
     }
 }

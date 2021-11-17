@@ -3,6 +3,22 @@
 .select-wrapper {
     display: block;
 
+    &__label {
+        color: $text-low;
+        cursor: text;
+        display: block;
+        font-size: 10px;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+        margin-bottom: 4px;
+        overflow: hidden;
+        padding-left: 12px;
+        padding-right: 12px;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
     &__container {
         display: block;
     }

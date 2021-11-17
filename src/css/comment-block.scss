@@ -1,0 +1,137 @@
+@import "base/_variables.scss";
+
+.comment-block {
+    &__button {
+        background-color: transparent;
+        border: none;
+        color: $primary-medium;
+        cursor: pointer;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+        line-height: 1.21428;
+        padding: 16px 0;
+        text-align: left;
+        transition: color 0.3s;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+            color: $primary-full;
+        }
+    }
+
+    &__workarea {
+        align-items: center;
+        display: flex;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__textarea {
+        border: none;
+        color: $text-full;
+        font-size: 14px;
+        flex-grow: 1;
+        height: 100px;
+        line-height: 1.71428;
+        letter-spacing: 0.25px;
+        overflow-y: auto;
+        padding: 0;
+        resize: none;
+
+        &:disabled {
+            color: $text-low;
+        }
+
+        &:-ms-input-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $text-low;
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        padding-left: 8px;
+        width: 28px;
+    }
+
+    &__action {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        position: relative;
+        padding: 0;
+        width: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &--apply {
+            svg {
+                stroke: $green;
+            }
+
+            &:focus,
+            &:hover {
+                svg {
+                    stroke: darken($green, 10%);
+                }
+            }
+        }
+
+        &--delete {
+            svg {
+                stroke: $secondary-medium;
+            }
+
+            &:focus,
+            &:hover {
+                svg {
+                    stroke: $secondary-full;
+                }
+            }
+        }
+
+        &--edit {
+            svg {
+                stroke: $primary-medium;
+            }
+
+            &:focus,
+            &:hover {
+                svg {
+                    stroke: $primary-full;
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            height: 40px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+        }
+    }
+}

@@ -23,6 +23,11 @@
         padding: 24px 20px;
     }
 
+    &.popup--480 {
+        max-width: 480px;
+        padding: 24px 20px;
+    }
+
     &.popup--656 {
         max-width: 656px;
         @media(min-width: 768px) {
