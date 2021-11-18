@@ -1,16 +1,8 @@
 @import "base/_variables.scss";
 
 .compare {
-    left: 50%;
-    margin-right: 0;
-    margin-left: 0;
-    overflow: hidden;
-    position: relative;
-    transform: translateX(-50%);
-    width: 100vw;
-
     &__top {
-        min-height: 416px;
+        height: 416px;
     }
 
     &__next,
@@ -46,11 +38,17 @@
 
     &__prev {
         left: 20px;
+        @media(min-width: 1350px) {
+            left: calc(50vw - 664px);
+        }
     }
 
     &__next {
         left: auto;
         right: 20px;
+        @media(min-width: 1350px) {
+            right: calc(50vw - 664px);
+        }
     }
 
     &__container {
@@ -67,6 +65,59 @@
 
             &:not(:last-child) {
                 border-bottom: 1px solid $primary-ghostH;
+            }
+        }
+
+        &.scrolled {
+            background-color: #fff;
+            box-shadow: 0 0 3px 3px rgba(#000, 0.1);
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
+
+            .compare__next,
+            .compare__prev {
+                top: 16px;
+            }
+
+            .card--type_2 {
+                min-height: 0;
+            }
+
+            .card__inner {
+                flex-direction: row;
+                position: static;
+            }
+
+            .card__link {
+                min-width: 60px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                width: 60px;
+            }
+
+            .card__image {
+                width: 40px;
+            }
+
+            .card__label {
+                display: none;
+            }
+
+            .card__price-block {
+                display: none;
+            }
+
+            .card__title {
+                font-size: 12px;
+                height: 50px;
+                margin-bottom: 0;
+            }
+
+            .card__buttons {
+                display: none;
             }
         }
     }
@@ -88,12 +139,14 @@
     &__container-inner {
         display: inline-flex;
         transition: transform 0.2s ease-out;
+        vertical-align: top;
     }
 
     &__item {
         color: $text-full;
         line-height: 1.1875;
         min-width: 252px;
+        margin-right: 4px;
         position: relative;
         padding-right: 16px;
         padding-left: 16px;

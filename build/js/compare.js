@@ -1,17 +1,37 @@
+var resize_scroll = function(e) {
+  var block = $('.compare__top');
+  var blockOffsetTop = block.offset().top + block.height();
+  if($(window).scrollTop() > blockOffsetTop) {
+    $('.compare__top .compare__container').addClass('scrolled');
+  } else {
+    $('.compare__top .compare__container').removeClass('scrolled');
+  }
+
+  var compareHeight = $('.compare').height();
+  if($(window).scrollTop() > blockOffsetTop + compareHeight - block.height()){
+    $('.compare__top .compare__container').removeClass('scrolled');
+  }
+};
+
+
 $(document).ready(function () {
+  resize_scroll();
+
   if($('.compare__top .compare__container-inner').width() <= $('.compare__top .compare__container').width()) {
     $('.compare__next').css('display', 'none');
   }
 });
 
+$(window).on("scroll", resize_scroll).on("resize", resize_scroll);
+
 var translate = 0;
 
 function next() {
-  return translate -= 252;
+  return translate -= 256;
 }
 
 function prev() {
-  return translate += 252;
+  return translate += 256;
 }
 
 $(document).on('click', '.compare__next', function () {
@@ -21,10 +41,6 @@ $(document).on('click', '.compare__next', function () {
     $('.compare__prev').css('display', 'flex');
 
     var comp = 0;
-
-    /*if($('body').width() > 1890) {
-      comp = -252;
-    }*/
 
     var sum = $('.compare__container-inner').width() + tr + comp;
 
