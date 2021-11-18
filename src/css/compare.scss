@@ -1,6 +1,9 @@
 @import "base/_variables.scss";
 
 .compare {
+    overflow: hidden;
+    width: 100%;
+
     &__top {
         height: 416px;
     }
