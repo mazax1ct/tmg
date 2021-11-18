@@ -173,4 +173,16 @@
             stroke: $secondary-medium;
         }
     }
+
+    &--accept {
+        background-color: $green;
+        color: #fff;
+        font-weight: 700;
+
+        &:focus,
+        &:hover {
+            background-color: darken($green, 10%);
+            color: #fff;
+        }
+    }
 }

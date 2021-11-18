@@ -548,6 +548,10 @@ p + .title-block--type_1 {
     text-align: right;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .required {
     color: $secondary-medium;
 }
@@ -565,7 +569,7 @@ p + .title-block--type_1 {
 
     &:first-child {
         margin-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
 }
 

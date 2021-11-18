@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Оформление заказа</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="stylesheet" href="css/file.css" />
+    <link rel="stylesheet" href="css/comment-block.css" />
+    <link rel="stylesheet" href="css/cards-list.css" />
+    <link rel="stylesheet" href="css/card.css" />
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <p class="back-block"><a href="#">Вернуться в корзину</a></p>
+            <div class="title-block">
+                <h1>Оформление заказа</h1>
+            </div>
+
+            <div class="cart">
+                <div class="cart__left">
+                    <div class="checkout">
+                        <div class="checkout__section">
+                            <div class="checkout__section-inner">
+                                <h3>Контактная информация</h3>
+
+                                <div class="checkout__input-row">
+                                    <label class="input-label">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" />
+                                            <span class="input-label__label-text">ФИО представителя <span class="required">*</span></span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input-row">
+                                    <label class="input-label">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" />
+                                            <span class="input-label__label-text">E-mail <span class="required">*</span></span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input-row">
+                                    <label class="input-label">
+                                        <span class="input-label__input-container">
+                                            <input class="js-input input" type="text" value="" />
+                                            <span class="input-label__label-text">Контактный номер телефона <span class="required">*</span></span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <button class="checkout__toggler is-active" type="button">
+                                    Указать реквизиты
+                                    <svg class="icon icon--small">
+                                        <use xlink:href="#chevron_down"></use>
+                                    </svg>
+                                </button>
+
+                                <div class="checkout__radios">
+                                    <label class="radio-label">
+                                        <input id="radio1" type="radio" name="reqs" value="1" />
+                                        <span class="radio-icon"></span>
+                                        <span class="radio-text">Внести/загрузить новые реквизиты</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input id="radio1" type="radio" name="reqs" value="2" checked />
+                                        <span class="radio-icon"></span>
+                                        <span class="radio-text">Выбрать из списка моих компаний</span>
+                                    </label>
+                                </div>
+                                <label class="select-wrapper">
+                                    <span class="select-wrapper__container">
+                                        <select class="js-select">
+                                            <option value="1">ООО “Рожки и Копытца”</option>
+                                            <option value="3">Компания 2</option>
+                                            <option value="4">Компания 3</option>
+                                        </select>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <div class="checkout__section-inner">
+                                <h3>Варианты доставки</h3>
+                                <div class="checkout__radios">
+                                    <label class="radio-label">
+                                        <input id="radio1" type="radio" name="delivery" value="1" />
+                                        <span class="radio-icon"></span>
+                                        <span class="radio-text">Самовывоз</span>
+                                    </label>
+
+                                    <label class="radio-label">
+                                        <input id="radio1" type="radio" name="delivery" value="2" />
+                                        <span class="radio-icon"></span>
+                                        <span class="radio-text">Новый адрес доставки</span>
+                                    </label>
+
+                                    <label class="radio-label">
+                                        <input id="radio1" type="radio" name="delivery" value="3" checked />
+                                        <span class="radio-icon"></span>
+                                        <span class="radio-text">Выбрать из списка моих адресов</span>
+                                    </label>
+                                </div>
+
+                                <label class="select-wrapper">
+                                    <span class="select-wrapper__container">
+                                        <select class="js-select">
+                                            <option value="1">г.Москва, ул. Жоры Пупочкина, д.18, к.5, </option>
+                                            <option value="3">Адрес 2</option>
+                                            <option value="4">Адрес 3</option>
+                                        </select>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <div class="checkout__section-inner">
+                                <h3>Ваш менеджер</h3>
+
+                                <p class="text-justify">Если это не первый ваш заказ - вероятно вам будет удобнее продолжить работу с уже известным вам менеджером</p>
+
+                                <label class="select-wrapper">
+                                    <span class="select-wrapper__container">
+                                        <select class="js-select">
+                                            <option value="1">Без предпочтений</option>
+                                            <option value="2">Менеджер 1</option>
+                                            <option value="3">Менеджер 2</option>
+                                            <option value="4">Менеджер 3</option>
+                                        </select>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__right">
+                    <p class="cart__total"><span>ИТОГО:</span> <span>348 301.50₽ </span></p>
+                    <p class="cart__details"><span>Товары (334)</span> <span>58 301.50 ₽</span></p>
+                    <p class="cart__details"><span>Нанесение</span> <span>268 480.00 ₽</span></p>
+                    <p class="cart__details"><span>Вес заказа</span> <span>58 кг</span></p>
+                    <p class="cart__details-note">Общая стоимость с учётом выбора нанесения, упаковки и доставки определится после окончательного оформления заказа</p>
+                    <a class="button button--accept button--big button--wide" href="javascript:void(0)" data-fancybox="checkout_finish" data-src="#checkout_finish">Оформить заказ</a>
+                    <hr class="cart__buttons-divider">
+                    <a class="button button--primary button--big button--wide" href="#">Сформировать КП</a>
+                    <div class="cart__images">
+                        <p class="cart__images-title">Макеты изображений для нанесения</p>
+                        <div class="file">
+                            <div class="file__title">layout_picture_one.png</div>
+                        </div>
+                        <div class="file">
+                            <div class="file__title">layout_picture_number_two.png</div>
+                        </div>
+                        <div class="file">
+                            <div class="file__title">someone_makes_me_say_all_this.png</div>
+                        </div>
+                        <div class="file">
+                            <div class="file__title">please_return_my_passport.png</div>
+                        </div>
+                    </div>
+                    <div class="cart__comment-block">
+                        <div class="comment-block">
+                            <button class="comment-block__button" type="button">Оставить комментарий</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-block title-block--type_2">
+                <h2>Вы смотрели</h2>
+                <a href="#">Смотреть все</a>
+            </div>
+            <div class="cards-list cards-list--type_1">
+                //= template/cards-list-3.html
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/card.js"></script>
+
+    <script src="js/preloader.js"></script>
+
+</body>
+
+</html>
