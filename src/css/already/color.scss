@@ -1,0 +1,18 @@
+@import "base/_variables.scss";
+
+.color {
+    border: 1px solid $text-low;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 18px;
+    padding: 1px;
+    vertical-align: top;
+    width: 18px;
+
+    &__inner {
+        border-radius: 50%;
+        display: block;
+        height: 14px;
+        width: 14px;
+    }
+}

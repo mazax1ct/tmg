@@ -111,29 +111,9 @@
         align-items: center;
         display: flex;
 
-        img {
-            border: 1px solid $text-lowest;
-            border-radius: 50%;
+        .color {
             margin-right: 8px;
-            min-width: 18px;
-            width: 18px;
         }
-    }
-
-    &__color {
-        border: 1px solid $text-low;
-        border-radius: 50%;
-        height: 18px;
-        margin-right: 8px;
-        padding: 1px;
-        width: 18px;
-    }
-
-    &__color-inner {
-        border-radius: 50%;
-        display: block;
-        height: 14px;
-        width: 14px;
     }
 
     &__switch {

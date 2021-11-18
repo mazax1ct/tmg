@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Сравнение</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/list-clear.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/compare.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/color.css" />
+
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <p class="back-block"><a href="#">Вернуться в Кабинет</a></p>
+            <div class="title-block title-block--type_4">
+                <h1>Сравнение товаров</h1>
+                <button class="list-clear" type="button">Очистить список</button>
+            </div>
+
+            <div class="tabs-nav">
+                <ul class="tabs-nav__list">
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button is-active" type="button">Платьишки<sup>46</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Ручки<sup>6</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Микроскопы<sup>4</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Межконтинентальные баллистические ракеты<sup>3</sup></button>
+                    </li>
+                    <li class="tabs-nav__list-item">
+                        <button class="tabs-nav__button" type="button">Шапочки<sup>12</sup></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="compare">
+                <div class="compare__top">
+                    <div class="compare__container">
+                        <button class="compare__prev" title="Назад" style="display: none;">
+                            <svg class="icon icon-giant">
+                                <use xlink:href="#chevron_left" />
+                            </svg>
+                        </button>
+                        <div class="compare__container-inner">
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Бутылка для воды стеклянная c чехлом Pure, серая</a></p>
+                                        <div class="card__buttons">
+                                            <a class="js-open-dropdown card__add-cart button button--primary_ghost button--big" href="#">В корзину</a>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card__inner card__dropdown">
+                                        <div class="card__tirage">
+                                            <span class="card__size">XS /44</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">S / 46</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">M /48</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">L / 50</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">XL / 52</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">2XL / 54</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">3XL / 56</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">4XL / 58</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__buttons card__buttons--type_1">
+                                            <button class="button button--primary button--big" type="button" disabled>Добавить</button>
+                                            <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                            <span class="card__label">Доп. акцент</span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                            <span class="card__old-price">2 050 ₽</span>
+                                            <span class="card__discount">-40%</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Зарядное устройство беспроводное Ritmix RM-1000W, белое</a></p>
+                                        <div class="card__buttons">
+                                            <a class="js-open-dropdown card__add-cart button button--primary_ghost button--big" href="#">В корзину</a>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card__inner card__dropdown">
+                                        <div class="card__tirage">
+                                            <span class="card__size">XS /44</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">S / 46</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                        <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                            <svg class="icon icon--big">
+                                                                <use xlink:href="#close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">M /48</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">L / 50</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">XL / 52</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">2XL / 54</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">3XL / 56</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">4XL / 58</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__buttons card__buttons--type_1">
+                                            <button class="button button--primary button--big" type="button">Добавить</button>
+                                            <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                            <span class="card__label">Доп. акцент</span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                            <span class="card__old-price">2 050 ₽</span>
+                                            <span class="card__discount">-40%</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Бутылка для воды стеклянная c чехлом Pure, серая</a></p>
+                                        <div class="card__buttons">
+                                            <a class="js-open-dropdown card__add-cart button button--primary_ghost button--big" href="#">В корзину</a>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card__inner card__dropdown">
+                                        <div class="card__tirage">
+                                            <span class="card__size">XS /44</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">S / 46</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                        <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                            <svg class="icon icon--big">
+                                                                <use xlink:href="#close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">M /48</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">L / 50</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">XL / 52</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">2XL / 54</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">3XL / 56</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">4XL / 58</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__buttons card__buttons--type_1">
+                                            <button class="button button--primary button--big" type="button">Добавить</button>
+                                            <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                            <span class="card__old-price">2 050 ₽</span>
+                                            <span class="card__discount">-40%</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Бутылка для воды стеклянная c чехлом Pure, серая</a></p>
+                                        <div class="card__buttons">
+                                            <div class="card__out-of-stock">Нет в наличии</div>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                            <span class="card__old-price">2 050 ₽</span>
+                                            <span class="card__discount">-40%</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Бутылка для воды стеклянная c чехлом Pure, серая</a></p>
+                                        <div class="card__buttons">
+                                            <div class="card__out-of-stock">Нет в наличии</div>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compare__item">
+                                <div class="card card--type_2">
+                                    <div class="card__inner">
+                                        <a class="card__link" href="detail.html">
+                                            <span class="card__image">
+                                                <img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt="">
+                                            </span>
+                                        </a>
+                                        <p class="card__price-block">
+                                            <span class="card__price">12 178 ₽</span>
+                                        </p>
+                                        <p class="card__title"><a href="detail.html">Бутылка для воды стеклянная c чехлом Pure, серая</a></p>
+                                        <div class="card__buttons">
+                                            <a class="js-open-dropdown card__add-cart button button--primary_ghost button--big" href="#">В корзину</a>
+                                            <button class="card__action is-active" type="button" title="Убрать из сравнения">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="card__action" type="button" title="Добавить в избранное">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#favorite"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card__inner card__dropdown">
+                                        <div class="card__tirage">
+                                            <span class="card__size">XS /44</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">S / 46</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                        <button class="input-label__input-action input-label__input-action--clear" type="button" title="Очистить">
+                                                            <svg class="icon icon--big">
+                                                                <use xlink:href="#close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">M /48</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">L / 50</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">XL / 52</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">2XL / 54</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">3XL / 56</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__tirage">
+                                            <span class="card__size">4XL / 58</span>
+                                            <div class="card__input-container">
+                                                <label class="input-label input-label--small">
+                                                    <span class="input-label__input-container">
+                                                        <input class="js-input input" type="text" value="" placeholder="до 1 580 шт" />
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card__buttons card__buttons--type_1">
+                                            <button class="button button--primary button--big" type="button">Добавить</button>
+                                            <button class="js-close-dropdown button button--primary button--big button--just_icon" type="button" title="Закрыть">
+                                                <svg class="icon icon--big">
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="compare__next" title="Вперед">
+                            <svg class="icon icon--giant">
+                                <use xlink:href="#chevron_right" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="compare__container compare__container--type_2">
+                    <div class="compare__container-title">Размеры</div>
+                    <div class="compare__container-inner">
+                        <div class="compare__item">XS-3XL</div>
+                        <div class="compare__item">XS-3XL</div>
+                        <div class="compare__item">XS-3XL</div>
+                        <div class="compare__item">XS-3XL</div>
+                        <div class="compare__item">XS-3XL</div>
+                        <div class="compare__item">XS-3XL</div>
+                    </div>
+                </div>
+                <div class="compare__container compare__container--type_2">
+                    <div class="compare__container-title">Бренд</div>
+                    <div class="compare__container-inner">
+                        <div class="compare__item">Max & Co</div>
+                        <div class="compare__item">Lacoste</div>
+                        <div class="compare__item">Mia-Mia</div>
+                        <div class="compare__item">Valentino</div>
+                        <div class="compare__item">Rocawear</div>
+                        <div class="compare__item">Rocawear</div>
+                    </div>
+                </div>
+                <div class="compare__container compare__container--type_2">
+                    <div class="compare__container-title">Материал</div>
+                    <div class="compare__container-inner">
+                        <div class="compare__item">Хлопок</div>
+                        <div class="compare__item">Хлопок, шерсть</div>
+                        <div class="compare__item">Полиэстер</div>
+                        <div class="compare__item">Шёлк</div>
+                        <div class="compare__item">Хлопок</div>
+                        <div class="compare__item">Хлопок</div>
+                    </div>
+                </div>
+                <div class="compare__container compare__container--type_2">
+                    <div class="compare__container-title">Цвета</div>
+                    <div class="compare__container-inner">
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                        <div class="compare__item">
+                            <div class="compare__colors">
+                                <span class="color"><span class="color__inner" style="background-color: #fff;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #000;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #246492;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #559ED2;" title="Название цвета"></span></span>
+                                <span class="color"><span class="color__inner" style="background-color: #FB3449;" title="Название цвета"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/card.js"></script>
+    <script src="js/compare.js"></script>
+
+    <script src="js/preloader.js"></script>
+
+</body>
+
+</html>

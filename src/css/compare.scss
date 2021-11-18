@@ -1,0 +1,115 @@
+@import "base/_variables.scss";
+
+.compare {
+    left: 50%;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-50%);
+    width: 100vw;
+
+    &__top {
+        min-height: 416px;
+    }
+
+    &__next,
+    &__prev {
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(#D3E8F8, 0.2);
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        padding: 0;
+        position: absolute;
+        top: 102px;
+        transition: background-color 0.3s;
+        width: 48px;
+        z-index: 4;
+
+        &:hover {
+            background-color: rgba(#D3E8F8, 0.5);
+
+            svg {
+                stroke: $text-full;
+            }
+        }
+
+        svg {
+            stroke: $text-low;
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    &__prev {
+        left: 20px;
+    }
+
+    &__next {
+        left: auto;
+        right: 20px;
+    }
+
+    &__container {
+        min-width: 320px;
+        position: relative;
+        @media(min-width: 1350px) {
+            padding-left: calc(50vw - 640px);
+            padding-right: calc(50vw - 640px);
+        }
+
+        &--type_2 {
+            padding-top: 48px;
+            padding-bottom: 24px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $primary-ghostH;
+            }
+        }
+    }
+
+    &__container-title {
+        align-items: center;
+        color: $text-medium;
+        display: flex;
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        min-height: 28px;
+        position: absolute;
+        padding-right: 16px;
+        padding-left: 16px;
+        top: 16px;
+        text-transform: uppercase;
+    }
+
+    &__container-inner {
+        display: inline-flex;
+        transition: transform 0.2s ease-out;
+    }
+
+    &__item {
+        color: $text-full;
+        line-height: 1.1875;
+        min-width: 252px;
+        position: relative;
+        padding-right: 16px;
+        padding-left: 16px;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+        width: 252px;
+    }
+
+    &__colors {
+        display: flex;
+        flex-wrap: wrap;
+
+        .color {
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+    }
+}

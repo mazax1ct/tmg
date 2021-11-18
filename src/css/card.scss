@@ -23,6 +23,17 @@
         }
     }
 
+    &--type_2 {
+        min-height: 416px;
+        margin-left: -16px;
+        margin-right: -16px;
+        width: 252px;
+
+        .card__inner {
+            padding: 16px;
+        }
+    }
+
     &.is-open {
         z-index: 3;
 
