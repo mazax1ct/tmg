@@ -42,7 +42,8 @@
     &__prev {
         left: 20px;
         @media(min-width: 1350px) {
-            left: calc(50vw - 664px);
+            left: calc(50% - 664px);
+            /*половина контейнера без паддингов + половина кнопки*/
         }
     }
 
@@ -50,7 +51,8 @@
         left: auto;
         right: 20px;
         @media(min-width: 1350px) {
-            right: calc(50vw - 664px);
+            right: calc(50% - 664px);
+            /*половина контейнера без паддингов + половина кнопки*/
         }
     }
 
@@ -58,8 +60,9 @@
         min-width: 320px;
         position: relative;
         @media(min-width: 1350px) {
-            padding-left: calc(50vw - 640px);
-            padding-right: calc(50vw - 640px);
+            padding-left: calc(50% - 640px);
+            padding-right: calc(50% - 640px);
+            /*половина контейнера без паддингов*/
         }
 
         &--type_2 {

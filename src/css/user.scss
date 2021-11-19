@@ -1,0 +1,133 @@
+@import "base/_variables.scss";
+
+.user {
+    margin-bottom: 40px;
+    padding-left: 12px;
+
+    &__avatar {
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: 120px;
+        margin-bottom: 24px;
+        position: relative;
+        width: 120px;
+
+        &.changed {
+            .icon {
+                opacity: 0;
+            }
+
+            .user__avatar-image {
+                &::after {
+                    background-color: $text-low;
+                    bottom: 0;
+                    content: '';
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    transition: opacity 0.3s;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+
+            &:hover {
+                .icon {
+                    opacity: 1;
+                }
+
+                .user__avatar-image {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            input {
+                &:focus ~ .user__avatar-image {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &:focus + .icon {
+                    opacity: 1;
+                    stroke: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            .user__avatar-image {
+                background-color: $text-lowest;
+            }
+
+            .icon {
+                stroke: #fff;
+            }
+        }
+
+        input {
+            position: absolute;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            width: 1px;
+
+            &:focus ~ .user__avatar-image {
+                background-color: $text-lowest;
+            }
+
+            &:focus + .icon {
+                stroke: #fff;
+            }
+        }
+
+        .icon {
+            height: 40px;
+            left: 50%;
+            position: absolute;
+            stroke: $primary-ghostH;
+            stroke-width: 2px;
+            top: 50%;
+            transition: stroke 0.3s, opacity 0.3s;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            z-index: 2;
+        }
+    }
+
+    &__avatar-image {
+        background-color: $primary-ghostL;
+        border-radius: 50%;
+        display: block;
+        height: 120px;
+        overflow: hidden;
+        position: relative;
+        transition: background-color 0.3s;
+        width: 120px;
+
+        img {
+            border-radius: 50%;
+            height: 120px;
+            object-fit: cover;
+            object-position: center;
+            width: 120px;
+        }
+    }
+
+    &__name {
+        color: $text-full;
+        display: block;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.4px;
+        @media(min-width: 1024px) {
+            font-size: 20px;
+        }
+    }
+}

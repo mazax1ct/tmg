@@ -44,10 +44,15 @@
     &__input-action,
     &__input-status {
         align-items: center;
+        color: $primary-medium;
         display: flex;
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
         height: 40px;
         justify-content: center;
         left: auto;
+        letter-spacing: 0.3px;
         position: absolute;
         padding: 0;
         right: 0;
@@ -89,6 +94,12 @@
                 stroke: $primary-medium;
                 stroke-width: 1.4px;
             }
+        }
+
+        &--verify {
+            padding-left: 8px;
+            padding-right: 8px;
+            width: auto;
         }
     }
 
@@ -200,6 +211,10 @@
 
     &--with_action {
         padding-right: 52px;
+    }
+
+    &--with_action_big {
+        padding-right: 102px;
     }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <title>Попапы</title>
+    <title>Личный кабинет</title>
 
     <meta name="description" content="">
 
@@ -94,10 +94,10 @@
     <link rel="stylesheet" href="css/select.css" />
 
     <!--стили подключаемых на страние блоков-->
-    <link rel="stylesheet" href="css/catalog-item.css" />
-    <link rel="stylesheet" href="css/package.css" />
-    <link rel="stylesheet" href="css/print.css" />
-    <link rel="stylesheet" href="css/select.css" />
+    <link rel="stylesheet" href="css/lk.css" />
+    <link rel="stylesheet" href="css/user.css" />
+    <link rel="stylesheet" href="css/lk-menu.css" />
+    <link rel="stylesheet" href="css/personal-form.css" />
 </head>
 
 <body>
@@ -1151,848 +1151,171 @@
 
     <main class="page-content">
         <div class="container">
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_1_1" data-src="#modal_1">Вход</button></p>
-            <div id="modal_1" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <div class="popup__enter-block">
-                        <span class="popup__enter-title">Войти</span>
-                        <button class="popup__enter-button" type="button">Зарегистрироваться</button>
-                    </div>
-                    <div class="popup__row">
-                        <button class="button button--primary button--big button--wide" type="button">По E-mail адресу</button>
-                    </div>
-                    <div class="popup__row popup__row--type_1">
-                        <button class="button button--primary button--big button--wide" type="button">По номеру телефона</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_2" data-src="#modal_2">Вход по E-mail адресу</button></p>
-            <div id="modal_2" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">ВХОД</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Адрес электронной почты</span>
-                                </span>
-                            </label>
-                        </div>
-                        <label class="input-label">
-                            <span class="input-label__input-container">
-                                <input class="js-input input" type="password" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                <span class="input-label__label-text">Пароль</span>
-                            </span>
-                        </label>
-                    </form>
-                    <p class="popup__forgot-block"><a href="#">Забыли пароль?</a></p>
-                    <div class="popup__row popup__row--type_2">
-                        <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
+            <div class="lk">
+                <button class="js-personal-opener lk__personal-opener button button--primary button--big button--wide" type="button">Меню Личного кабинета</button>
+                <div class="lk__left">
+                    <div class="lk__left-inner">
+                        <button class="js-personal-closer lk__left-inner-close" type="button" title="Закрыть меню">
                             <svg class="icon icon--big">
-                                <use xlink:href="#arrow_left"></use>
+                                <use xlink:href="#close"></use>
                             </svg>
                         </button>
-                        <button class="button button--primary button--big button--wide" type="button">Войти</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_3" data-src="#modal_3">Вход по номеру телефона</button></p>
-            <div id="modal_3" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">ВХОД</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="phone-input">
-                                <span class="phone-input__input-container">
-                                    <button class="phone-input__prefix" type="button">
-                                        <span class="phone-input__prefix-text">+7</span>
-                                        <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
-                                            <use xlink:href="#arrow_down"></use>
+                        <div class="user">
+                            <label class="user__avatar" for="user_avatar">
+                                <input id="user_avatar" type="file" value="">
+                                <svg class="icon">
+                                    <use xlink:href="#photo_add"></use>
+                                </svg>
+                                <span class="user__avatar-image"></span>
+                            </label>
+                            <h1 class="user__name">Аноним<br> Анонимович</h1>
+                        </div>
+                        <ul class="lk-menu">
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link is-active" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#personal"></use>
                                         </svg>
-                                    </button>
-                                    <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
-                                    <span class="phone-input__pseudo-container"></span>
-                                    <div class="phone-input__dropdown dropdown">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
-                                        </ul>
-                                    </div>
-                                </span>
-                            </label>
-                        </div>
-                        <label class="input-label">
-                            <span class="input-label__input-container">
-                                <input class="js-input input" type="password" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                <span class="input-label__label-text">Пароль</span>
-                            </span>
-                        </label>
-                    </form>
-                    <p class="popup__forgot-block"><a href="#">Забыли пароль?</a></p>
-                    <div class="popup__row popup__row--type_2">
-                        <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                            <svg class="icon icon--big">
-                                <use xlink:href="#arrow_left"></use>
-                            </svg>
-                        </button>
-                        <button class="button button--primary button--big button--wide" type="button">Войти</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_4" data-src="#modal_4">Восстановление пароля по e-mail</button></p>
-            <div id="modal_4" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Восстановление пароля</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row">Введите адрес электронной почты, указанный при регистрации</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Адрес электронной почты</span>
-                                </span>
-                            </label>
-                        </div>
-                    </form>
-                    <div class="popup__row popup__row--type_2">
-                        <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                            <svg class="icon icon--big">
-                                <use xlink:href="#arrow_left"></use>
-                            </svg>
-                        </button>
-                        <button class="button button--primary button--big button--wide" type="button">Далее</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_5" data-src="#modal_5">Восстановление пароля по номеру телефона</button></p>
-            <div id="modal_5" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Восстановление пароля</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row">Введите номер мобильного телефона, указанный при регистрации</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="phone-input">
-                                <span class="phone-input__input-container">
-                                    <button class="phone-input__prefix" type="button">
-                                        <span class="phone-input__prefix-text">+7</span>
-                                        <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
-                                            <use xlink:href="#arrow_down"></use>
+                                    </span>
+                                    Данные и адреса
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#case"></use>
                                         </svg>
-                                    </button>
-                                    <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
-                                    <span class="phone-input__pseudo-container"></span>
-                                    <div class="phone-input__dropdown dropdown">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
-                                        </ul>
-                                    </div>
-                                </span>
-                            </label>
-                        </div>
-                    </form>
-                    <div class="popup__row popup__row--type_2">
-                        <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                            <svg class="icon icon--big">
-                                <use xlink:href="#arrow_left"></use>
-                            </svg>
-                        </button>
-                        <button class="button button--primary button--big button--wide" type="button">Далее</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_6" data-src="#modal_6">Отправлено письмо</button></p>
-            <div id="modal_6" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Восстановление пароля</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row popup__row--type_1">На адрес <b>unodostresquatro@icloud.com</b> отправлено письмо с новым паролем</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="password" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                    <span class="input-label__label-text">Пароль</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_2">
-                            <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#arrow_left"></use>
-                                </svg>
-                            </button>
-                            <button class="button button--primary button--big button--wide" type="button">Войти</button>
-                        </div>
-                    </form>
-                    <hr class="popup__row">
-                    <div class="popup__row">
-                        <button class="button button--primary button--big button--wide" type="button">Отправить письмо повторно</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_7" data-src="#modal_7">Отправлено SMS</button></p>
-            <div id="modal_7" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Восстановление пароля</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row popup__row--type_1">На номер <b>+7 999 999 99 99</b> отправлено SMS с новым паролем</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="password" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                    <span class="input-label__label-text">Пароль</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_2">
-                            <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#arrow_left"></use>
-                                </svg>
-                            </button>
-                            <button class="button button--primary button--big button--wide" type="button">Войти</button>
-                        </div>
-                    </form>
-                    <hr class="popup__row">
-                    <div class="popup__row">
-                        <button class="button button--primary button--big button--wide" type="button">Отправить письмо повторно</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_8" data-src="#modal_8">Регистрация шаг 1</button></p>
-            <div id="modal_8" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Регистрация</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Адрес электронной почты</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Ваше имя</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row">
-                            <label class="checkbox-label">
-                                <input type="checkbox" />
-                                <span class="checkbox-icon"></span>
-                                <span class="checkbox-text">Соглашаюсь с <a href="#">условиями</a> обработки персональных данных</span>
-                            </label>
-                        </div>
-                        <div class="popup__recaptcha">
-                            <label class="checkbox-label">
-                                <input type="checkbox" />
-                                <span class="checkbox-icon"></span>
-                                <span class="checkbox-text">I’m not a robot</span>
-                            </label>
-                            <img width="48" height="48" src="images/content/popups/recaptcha.jpg" alt="">
-                        </div>
-                    </form>
-                    <div class="popup__row popup__row--type_2">
-                        <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                            <svg class="icon icon--big">
-                                <use xlink:href="#arrow_left"></use>
-                            </svg>
-                        </button>
-                        <button class="button button--primary button--big button--wide" type="button" disabled>Создать профиль</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_9" data-src="#modal_9">Регистрация шаг 2</button></p>
-            <div id="modal_9" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Регистрация</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row">Для полноценной работы личного кабинета и в качестве резервного способа входа необходимо указать <b>номер мобильного телефона</b></p>
-                    <p class="popup__text popup__row">Вы можете добавить и подтвердить номер телефона позднее в настройках вашего профиля</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <label class="phone-input">
-                            <span class="phone-input__input-container">
-                                <button class="phone-input__prefix" type="button">
-                                    <span class="phone-input__prefix-text">+7</span>
-                                    <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
-                                        <use xlink:href="#arrow_down"></use>
-                                    </svg>
-                                </button>
-                                <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
-                                <span class="phone-input__pseudo-container"></span>
-                                <div class="phone-input__dropdown dropdown">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
-                                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
-                                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
-                                        <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
-                                    </ul>
-                                </div>
-                            </span>
-                        </label>
-                    </form>
-                    <div class="popup__row">
-                        <button class="button button--primary button--big button--wide" type="button">Продолжить</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Пропустить шаг</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_10" data-src="#modal_10">Регистрация шаг 3</button></p>
-            <div id="modal_10" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Регистрация</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row">На номер <b>+7 999 999 99 99</b> отправлено SMS с кодом подтверждения</p>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Введите код</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_2">
-                            <button class="popup__back-button button button--primary button--big button--just_icon" type="button" title="Назад">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#arrow_left"></use>
-                                </svg>
-                            </button>
-                            <button class="button button--primary button--big button--wide" type="button">Завершить</button>
-                        </div>
-                    </form>
-                    <hr class="popup__row">
-                    <div class="popup__row">
-                        <button class="button button--primary button--big button--wide" type="button">Отправить SMS повторно</button>
-                    </div>
-                    <button class="button button--secondary button--big button--wide" type="button">Пропустить шаг</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_11" data-src="#modal_11">Регистрация завершена</button></p>
-            <div id="modal_11" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Регистрация</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__title">Регистрация завершена!</p>
-                    <p class="popup__text popup__row"><img width="14" height="14" style="vertical-align: middle; position: relative; top: -2px;" src="images/icons/attention.png" alt=""> Ваша учётная запись проходит проверку, это не займёт много
-                        времени. До её завершения возможности
-                        личного кабинета ограничены.
-                    </p>
-                    <p class="popup__text popup__row">На адрес <b>heeeey_uasya@yahoo.com</b> отправлено письмо с паролем для входа.</p>
-                    <form class="popup__row" action="">
-                        <div class="popup__row popup__row--type_1">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="password" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                    <span class="input-label__label-text">Пароль</span>
-                                </span>
-                            </label>
-                        </div>
-                        <button class="button button--primary button--big button--wide" type="button">Войти</button>
-                    </form>
-                    <button class="button button--secondary button--big button--wide" type="button">Отправить письмо повторно</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_12" data-src="#modal_12">Результат верификации 1</button></p>
-            <div id="modal_12" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__title">Поздравляем!</p>
-                    <p class="popup__text popup__row popup__row--type_1">Ваша учётная запись <b>успешно</b> прошла проверку! Получен полный доступ к инструментам личного кабинета!</p>
-                    <button class="button button--primary button--big button--wide" type="button">Отлично!</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_13" data-src="#modal_13">Результат верификации 2</button></p>
-            <div id="modal_13" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__title">Увы...</p>
-                    <p class="popup__text popup__row popup__row--type_1">По какой-то причине учётная запись <b>не смогла</b> пройти проверку. За подробностями обращайтесь по телефону <b>8-800-111-11-11</b></p>
-                    <button class="button button--secondary button--big button--wide" type="button">Закрыть</button>
-                </div>
-            </div>
-
-            <div id="request" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Оставить заявку</p>
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <form class="popup__row popup__row--type_1" action="">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Имя <span class="required">*</span></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row">
-                            <label class="phone-input">
-                                <span class="phone-input__input-container">
-                                    <button class="phone-input__prefix" type="button">
-                                        <span class="phone-input__prefix-text">+7</span>
-                                        <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
-                                            <use xlink:href="#arrow_down"></use>
+                                    </span>
+                                    Юридические лица
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <span class="lk-menu__notificator notificator">8</span>
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#compare"></use>
                                         </svg>
-                                    </button>
-                                    <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
-                                    <span class="phone-input__pseudo-container"></span>
-                                    <div class="phone-input__dropdown dropdown">
-                                        <ul class="dropdown-list">
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
-                                            <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
-                                        </ul>
-                                    </div>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Email <span class="required">*</span></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Название компании</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <div class="input-file">
-                                <input id="input_3" type="file">
-                                <label class="input-file__text-block ready" for="input_3"><span class="input-file__text">Прикрепить файл +</span></label>
-                            </div>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <div class="input-file">
-                                <input id="input_4" type="file">
-                                <label class="input-file__text-block preload" for="input_4"><span class="input-file__text">гениальная_идея.pdf</span></label>
-                                <span class="input-file__placeholder">Прикрепить реквизиты</span>
-                                <button class="input-file__delete" type="button" title="Очистить">
-                                    <svg class="icon icon--big">
-                                        <use xlink:href="#close"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="popup__row popup__row--type_1">
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Тираж</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Ориентировочный бюджет</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <label class="input-label">
-                                <span class="input-label__input-container">
-                                    <input class="js-input input" type="text" value="" />
-                                    <span class="input-label__label-text">Желаемая дата доставки</span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="popup__row popup__row--type_1">
-                            <label class="checkbox-label checkbox-label--tiny">
-                                <input type="checkbox" />
-                                <span class="checkbox-icon"></span>
-                                <span class="checkbox-text">Нажимая кнопку «Отправить», я даю свое согласие на обработ-ку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
-                                    для целей,
-                                    определенных в Согласии на обработ-ку персональных данных <span class="required">*</span></span>
-                            </label>
-                        </div>
-                        <button class="button button--primary button--big button--wide" type="button" disabled>Отправить</button>
-                    </form>
-                </div>
-            </div>
-
-            <div id="help_popup" class="popup help-popup">
-                <div class="popup__content">
-                    <p class="h1 text-center">Заказ в пару кликов - быстро и удобно</p>
-                    <div class="help-steps">
-                        <div class="help-steps__step">
-                            <img src="images/content/help-popup/img_1.svg" alt="">
-                            <p class="help-steps__step-title">Добавьте нужные<br> товары в корзину</p>
-                        </div>
-                        <div class="help-steps__step">
-                            <img src="images/content/help-popup/img_2.svg" alt="">
-                            <p class="help-steps__step-title">Укажите для каждого из них количество</p>
-                        </div>
-                        <div class="help-steps__step">
-                            <img src="images/content/help-popup/img_3.svg" alt="">
-                            <p class="help-steps__step-title">Поставьте галочку «нанести логотип» там, где это нужно</p>
-                            <p class="help-steps__step-note">Если у вас уже есть готовый макет или графические файлы для<br> нанесения - прикрепите их к корзине в любом формате.</p>
-                        </div>
-                        <div class="help-steps__step">
-                            <img src="images/content/help-popup/img_4.svg" alt="">
-                            <p class="help-steps__step-title">Теперь Просто ждите ;)</p>
-                            <p class="help-steps__step-note">Оплата на данном этапе не требуется. Наш менеджер свяжется с<br> вами в ближайшее время, уточнит необходимые детали и оформит<br> заказ.</p>
-                        </div>
-                    </div>
-                    <ul class="help-popup__links">
-                        <li class="help-popup__links-item"><a class="help-popup__link" href="#">оплата</a></li>
-                        <li class="help-popup__links-item"><a class="help-popup__link" href="#">доставка</a></li>
-                        <li class="help-popup__links-item"><a class="help-popup__link" href="#">требования к макетам</a></li>
-                        <li class="help-popup__links-item"><a class="help-popup__link" href="#">обмен и возврат</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="cart_clear" class="popup popup--400">
-                <div class="popup__content">
-                    <p class="popup__header">Очистить корзину?</p>
-
-                    <p class="popup__text popup__row popup__row--type_1">Внимание! Вы уверены, что хотите удалить все товары в корзине? Данное действие необратимо.</p>
-
-                    <div class="popup__row popup__row--type_3">
-                        <button class="button button--primary button--big" type="button">Отмена</button>
-                        <button class="button button--secondary button--big" type="button">Да, удалить</button>
+                                    </span>
+                                    Списки сравнения
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                    </span>
+                                    Заказы
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#doc"></use>
+                                        </svg>
+                                    </span>
+                                    КП
+                                </a>
+                            </li>
+                            <li class="lk-menu__item lk-menu__item--type_1">
+                                <a class="lk-menu__link lk-menu__link--type_1" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#logout"></use>
+                                        </svg>
+                                    </span>
+                                    Выход
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_14" data-src="#modal_14">УПАКОВКА И НАНЕСЕНИЕ</button></p>
-            <div id="modal_14" class="popup popup--480">
-                <div class="popup__content">
-                    <p class="popup__header">УПАКОВКА И НАНЕСЕНИЕ</p>
-                    <div class="catalog-item">
-                        <div class="catalog-item__image"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></div>
-                        <div class="catalog-item__title">Стерилизатор с функцией беспроводной зарядки Chili, белый</div>
-                    </div>
-                    <div class="package">
-                        <button class="package__button" type="button">Добавить упаковку +</button>
-                    </div>
-                    <div class="print">
-                        <button class="print__button" type="button">Добавить нанесение +</button>
-                    </div>
-                    <div class="popup__button-block">
-                        <button class="button button--secondary button--big button--wide" type="button">Отмена</button>
-                    </div>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_15" data-src="#modal_15">УПАКОВКА И НАНЕСЕНИЕ</button></p>
-            <div id="modal_15" class="popup popup--480">
-                <div class="popup__content">
-                    <p class="popup__header">УПАКОВКА И НАНЕСЕНИЕ</p>
-                    <div class="catalog-item">
-                        <div class="catalog-item__image"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></div>
-                        <div class="catalog-item__title">Стерилизатор с функцией беспроводной зарядки Chili, белый</div>
-                    </div>
-                    <div class="package">
-                        <div class="package__item">
-                            <div class="package__item-title">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#verified"></use>
-                                </svg>
-                                Упаковка
-                            </div>
-                            <button class="package__delete" type="button" title="Удалить упаковку">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#close"></use>
-                                </svg>
-                            </button>
+                <div class="lk__right">
+                    <div class="personal-form">
+                        <div class="personal-form__title-block">
+                            <h2 class="personal-form__title">Персональные данные</h2>
+                            <button class="personal-form__edit-button" type="button">Изменить</button>
                         </div>
-                    </div>
-                    <div class="print">
-                        <button class="print__button" type="button">Добавить нанесение +</button>
-                    </div>
-                    <div class="popup__button-block">
-                        <button class="button button--secondary button--big button--wide" type="button">Отмена</button>
-                    </div>
-                </div>
-            </div>
 
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_16" data-src="#modal_16">УПАКОВКА И НАНЕСЕНИЕ</button></p>
-            <div id="modal_16" class="popup popup--480">
-                <div class="popup__content">
-                    <p class="popup__header">УПАКОВКА И НАНЕСЕНИЕ</p>
-                    <div class="catalog-item">
-                        <div class="catalog-item__image"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt="alt"></div>
-                        <div class="catalog-item__title">Стерилизатор с функцией беспроводной зарядки Chili, белый</div>
-                    </div>
-                    <div class="package">
-                        <div class="package__item">
-                            <div class="package__item-title">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#verified"></use>
-                                </svg>
-                                Упаковка
-                            </div>
-                            <button class="package__delete" type="button" title="Удалить упаковку">
-                                <svg class="icon icon--big">
-                                    <use xlink:href="#close"></use>
-                                </svg>
-                            </button>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Аноним Анонимович" disabled />
+                                    <span class="input-label__label-text">Обращение</span>
+                                </span>
+                            </label>
                         </div>
-                    </div>
-                    <div class="print">
-                        <div class="print__inner">
-                            <div class="print__item">
-                                <div class="print__row print__row--type_1">
-                                    <div class="print__num">1</div>
-                                    <div class="print__select-block">
-                                        <label class="select-wrapper">
-                                            <span class="select-wrapper__label">Способ нанесения</span>
-                                            <span class="select-wrapper__container">
-                                                <select class="js-select">
-                                                    <option value="1">Шелкография на текстиль</option>
-                                                    <option value="2">Вышивка на текстиль</option>
-                                                    <option value="3">DTG</option>
-                                                </select>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <button class="print__delete" type="button" title="Удалить">
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="01 Января 2000" disabled />
+                                    <span class="input-label__label-text">дата рождения</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input input--with_action" type="text" value="no1knows_where2find.me@gmail.com" disabled />
+                                    <span class="input-label__label-text">Электронная почта</span>
+                                    <span class="input-label__input-status input-label__input-status--verified" title="Email подтверждён">
                                         <svg class="icon icon--big">
-                                            <use xlink:href="#close"></use>
+                                            <use xlink:href="#verified"></use>
                                         </svg>
-                                    </button>
-                                </div>
-                                <div class="print__row print__row--type_2">
-                                    <div class="print__select-block">
-                                        <label class="select-wrapper">
-                                            <span class="select-wrapper__label">Цвета</span>
-                                            <span class="select-wrapper__container">
-                                                <select class="js-select">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="3">4</option>
-                                                </select>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="print__input-block">
-                                        <label class="input-label">
-                                            <span class="input-label__input-container">
-                                                <input class="input changed" type="text" value="" />
-                                                <span class="input-label__label-text">ширина, мм</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="print__input-block">
-                                        <label class="input-label">
-                                            <span class="input-label__input-container">
-                                                <input class="input changed" type="text" value="" />
-                                                <span class="input-label__label-text">высота, мм</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="print__price">50 180.50 ₽</div>
-                                </div>
-                            </div>
-                            <div class="print__item">
-                                <div class="print__row print__row--type_1">
-                                    <div class="print__num">2</div>
-                                    <div class="print__select-block">
-                                        <label class="select-wrapper">
-                                            <span class="select-wrapper__label">Способ нанесения</span>
-                                            <span class="select-wrapper__container">
-                                                <select class="js-select">
-                                                    <option value="1">Флекс</option>
-                                                    <option value="2">Вышивка на текстиль</option>
-                                                    <option value="3">DTG</option>
-                                                </select>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <button class="print__delete" type="button" title="Удалить">
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input input--with_action" type="text" value="+7 (999) 123-45-67" disabled />
+                                    <span class="input-label__label-text">Телефон</span>
+                                    <span class="input-label__input-status input-label__input-status--verified" title="Телефон подтверждён">
                                         <svg class="icon icon--big">
-                                            <use xlink:href="#close"></use>
+                                            <use xlink:href="#verified"></use>
                                         </svg>
-                                    </button>
-                                </div>
-                                <div class="print__row print__row--type_3">
-                                    <div class="print__input-block">
-                                        <label class="input-label">
-                                            <span class="input-label__input-container">
-                                                <input class="input changed" type="text" value="" />
-                                                <span class="input-label__label-text">ширина, мм</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="print__input-block">
-                                        <label class="input-label">
-                                            <span class="input-label__input-container">
-                                                <input class="input changed" type="text" value="" />
-                                                <span class="input-label__label-text">высота, мм</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="print__price">50 180.50 ₽</div>
-                                </div>
-                            </div>
-                            <button class="print__button" type="button">Добавить нанесение +</button>
-                            <p class="print__total"><span>Всего за нанесение:</span> <span>112 301.50 ₽</span></p>
-                            <p class="print__note">Общая стоимость определится после окончательного оформления заказа</p>
+                                    </span>
+                                </span>
+                            </label>
                         </div>
                     </div>
-                    <div class="popup__button-block popup__row popup__row--type_3">
-                        <button class="button button--primary button--big" type="button">Отмена</button>
-                        <button class="button button--secondary button--big" type="button">Сохранить</button>
-                    </div>
-                </div>
-            </div>
+                    <hr>
+                    <div class="personal-form">
+                        <div class="personal-form__title-block">
+                            <h2 class="personal-form__title">Адреса доставки</h2>
+                            <button class="personal-form__edit-button" type="button">Изменить</button>
+                        </div>
 
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_17" data-src="#modal_17">Отправка sms 1</button></p>
-            <div id="modal_17" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row text-center">Номер мобильного телефона необходим для полноценной работы личного кабинета и в качестве резервного способа входа.</p>
-                    <p class="popup__text popup__row popup__row--type_1 text-center">Для подтверждения мы отправим SMS на номер<br> <b>+7 999 999 99 99</b></p>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled />
+                                </span>
+                            </label>
+                        </div>
 
-                    <button class="button button--primary button--big button--wide" type="button">Отправить SMS</button>
-                </div>
-            </div>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Республика Алтай, Посёлок им. Лохматого Геолога, д. 14" disabled />
+                                </span>
+                            </label>
+                        </div>
 
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_18" data-src="#modal_18">Отправка sms 2</button></p>
-            <div id="modal_18" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row text-center">На номер <b>+7 999 999 99 99</b><br> отправлено SMS с кодом подтверждения</p>
-                    <div class="popup__row">
-                        <label class="input-label">
-                            <span class="input-label__input-container">
-                                <input class="js-input input" type="text" value="" />
-                                <span class="input-label__label-text">Код из SMS</span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="popup__row popup__row--type_1">
-                        <button class="button button--primary button--big button--wide" type="button" disabled>Подтвердить</button>
-                    </div>
-                    <button class="button button--primary button--big button--wide" type="button">Отправить код повторно</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_19" data-src="#modal_19">Отправка sms 3</button></p>
-            <div id="modal_19" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row text-center">На номер <b>+7 999 999 99 99</b><br> отправлено SMS с кодом подтверждения</p>
-                    <div class="popup__row">
-                        <label class="input-label">
-                            <span class="input-label__input-container">
-                                <input class="js-input input" type="text" value="123456" />
-                                <span class="input-label__label-text">Код из SMS</span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="popup__row popup__row--type_1">
-                        <button class="button button--primary button--big button--wide" type="button">Подтвердить</button>
-                    </div>
-                    <button class="button button--primary button--big button--wide" type="button" disabled>Отправить повторно через 2:59</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_20" data-src="#modal_20">Отправка sms 4</button></p>
-            <div id="modal_20" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__title">Спасибо, номер подтверждён!</p>
-                    <p class="popup__text popup__row popup__row--type_1">Ваша учётная запись проходит проверку, это не займёт много времени. До её завершения возможности личного кабинета ограничены.</p>
-                    <button class="button button--primary button--big button--wide" type="button">Закрыть</button>
-                </div>
-            </div>
-
-            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_21" data-src="#modal_21">Удаление юр лица</button></p>
-            <div id="modal_21" class="popup popup--400">
-                <div class="popup__content">
-                    <div class="popup__logo">
-                        <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
-                    </div>
-                    <p class="popup__text popup__row">Внимание! Данное действие необратимо. Вы уверены, что хотите удалить <b>ООО “Рога и копыта”</b>?</p>
-                    <div class="popup__button-block popup__row popup__row--type_3">
-                        <button class="button button--primary button--big" type="button">Отмена</button>
-                        <button class="button button--secondary button--big" type="button">Да, удалить</button>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Магаданская область, г. Весёленький, ул. Грустненькая 18, кв. 131" disabled />
+                                </span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2157,6 +1480,203 @@
         </a>
     </div>
 
+    <div id="modal_1" class="popup popup--400">
+        <div class="popup__content">
+            <div class="popup__logo">
+                <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
+            </div>
+            <div class="popup__enter-block">
+                <span class="popup__enter-title">Войти</span>
+                <button class="popup__enter-button" type="button">Зарегистрироваться</button>
+            </div>
+            <div class="popup__row">
+                <button class="button button--primary button--big button--wide" type="button">По E-mail адресу</button>
+            </div>
+            <div class="popup__row popup__row--type_1">
+                <button class="button button--primary button--big button--wide" type="button">По номеру телефона</button>
+            </div>
+            <button class="button button--secondary button--big button--wide" type="button">Продолжить без авторизации</button>
+        </div>
+    </div>
+    
+    <div id="request" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Оставить заявку</p>
+            <div class="popup__logo">
+                <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
+            </div>
+            <form class="popup__row popup__row--type_1" action="">
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Имя <span class="required">*</span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="phone-input">
+                        <span class="phone-input__input-container">
+                            <button class="phone-input__prefix" type="button">
+                                <span class="phone-input__prefix-text">+7</span>
+                                <svg class="phone-input__prefix-arrow icon icon--small icon--fill">
+                                    <use xlink:href="#arrow_down"></use>
+                                </svg>
+                            </button>
+                            <input class="phone-input__input" type="text" value="" placeholder="(999) 123-45-67" />
+                            <span class="phone-input__pseudo-container"></span>
+                            <div class="phone-input__dropdown dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item selected" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+994</span> Азербайджан</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+347</span> Армения</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+375</span> Беларусь</span></button></li>
+                                    <li class="dropdown-list__list-item"><button class="dropdown-list__item" type="button"><span class="phone-prefix"><span class="phone-prefix__code">+7</span> Россия</span></button></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Email <span class="required">*</span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Название компании</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <div class="input-file">
+                        <input id="input_3" type="file">
+                        <label class="input-file__text-block ready" for="input_3"><span class="input-file__text">Прикрепить файл +</span></label>
+                    </div>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <div class="input-file">
+                        <input id="input_4" type="file">
+                        <label class="input-file__text-block preload" for="input_4"><span class="input-file__text">гениальная_идея.pdf</span></label>
+                        <span class="input-file__placeholder">Прикрепить реквизиты</span>
+                        <button class="input-file__delete" type="button" title="Очистить">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <hr class="popup__row popup__row--type_1">
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Тираж</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Ориентировочный бюджет</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="input-label">
+                        <span class="input-label__input-container">
+                            <input class="js-input input" type="text" value="" />
+                            <span class="input-label__label-text">Желаемая дата доставки</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="popup__row popup__row--type_1">
+                    <label class="checkbox-label checkbox-label--tiny">
+                        <input type="checkbox" />
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Нажимая кнопку «Отправить», я даю свое согласие на обработ-ку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
+                            определенных в Согласии на обработ-ку персональных данных <span class="required">*</span></span>
+                    </label>
+                </div>
+                <button class="button button--primary button--big button--wide" type="button" disabled>Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="help_popup" class="popup help-popup">
+        <div class="popup__content">
+            <p class="h1 text-center">Заказ в пару кликов - быстро и удобно</p>
+            <div class="help-steps">
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_1.svg" alt="">
+                    <p class="help-steps__step-title">Добавьте нужные<br> товары в корзину</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_2.svg" alt="">
+                    <p class="help-steps__step-title">Укажите для каждого из них количество</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_3.svg" alt="">
+                    <p class="help-steps__step-title">Поставьте галочку «нанести логотип» там, где это нужно</p>
+                    <p class="help-steps__step-note">Если у вас уже есть готовый макет или графические файлы для<br> нанесения - прикрепите их к корзине в любом формате.</p>
+                </div>
+                <div class="help-steps__step">
+                    <img src="images/content/help-popup/img_4.svg" alt="">
+                    <p class="help-steps__step-title">Теперь Просто ждите ;)</p>
+                    <p class="help-steps__step-note">Оплата на данном этапе не требуется. Наш менеджер свяжется с<br> вами в ближайшее время, уточнит необходимые детали и оформит<br> заказ.</p>
+                </div>
+            </div>
+            <ul class="help-popup__links">
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">оплата</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">доставка</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">требования к макетам</a></li>
+                <li class="help-popup__links-item"><a class="help-popup__link" href="#">обмен и возврат</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="filter_reset" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Сбросить фильтры?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Данное действие необратимо!</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, сбросить</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cart_clear" class="popup popup--400">
+        <div class="popup__content">
+            <p class="popup__header">Очистить корзину?</p>
+    
+            <p class="popup__text popup__row popup__row--type_1">Внимание! Вы уверены, что хотите удалить все товары в корзине? Данное действие необратимо.</p>
+    
+            <div class="popup__row popup__row--type_3">
+                <button class="button button--primary button--big" type="button">Отмена</button>
+                <button class="button button--secondary button--big" type="button">Да, удалить</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="checkout_finish" class="popup popup--460">
+        <div class="popup__content">
+            <div class="popup__logo">
+                <img width="168" height="42" src="images/logo_full.svg" alt="TOOMANYGIFTS">
+            </div>
+            <h3 class="popup__row text-center">Заказ №1234567-89 принят!</h3>
+            <p class="popup__text popup__row popup__row--type_1 text-center">Информация о заказе отправлена на Вашу электронную почту. В ближайшее время с Вами свяжется персональный менеджер <b>Николай</b> для уточнения деталей.</p>
+            <a class="button button--secondary button--big button--wide" href="#">Вернуться на главную</a>
+        </div>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     
     <script src="js/select2.full.min.js"></script>
@@ -2176,6 +1696,8 @@
     <script src="js/inputs.js"></script>
     
     <script src="js/phone-input.js"></script>
+
+    <script src="js/lk.js"></script>
 
     <script src="js/preloader.js"></script>
 </body>

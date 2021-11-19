@@ -30,7 +30,6 @@
     &__left {
         padding-top: 12px;
         @media(min-width: 1024px) {
-            border-top: none;
             padding-right: 20px;
             width: 68.75%;
         }
@@ -42,7 +41,6 @@
     &__right {
         padding-top: 32px;
         @media(min-width: 1024px) {
-            border-top: none;
             padding-left: 20px;
             width: 31.25%;
         }

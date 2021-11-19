@@ -1,0 +1,75 @@
+@import "base/_variables.scss";
+
+.lk-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &--type_1 {
+            border-top: 1px solid $primary-ghostH;
+            padding-top: 12px;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: $text-medium;
+        display: flex;
+        min-height: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &:focus,
+        &:hover {
+            color: $primary-full;
+
+            .icon {
+                stroke: $primary-full;
+            }
+        }
+
+        &.is-active {
+            background-color: $background-alt;
+            border-radius: 4px;
+            color: $text-full;
+
+            .icon {
+                stroke: $primary-medium;
+            }
+        }
+
+        .icon {
+            stroke: $text-medium;
+        }
+
+        &--type_1 {
+            &:focus,
+            &:hover {
+                color: $secondary-full;
+
+                .icon {
+                    stroke: $secondary-full;
+                }
+            }
+        }
+    }
+
+    &__icon-container {
+        height: 20px;
+        margin-right: 8px;
+        position: relative;
+        width: 20px;
+    }
+
+    &__notificator {
+        left: 8px;
+        position: absolute;
+        top: -8px;
+        z-index: 1;
+    }
+}

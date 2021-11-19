@@ -95,9 +95,7 @@ h4 {
 }
 
 .h5,
-.h6,
-h5,
-h6 {
+h5 {
     color: $text-full;
     font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
     font-size: 14px;
@@ -106,6 +104,21 @@ h6 {
     margin-top: 0;
     margin-bottom: 16px;
     text-transform: uppercase;
+
+    &:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+.h6,
+h6 {
+    color: $text-full;
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.21428;
+    margin-top: 0;
+    margin-bottom: 12px;
 
     &:not(:first-child) {
         margin-top: 40px;
@@ -647,4 +660,12 @@ p + .title-block--type_1 {
 
 .footnote {
     padding-left: 16px;
+}
+
+.color-full {
+    color: $text-full;
+}
+
+.color-low {
+    color: $text-low;
 }

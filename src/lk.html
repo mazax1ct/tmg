@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Личный кабинет</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/lk.css" />
+    <link rel="stylesheet" href="css/user.css" />
+    <link rel="stylesheet" href="css/lk-menu.css" />
+    <link rel="stylesheet" href="css/personal-form.css" />
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <div class="lk">
+                <button class="js-personal-opener lk__personal-opener button button--primary button--big button--wide" type="button">Меню Личного кабинета</button>
+                <div class="lk__left">
+                    <div class="lk__left-inner">
+                        <button class="js-personal-closer lk__left-inner-close" type="button" title="Закрыть меню">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="user">
+                            <label class="user__avatar" for="user_avatar">
+                                <input id="user_avatar" type="file" value="">
+                                <svg class="icon">
+                                    <use xlink:href="#photo_add"></use>
+                                </svg>
+                                <span class="user__avatar-image"></span>
+                            </label>
+                            <h1 class="user__name">Аноним<br> Анонимович</h1>
+                        </div>
+                        <ul class="lk-menu">
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link is-active" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#personal"></use>
+                                        </svg>
+                                    </span>
+                                    Данные и адреса
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#case"></use>
+                                        </svg>
+                                    </span>
+                                    Юридические лица
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <span class="lk-menu__notificator notificator">8</span>
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </span>
+                                    Списки сравнения
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                    </span>
+                                    Заказы
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#doc"></use>
+                                        </svg>
+                                    </span>
+                                    КП
+                                </a>
+                            </li>
+                            <li class="lk-menu__item lk-menu__item--type_1">
+                                <a class="lk-menu__link lk-menu__link--type_1" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#logout"></use>
+                                        </svg>
+                                    </span>
+                                    Выход
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lk__right">
+                    <div class="personal-form">
+                        <div class="personal-form__title-block">
+                            <h2 class="personal-form__title">Персональные данные</h2>
+                            <button class="personal-form__edit-button" type="button">Изменить</button>
+                        </div>
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Аноним Анонимович" disabled />
+                                    <span class="input-label__label-text">Обращение</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="01 Января 2000" disabled />
+                                    <span class="input-label__label-text">дата рождения</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input input--with_action" type="text" value="no1knows_where2find.me@gmail.com" disabled />
+                                    <span class="input-label__label-text">Электронная почта</span>
+                                    <span class="input-label__input-status input-label__input-status--verified" title="Email подтверждён">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#verified"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input input--with_action" type="text" value="+7 (999) 123-45-67" disabled />
+                                    <span class="input-label__label-text">Телефон</span>
+                                    <span class="input-label__input-status input-label__input-status--verified" title="Телефон подтверждён">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#verified"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="personal-form">
+                        <div class="personal-form__title-block">
+                            <h2 class="personal-form__title">Адреса доставки</h2>
+                            <button class="personal-form__edit-button" type="button">Изменить</button>
+                        </div>
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="г. Москва, ул. Жоры Пупочкина, д. 18, к. 5, офф. 345" disabled />
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Республика Алтай, Посёлок им. Лохматого Геолога, д. 14" disabled />
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="personal-form__row">
+                            <label class="input-label">
+                                <span class="input-label__input-container">
+                                    <input class="js-input input" type="text" value="Магаданская область, г. Весёленький, ул. Грустненькая 18, кв. 131" disabled />
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/lk.js"></script>
+
+    <script src="js/preloader.js"></script>
+</body>
+
+</html>
