@@ -57,25 +57,25 @@
 
     &:hover {
         .cart-item__action {
-            svg {
+            .icon {
                 stroke: $primary-medium;
             }
 
             &:focus,
             &:hover {
-                svg {
+                .icon {
                     stroke: $primary-full;
                 }
             }
 
             &.is-active {
-                svg {
+                .icon {
                     stroke: $secondary-medium;
                 }
 
                 &:focus,
                 &:hover {
-                    svg {
+                    .icon {
                         stroke: $secondary-full;
                     }
                 }
@@ -83,7 +83,7 @@
         }
 
         .comment-block__action {
-            svg {
+            .icon {
                 opacity: 1;
             }
         }
@@ -121,12 +121,12 @@
             }
         }
 
-        svg {
+        .icon {
             stroke: $primary-ghostH;
         }
 
         &.is-active {
-            svg {
+            .icon {
                 stroke: $secondary-ghostH;
             }
         }
@@ -329,12 +329,12 @@
 
         &:focus,
         &:hover {
-            svg {
+            .icon {
                 stroke: $secondary-full;
             }
         }
 
-        svg {
+        .icon {
             stroke: $secondary-medium;
         }
 
@@ -396,7 +396,7 @@
     }
 
     .comment-block__action {
-        svg {
+        .icon {
             transition: stroke 0.3s, opacity 0.3s;
             opacity: 0.5;
         }

@@ -86,39 +86,39 @@
         }
 
         &--apply {
-            svg {
+            .icon {
                 stroke: $green;
             }
 
             &:focus,
             &:hover {
-                svg {
+                .icon {
                     stroke: darken($green, 10%);
                 }
             }
         }
 
         &--delete {
-            svg {
+            .icon {
                 stroke: $secondary-medium;
             }
 
             &:focus,
             &:hover {
-                svg {
+                .icon {
                     stroke: $secondary-full;
                 }
             }
         }
 
         &--edit {
-            svg {
+            .icon {
                 stroke: $primary-medium;
             }
 
             &:focus,
             &:hover {
-                svg {
+                .icon {
                     stroke: $primary-full;
                 }
             }

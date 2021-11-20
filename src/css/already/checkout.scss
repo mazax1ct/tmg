@@ -59,7 +59,7 @@
         transition: color 0.3s;
 
         &.is-active {
-            svg {
+            .icon {
                 transform: rotate(-180deg);
             }
         }
@@ -68,12 +68,12 @@
         &:hover {
             color: $primary-full;
 
-            svg {
+            .icon {
                 stroke: $primary-full;
             }
         }
 
-        svg {
+        .icon {
             margin-left: 8px;
             stroke: $primary-medium;
             stroke-width: 1.6px;

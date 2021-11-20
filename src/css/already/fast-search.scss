@@ -1,0 +1,29 @@
+@import "base/_variables.scss";
+
+.fast-search {
+    position: relative;
+
+    .input {
+        padding-left: 44px;
+    }
+
+    &__submit {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        padding: 0;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+
+        .icon {
+            stroke: $primary-low;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "base/_variables.scss";
+
+.order-goods {
+    font-size: 14px;
+    line-height: 1.42857;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__top {
+        align-items: center;
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        max-height: 40px;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding-right: 8px;
+        width: calc(100% - 50px);
+
+        a {
+            color: $text-low;
+            text-decoration: none;
+        }
+    }
+
+    &__image {
+        min-width: 50px;
+        width: 50px;
+    }
+
+    &__bottom {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        line-height: 1.21428;
+        margin-bottom: 0;
+        padding-right: 50px;
+    }
+
+    &__num {
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+    }
+}

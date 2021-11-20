@@ -183,7 +183,9 @@
         margin-bottom: 16px;
 
         svg {
+            height: 64px;
             transition: stroke 0.3s;
+            width: 64px;
         }
 
         &--type_1 {

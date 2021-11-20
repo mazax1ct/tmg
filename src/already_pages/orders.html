@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Заказы</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts-preload.html
+
+    //= template/preloader-styles.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/lk.css" />
+    <link rel="stylesheet" href="css/user.css" />
+    <link rel="stylesheet" href="css/lk-menu.css" />
+    <link rel="stylesheet" href="css/orders.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <link rel="stylesheet" href="css/order-goods.css" />
+</head>
+
+<body>
+    //= template/preloader.html
+
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="page-content">
+        <div class="container">
+            <div class="lk">
+                <button class="js-personal-opener lk__personal-opener button button--primary button--big button--wide" type="button">Меню Личного кабинета</button>
+                <div class="lk__left">
+                    <div class="lk__left-inner">
+                        <button class="js-personal-closer lk__left-inner-close" type="button" title="Закрыть меню">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="user">
+                            <label class="user__avatar" for="user_avatar">
+                                <input id="user_avatar" type="file" value="">
+                                <svg class="icon">
+                                    <use xlink:href="#photo_add"></use>
+                                </svg>
+                                <span class="user__avatar-image"></span>
+                            </label>
+                            <h1 class="user__name">Аноним<br> Анонимович</h1>
+                        </div>
+                        <ul class="lk-menu">
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#personal"></use>
+                                        </svg>
+                                    </span>
+                                    Данные и адреса
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#case"></use>
+                                        </svg>
+                                    </span>
+                                    Юридические лица
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <span class="lk-menu__notificator notificator">8</span>
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </span>
+                                    Списки сравнения
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link is-active" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                    </span>
+                                    Заказы
+                                </a>
+                            </li>
+                            <li class="lk-menu__item">
+                                <a class="lk-menu__link" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#doc"></use>
+                                        </svg>
+                                    </span>
+                                    КП
+                                </a>
+                            </li>
+                            <li class="lk-menu__item lk-menu__item--type_1">
+                                <a class="lk-menu__link lk-menu__link--type_1" href="#">
+                                    <span class="lk-menu__icon-container">
+                                        <svg class="icon icon--medium">
+                                            <use xlink:href="#logout"></use>
+                                        </svg>
+                                    </span>
+                                    Выход
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lk__right">
+                    <div class="orders">
+                        <h2 class="orders__title">Мои заказы</h2>
+                        <div class="orders__top">
+                            <label class="select-wrapper">
+                                <span class="select-wrapper__container">
+                                    <select class="js-select">
+                                        <option value="1">По дате создания</option>
+                                        <option value="2">По сумме</option>
+                                        <option value="3">По дате оплаты</option>
+                                    </select>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="order">
+                            <div class="order__title-block">
+                                <p class="order__title">
+                                    <span class="order__title-number">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                        №123456-04&nbsp;
+                                    </span>
+                                    <span>от&nbsp;17.04.21&nbsp;&nbsp;18:44</span>
+                                </p>
+                                <p class="order__title"><span>160 товаров и нанесение на сумму <b>313&nbsp;610.00&nbsp;₽</b></span></p>
+                            </div>
+                            <div class="order__body">
+                                <div class="order__info-block">
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Дата доставки:</div>
+                                        <div class="order__info-cell">02 мая 2021</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Адрес доставки:</div>
+                                        <div class="order__info-cell">г. Крыжополь, ул. Выдумщиков 15А, оф. 455</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Получатель:</div>
+                                        <div class="order__info-cell">Анонимов Аноним Анонимович</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Комментарий:</div>
+                                        <div class="order__info-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem porta senectus gravida facilisis. Viverra odio ac, amet donec sit.</div>
+                                    </div>
+                                </div>
+                                <div class="order__goods">
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">120 шт</span> + печать</span>
+                                            <span class="order-goods__num">34 890 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">44 шт</span></span>
+                                            <span class="order-goods__num">9 270 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Плед для пикника Comfy, черный</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">12 шт</span></span>
+                                            <span class="order-goods__num">17 778 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">120 шт</span> + печать</span>
+                                            <span class="order-goods__num">34 890 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">44 шт</span></span>
+                                            <span class="order-goods__num">9 270 ₽</span>
+                                        </p>
+                                    </div>
+                                    <button class="order__goods-toggler" type="button">
+                                        Весь список
+                                        <svg class="icon icon--small">
+                                            <use xlink:href="#chevron_down"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="order__title-block">
+                                <p class="order__title">
+                                    <span class="order__title-number">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                        №123456-04&nbsp;
+                                    </span>
+                                    <span>от&nbsp;17.04.21&nbsp;&nbsp;18:44</span>
+                                </p>
+                                <p class="order__title"><span>160 товаров и нанесение на сумму <b>313&nbsp;610.00&nbsp;₽</b></span></p>
+                            </div>
+                            <div class="order__body">
+                                <div class="order__info-block">
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Дата доставки:</div>
+                                        <div class="order__info-cell">02 мая 2021</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Адрес доставки:</div>
+                                        <div class="order__info-cell">г. Крыжополь, ул. Выдумщиков 15А, оф. 455</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Получатель:</div>
+                                        <div class="order__info-cell">Анонимов Аноним Анонимович</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Комментарий:</div>
+                                        <div class="order__info-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem porta senectus gravida facilisis. Viverra odio ac, amet donec sit.</div>
+                                    </div>
+                                </div>
+                                <div class="order__goods">
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">120 шт</span> + печать</span>
+                                            <span class="order-goods__num">34 890 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">44 шт</span></span>
+                                            <span class="order-goods__num">9 270 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Плед для пикника Comfy, черный</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">12 шт</span></span>
+                                            <span class="order-goods__num">17 778 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">120 шт</span> + печать</span>
+                                            <span class="order-goods__num">34 890 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                        <p class="order-goods__bottom">
+                                            <span><span class="order-goods__num">44 шт</span></span>
+                                            <span class="order-goods__num">9 270 ₽</span>
+                                        </p>
+                                    </div>
+                                    <button class="order__goods-toggler is-active" type="button">
+                                        Свернуть
+                                        <svg class="icon icon--small">
+                                            <use xlink:href="#chevron_down"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="order__title-block">
+                                <p class="order__title">
+                                    <span class="order__title-number">
+                                        <svg class="icon icon--big">
+                                            <use xlink:href="#package"></use>
+                                        </svg>
+                                        №123456-04&nbsp;
+                                    </span>
+                                    <span>от&nbsp;17.04.21&nbsp;&nbsp;18:44</span>
+                                </p>
+                                <p class="order__title"><span>160 товаров и нанесение на сумму <b>313&nbsp;610.00&nbsp;₽</b></span></p>
+                            </div>
+                            <div class="order__body">
+                                <div class="order__info-block">
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Дата доставки:</div>
+                                        <div class="order__info-cell">02 мая 2021</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Адрес доставки:</div>
+                                        <div class="order__info-cell">г. Крыжополь, ул. Выдумщиков 15А, оф. 455</div>
+                                    </div>
+                                    <div class="order__info-row">
+                                        <div class="order__info-cell">Получатель:</div>
+                                        <div class="order__info-cell">Анонимов Аноним Анонимович</div>
+                                    </div>
+                                </div>
+                                <div class="order__goods">
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                    </div>
+                                    <div class="order-goods">
+                                        <div class="order-goods__top">
+                                            <p class="order-goods__title"><a href="#">Портативное зарядное устройство «Олдбери», 2200 mAh</a></p>
+                                            <div class="order-goods__image"><img src="images/content/orders/img_1.jpg" srcset="images/content/orders/img_1@2x.jpg 2x" alt="alt"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    //= template/float-bar.html
+
+    //= template/modals.html
+
+    //= template/scripts.html
+
+    <script src="js/lk.js"></script>
+
+    <script src="js/preloader.js"></script>
+</body>
+
+</html>

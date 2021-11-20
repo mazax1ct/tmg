@@ -1,0 +1,41 @@
+.orders {
+    &__title {
+        margin-bottom: 40px;
+        padding-top: 8px;
+    }
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+    }
+
+    &__top-search,
+    &__top-select {
+        margin-bottom: 4px;
+        @media(min-width: 768px) {
+            padding-right: 16px;
+        }
+    }
+
+    &__top-button,
+    &__top-search,
+    &__top-select {
+        flex-grow: 1;
+    }
+
+    &__top-select {
+        .select-wrapper .select2-container {
+            width: 100% !important;
+        }
+        @media(min-width: 768px) {
+            max-width: 266px;
+        }
+    }
+
+    &__top-button {
+        @media(min-width: 768px) {
+            max-width: 176px;
+        }
+    }
+}

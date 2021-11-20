@@ -80,6 +80,7 @@
         background-color: rgba(#D3E8F8, 0.2);
         height: 48px;
         opacity: 0;
+        padding: 0;
         transition: background-color 0.3s, opacity 0.3s;
         width: 48px;
 
@@ -90,12 +91,12 @@
         &:hover {
             background-color: rgba(#D3E8F8, 0.5);
 
-            svg {
+            .icon {
                 stroke: $text-full;
             }
         }
 
-        svg {
+        .icon {
             stroke: $text-low;
             height: 48px;
             width: 48px;

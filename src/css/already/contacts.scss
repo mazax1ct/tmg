@@ -20,12 +20,17 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+
+        .h5 {
+            margin-top: 24px;
+        }
     }
 
     &__block-inner {
         background-color: $background-alt;
         padding-left: 8px;
         padding-right: 8px;
+        padding-bottom: 8px;
     }
 
     &__block-title {

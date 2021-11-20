@@ -63,7 +63,7 @@
 
     &__input-status {
         &--verified {
-            svg {
+            .icon {
                 stroke: $green;
                 stroke-width: 1.6px;
             }
@@ -76,21 +76,21 @@
         cursor: pointer;
 
         &--delete {
-            svg {
+            .icon {
                 stroke: $secondary-medium;
                 stroke-width: 1.4px;
             }
         }
 
         &--clear {
-            svg {
+            .icon {
                 stroke: $text-medium;
                 stroke-width: 1.4px;
             }
         }
 
         &--undo {
-            svg {
+            .icon {
                 stroke: $primary-medium;
                 stroke-width: 1.4px;
             }

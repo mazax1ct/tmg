@@ -156,12 +156,12 @@
 
         &:focus,
         &:hover {
-            svg {
+            .icon {
                 stroke: $secondary-full;
             }
         }
 
-        svg {
+        .icon {
             stroke: $secondary-medium;
         }
 
