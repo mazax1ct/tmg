@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/catalog-item.css" />
     <link rel="stylesheet" href="css/package.css" />
     <link rel="stylesheet" href="css/print.css" />
-    <link rel="stylesheet" href="css/select.css" />
+    <link rel="stylesheet" href="css/count-block.css" />
 </head>
 
 <body>
@@ -878,6 +878,42 @@
                     <div class="popup__button-block popup__row popup__row--type_3">
                         <button class="button button--primary button--big" type="button">Отмена</button>
                         <button class="button button--secondary button--big" type="button">Да, удалить</button>
+                    </div>
+                </div>
+            </div>
+
+            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_22" data-src="#modal_22">Новый комментарий к товару</button></p>
+            <div id="modal_22" class="popup popup--656">
+                <div class="popup__content">
+                    <p class="popup__header popup__header--type_1">Новый комментарий к товару</p>
+                    <div class="popup__row">
+                        <div class="count-block"><span>комментарии к товару видны только вам и другим менеджерам</span> <span class="count-block__counter">97/120 символов</span></div>
+                        <label class="input-label">
+                            <textarea class="textarea" placeholder="Текст комментария"></textarea>
+                        </label>
+                    </div>
+                    <button class="button button--primary button--big button--wide" type="button">Опубликовать</button>
+                </div>
+            </div>
+
+            <p><button class="button button--primary button--big" type="button" data-fancybox="modal_23" data-src="#modal_23">Изменение комментария</button></p>
+            <div id="modal_23" class="popup popup--656">
+                <div class="popup__content">
+                    <p class="popup__header popup__header--type_1">Изменение комментария</p>
+                    <div class="popup__row">
+                        <div class="count-block"><span class="count-block__counter">97/120 символов</span></div>
+                        <label class="input-label">
+                            <textarea class="textarea"
+                              placeholder="Текст комментария">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh purus et, consectetur laoreet egestas mi egestas consectetur. Erat quis arcu sed id dui. Sagittis nam ac eget amet lectus fermentum. Egestas proin viverra et imperdiet. Fames et a mollis a quisque tortor. Risus amet eget massa, convallis tincidunt nulla convallis diam fringilla. Pulvinar arcu non quis cursus convallis lacus, volutpat.</textarea>
+                        </label>
+                    </div>
+                    <div class="popup__row popup__row--type_2">
+                        <button class="popup__back-button button button--secondary button--big button--just_icon" type="button" title="Удалить">
+                            <svg class="icon icon--big">
+                                <use xlink:href="#delete"></use>
+                            </svg>
+                        </button>
+                        <button class="button button--primary button--big button--wide" type="button">Сохранить изменения</button>
                     </div>
                 </div>
             </div>

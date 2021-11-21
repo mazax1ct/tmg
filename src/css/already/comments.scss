@@ -1,0 +1,48 @@
+@import "base/_variables.scss";
+
+.comments {
+    &__toggler {
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid $primary-ghostH;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        justify-content: space-between;
+        line-height: 1.14285;
+        padding: 0 0 16px;
+        text-align: left;
+        transition: background-color 0.3s;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+            background-color: $background-alt;
+        }
+
+        &.is-active {
+            .icon {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .icon {
+            fill: $text-medium;
+        }
+    }
+
+    &__list {
+        border-bottom: 1px solid $primary-ghostH;
+        max-height: 337px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__add {
+        border-bottom: 1px solid $primary-ghostH;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}

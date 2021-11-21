@@ -1,0 +1,21 @@
+@import "base/_variables.scss";
+
+.count-block {
+    align-items: flex-end;
+    color: $text-low;
+    display: flex;
+    font-size: 10px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    @media(min-width: 768px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    &__counter {
+        margin-left: auto;
+        padding-left: 8px;
+        white-space: nowrap;
+    }
+}

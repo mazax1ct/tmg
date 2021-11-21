@@ -1,0 +1,80 @@
+@import "base/_variables.scss";
+
+.details {
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    &__columns {
+        @media(min-width: 1024px) {
+            display: flex;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $primary-ghostH;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__column-big {
+        @media(min-width: 1024px) {
+            width: 66.66666%;
+        }
+        @media(min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__column-small {
+        @media(min-width: 1024px) {
+            width: 33.33333%;
+        }
+    }
+
+    &__sub-column {
+        margin-bottom: 16px;
+        @media(min-width: 768px) {
+            padding-right: 16px;
+            width: 33.33333%;
+        }
+        @media(min-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        color: $text-low;
+        font-size: 10px;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+
+        & + .tags {
+            margin-top: 16px;
+        }
+    }
+
+    &__text {
+        color: $text-full;
+        line-height: 1.1875;
+        margin-bottom: 16px;
+    }
+
+    b {
+        color: $text-medium;
+        font-weight: 500;
+    }
+
+    ul:not([class]) + p:not([class]) {
+        margin-top: 0;
+    }
+
+    &__more {
+        font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+    }
+}

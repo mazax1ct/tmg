@@ -149,9 +149,6 @@
     background-color: #fff;
     border: 1px solid $primary-ghostH;
     border-radius: 4px;
-    color: $text-full;
-    font-size: 16px;
-    line-height: 19px;
     letter-spacing: 0.35px;
     padding: 10px 12px;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
@@ -201,16 +198,22 @@
 }
 
 .input {
+    color: $text-full;
+    font-size: 14px;
+    line-height: 19px;
     height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media(min-width: 1024px) {
+        font-size: 16px;
+    }
 
     &.deleted {
         color: $text-low;
     }
 
     &--with_action {
-        padding-right: 52px;
+        padding-right: 44px;
     }
 
     &--with_action_big {
@@ -219,6 +222,9 @@
 }
 
 .textarea {
-    height: 80px;
+    color: $text-medium;
+    font-size: 14px;
+    line-height: 1.71428;
+    height: 160px;
     resize: vertical;
 }

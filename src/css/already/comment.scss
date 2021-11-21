@@ -1,0 +1,65 @@
+@import "base/_variables.scss";
+
+.comment {
+    padding-bottom: 8px;
+    padding-right: 8px;
+
+    &__top {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.1875;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__title {
+        color: $text-full;
+        font-weight: 500;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    &__time {
+        color: $text-low;
+        font-size: 14px;
+    }
+
+    &__edit {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 16px;
+        margin-left: 8px;
+        padding: 0;
+        position: relative;
+        width: 16px;
+
+        &::after {
+            content: '';
+            height: 40px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            z-index: 1;
+        }
+
+        &:focus,
+        &:hover {
+            .icon {
+                stroke: $primary-full;
+            }
+        }
+
+        .icon {
+            stroke: $primary-medium;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.71428;
+    }
+}

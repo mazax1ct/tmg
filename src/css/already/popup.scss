@@ -22,8 +22,14 @@
 
     &--656 {
         max-width: 656px;
+        padding-top: 48px;
         @media(min-width: 768px) {
-            padding: 32px 32px 24px;
+            padding: 48px 32px 24px;
+        }
+
+        .popup__close {
+            right: 22px;
+            top: 28px;
         }
     }
 
@@ -61,7 +67,19 @@
         font-weight: 600;
         letter-spacing: 0.2px;
         margin-bottom: 40px;
+        padding-right: 44px;
         text-transform: uppercase;
+
+        &--type_1 {
+            color: $text-full;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.4px;
+            margin-top: -12px;
+            margin-bottom: 20px;
+            text-transform: none;
+        }
     }
 
     &__logo {

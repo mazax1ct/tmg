@@ -1,0 +1,13 @@
+@import "base/_variables.scss";
+
+.brand-link {
+    display: inline-block;
+    line-height: 1.1875;
+    text-decoration: none;
+    vertical-align: top;
+
+    span {
+        display: block;
+        margin-bottom: 8px;
+    }
+}

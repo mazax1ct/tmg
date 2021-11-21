@@ -1,0 +1,32 @@
+@import "base/_variables.scss";
+
+.sizes-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    .icon {
+        margin-right: 10px;
+        margin-bottom: 8px;
+        stroke: $text-medium;
+    }
+
+    &__item {
+        color: $text-low;
+        line-height: 1.1875;
+        margin-bottom: 8px;
+        padding-left: 6px;
+        padding-right: 6px;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__title {
+        color: $text-full;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+}
