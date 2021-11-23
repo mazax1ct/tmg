@@ -35,6 +35,11 @@
         }
     }
 
+    &__edit-buttons {
+        align-items: center;
+        display: flex;
+    }
+
     &__edit-button {
         background-color: transparent;
         border: none;
