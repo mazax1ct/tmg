@@ -51,7 +51,7 @@
     .detail-images__slider {
         img {
             border-radius: 4px;
-            object-fit: cover;
+            object-fit: contain;
             height: 100%;
             width: 100%;
         }
